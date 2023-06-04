@@ -60,7 +60,7 @@ class Nav extends React.Component{
               width: 2rem;
               height: 2rem;
               position: absolute;
-              background-color: #61dafb;
+              background-color: red;
               color: #000;
               border-radius: 50%;
               display: grid;

@@ -1,11 +1,13 @@
 import React from "react";
-import {useProductContext} from "../context/productcontext";
+// import {useProductContext} from "../context/productcontext";
 import styled from "styled-components";
 import Product from "./Product";
+import {NavLink} from "react-router-dom";
+import FormatPrice from "../heplers/FormatPrice";
 
 
 const FeatureProduct = () => {
-    const { isLoading, featureProducts } = useProductContext();
+    // const { isLoading, featureProducts } = useProductContext();
 
     // if (isLoading){
     //     return <div> ......Loading</div>;
@@ -16,11 +18,59 @@ const FeatureProduct = () => {
             <div className="intro-data">Check Now!</div>
             <div className="common-heading"> Our Feature Services </div>
             <div className="grid grid-three-column">
-                {
-                    featureProducts.map((curElem) => {
-                        return <Product  key={curElem.id} {...curElem} />
-                    })
-                }
+                <NavLink to="/product_detail/:id">
+                    <div className="card">
+                        <div className="card-img">
+                            <figure>
+                                <img src="/images/categories-01.jpg" alt="" />
+                                {/*<figcaption className="caption"></figcaption>*/}
+                            </figure>
+                        </div>
+                        <div className="card-data">
+                            <div className="card-data-flex">
+                                <h3>Game</h3>
+                                <p className="card-data--price-x">{<FormatPrice price="50"/>}</p>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
+                <NavLink to="/product_detail/:id">
+                    <div className="card">
+                        <div className="card-img">
+                            <figure>
+                                <img src="/images/categories-01.jpg" alt="" />
+                                {/*<figcaption className="caption"></figcaption>*/}
+                            </figure>
+                        </div>
+                        <div className="card-data">
+                            <div className="card-data-flex">
+                                <h3>Game</h3>
+                                <p className="card-data--price-x">50$</p>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
+                <NavLink to="/product_detail/:id">
+                    <div className="card">
+                        <div className="card-img">
+                            <figure>
+                                <img src="/images/categories-01.jpg" alt="" />
+                                {/*<figcaption className="caption"></figcaption>*/}
+                            </figure>
+                        </div>
+                        <div className="card-data">
+                            <div className="card-data-flex">
+                                <h3>Game</h3>
+                                <p className="card-data--price-x">50$</p>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
+                {/*{*/}
+                {/*    featureProducts.map((curElem) => {*/}
+                {/*        return <Product  key={curElem.id} {...curElem} />*/}
+                {/*    })*/}
+                {/*}*/}
             </div>
         </div>
     </Wrapper>;
@@ -29,6 +79,7 @@ const FeatureProduct = () => {
 const Wrapper = styled.section`
   padding: 9rem 0;
   background-color: ${({ theme }) => theme.colors.bg};
+
       .container {
         max-width: 120rem;
       }
@@ -80,11 +131,15 @@ const Wrapper = styled.section`
         }
       }
       .card {
-        background-color: #fff;
+        background-color: #61dafb;
         border-radius: 1rem;
-        
+
+        .card-img{
+          border-radius: 1rem;
+        }
         .card-data {
           padding: 0 2rem;
+          display: inline-block;
         }
         .card-data-flex {
           margin: 2rem 0;
@@ -92,16 +147,19 @@ const Wrapper = styled.section`
           justify-content: space-between;
           align-items: center;
         }
-        
+
         h3{
           color: ${({ theme }) => theme.colors.text};
           text-transform: capitalize;
+          display: inline-block;
         }
-        
-        .card-data--price {
-          color: ${({ theme }) => theme.colors.help};
+
+        .card-data--price-x {
+            // color: ${({ theme }) => theme.colors.help};
+          display: inline-block;
+          padding-left: 240px;
         }
-        
+
         .btn{
           margin: 2rem auto;
           background-color: rgb(0 0 0 / 0%);
@@ -109,15 +167,15 @@ const Wrapper = styled.section`
           display: flex;
           justify-content: center;
           align-items: center;
-          
+
           &:hover {
             background-color: rgb(98 84 243);
           }
-          
+
           &:hover a {
             color: #fff;
           }
-          
+
           a {
             color: rgb(98 84 243);
             font-size: 1.4rem;

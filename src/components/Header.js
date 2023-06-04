@@ -11,7 +11,6 @@ class Header extends React.Component{
                     <img className="logo" src="./images/logodnh.jpg" alt="my logo img" />
                 </NavLink>
                 <Nav />
-
             </MainHeader>
         );
     }
@@ -19,7 +18,7 @@ class Header extends React.Component{
 
 const MainHeader = styled.header`
   height: 10rem;
-  background-color: ${({ theme }) => theme.colors.bg};
+  background-color: cornflowerblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
