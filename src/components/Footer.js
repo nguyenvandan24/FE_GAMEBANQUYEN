@@ -84,7 +84,7 @@ const Wrapper = styled.section`
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.colors.shadowSupport};
     transform: translateY(50%);
-    
+
     .grid div:last-child {
       justify-self: end;
       align-self: center;
@@ -100,16 +100,16 @@ const Wrapper = styled.section`
     p {
       color: ${({theme}) => theme.colors.hr};
     }
-    
+
     .footer-social--icons {
       display: flex;
       gap: 2rem;
-      
+
       div {
         padding: 1rem;
         border-radius: 50%;
         border: 2px solid ${({theme}) => theme.colors.hr};
-        
+
         .icons {
           color: ${({theme}) => theme.colors.hr};
           font-size: 2.4rem;
@@ -121,7 +121,7 @@ const Wrapper = styled.section`
   }
   .footer-bottom--section {
     padding-top: 9rem;
-    
+
     hr {
       margin-bottom: 2rem;
       color: ${({ theme }) => theme.colors.hr};
