@@ -9,6 +9,7 @@ import {TbReplace, TbTruckDelivery} from "react-icons/tb";
 import {MdSecurity} from "react-icons/md";
 import Star from "../components/Star";
 import AddToCart from "../components/AddToCart";
+import Tabs from "../components/Tabs";
 
 
 const API = "https://api.pujakaitem.com/api/products";
@@ -101,6 +102,34 @@ const ProductDetail = () => {
                         <AddToCart />
                     </div>
                 </div>
+                <Tabs>
+                    <div label="Descriptions">
+                        [Tên Game] là một tựa game [mô tả chi tiết về nội dung game, cốt truyện, hệ thống gameplay và tính năng đặc biệt].
+                        Người chơi sẽ được tham gia vào một thế giới tuyệt vời, đắm mình trong những cuộc phiêu lưu đầy thách thức và hấp dẫn.
+                        Hãy chuẩn bị cho mình những trận đấu hào hùng, khám phá những khu vực bí ẩn,
+                        và tận hưởng cảm giác hồi hộp khi đối đầu với những kẻ thù nguy hiểm.
+                    </div>
+                    <div label="Main feature">
+                        1. [Liệt kê các tính năng chính của game, ví dụ: đồ họa tuyệt đẹp, hệ thống chiến đấu đa dạng,
+                        cấu trúc thế giới mở, chế độ chơi đơn và chơi đa người trực tuyến, v.v.]<br/>
+                        2. ...<br/>
+                        3. ...
+                    </div>
+                    <div label="System Requirements">
+                        Để có trải nghiệm tốt nhất khi chơi [Tên Game], hãy đảm bảo rằng máy tính của bạn đáp ứng các yêu cầu hệ thống sau:<br/>
+
+                        Hệ điều hành: [Hệ điều hành]<br/>
+                        Bộ vi xử lý: [Bộ vi xử lý]<br/>
+                        RAM: [RAM]<br/>
+                        Đồ họa: [Yêu cầu đồ họa]<br/>
+                        Không gian đĩa cứng: [Không gian trống yêu cầu]<br/>
+                    </div>
+                    <div label="Installation instructions">
+                        Tải file cài đặt game từ [Liên kết tải game].<br/>
+                        Chạy file cài đặt và làm theo hướng dẫn trên màn hình.<br/>
+                        Hoàn tất quá trình cài đặt và thưởng thức [Tên Game] một cách tự do và miễn phí!
+                    </div>
+                </Tabs>
             </Container>
         </Wrapper>
     );
