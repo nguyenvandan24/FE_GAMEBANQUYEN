@@ -59,12 +59,8 @@ class Footer extends React.Component{
                     </div>
                     <div className="footer-bottom--section">
                         <hr/>
-                        <div className="container grid grid-two-column">
+                        <div className="container">
                             <p>@{new Date().getFullYear()} ThapaTechnical. All Rights Reserved</p>
-                            <div>
-                                <p>PRIVACY POLICY</p>
-                                <p>TERMS & CONDITIONS</p>
-                            </div>
                         </div>
                     </div>
                 </footer>
@@ -76,6 +72,9 @@ class Footer extends React.Component{
 const Wrapper = styled.section`
   .iSIFGq {
     margin: 0;
+  }
+  .container{
+    text-align: center;
   }
   .contact-short {
     max-width: 60vw;
