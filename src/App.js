@@ -12,6 +12,8 @@ import {GlobalStyle} from "./pages/GlobalStyle";
 import {ThemeProvider} from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
     const theme = {
@@ -42,6 +44,8 @@ function App() {
               <Route path="/contact" element={<Contact />}/>
               <Route path="/product_detail/:id" element={<ProductDetail />}/>
               <Route path="/cart" element={<Cart />}/>
+              <Route path="/login" element={<Login />}/>
+              <Route path="/register" element={<Register />}/>
               <Route path="*" element={<ErrorPage />}/>
           </Routes>
           <Footer />
