@@ -14,6 +14,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import { getDatabase, ref, child, get, set } from "firebase/database";
+import { database } from "./firebase/firebase";
+
 
 function App() {
     const theme = {
@@ -32,6 +35,26 @@ function App() {
             tab: "998px",
         },
     };
+    // const users = ref(database, "users");
+    // onValue(users,(snapshot) => {
+    //
+    // })
+     const dbRef = ref(getDatabase());
+    set(child(dbRef, `users/2`), {
+        email: "nthau@gmail.com",
+        fullname: "Nguyễn Thị Hậu",
+        username: "haunt",
+        password: "0123"
+    });
+    // get(child(dbRef, `users`)).then((snapshot) => {
+    //     if (snapshot.exists()) {
+    //         console.log(snapshot.val());
+    //     } else {
+    //         console.log("No data available");
+    //     }
+    // }).catch((error) => {
+    //     console.error(error);
+    // });
     return (
       <ThemeProvider theme={theme}>
       <Router>
