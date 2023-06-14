@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {NavLink} from "react-router-dom";
 
-const ProductItem = () => {
+const ListItem = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -23,13 +23,12 @@ const ProductItem = () => {
                         <div className="card-img">
                             <figure>
                                 <img src={product.img} alt="" />
-                                {/*<figcaption className="caption"></figcaption>*/}
                             </figure>
                         </div>
                         <div className="card-data">
                             <div className="card-data-flex">
                                 <h3>{product.name}</h3>
-                                {/*<p className="card-data--price-x">{product.price}</p>*/}
+                                <p className="card-data--price">{product.price}</p>
                             </div>
                         </div>
                     </div>
@@ -39,4 +38,4 @@ const ProductItem = () => {
     );
 };
 
-export default ProductItem;
+export default ListItem;

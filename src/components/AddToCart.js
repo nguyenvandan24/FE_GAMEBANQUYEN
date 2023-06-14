@@ -46,7 +46,7 @@ const AddToCart = ({product}) => {
 
             <CartAmountToggle/>
             <NavLink to="/cart">
-                <Button className="btn">Add To Cart</Button>
+                <Button className="btn">Thêm vào giỏ hàng</Button>
             </NavLink>
         </Wrapper>
     );

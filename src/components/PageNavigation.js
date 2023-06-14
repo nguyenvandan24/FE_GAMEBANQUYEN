@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const PageNavigation = ({title}) => {
     return (
         <Wrapper>
-            <NavLink to="/">Home</NavLink>/ {title}
+            <NavLink to="/">Trang chủ</NavLink>/ {title}
         </Wrapper>
     );
 }

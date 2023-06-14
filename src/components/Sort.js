@@ -22,7 +22,7 @@ const Sort = () => {
             {/* 2st column */}
             <div className="product-data">
                 {/* tong san pham*/}
-                <p>{`${filter_products.length} Product Available`}</p>
+                <h3><b>Game</b></h3>
             </div>
             {/* 3rd column */}
             <div className="sort-section">
