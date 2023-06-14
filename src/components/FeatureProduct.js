@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 // import {useProductContext} from "../context/productcontext";
 import styled from "styled-components";
 import Product from "./Product";
 import {NavLink} from "react-router-dom";
 import FormatPrice from "../heplers/FormatPrice";
+import axios from "axios";
+import ProductItem from "./ProductItem";
 
 
 const FeatureProduct = () => {
@@ -18,54 +20,55 @@ const FeatureProduct = () => {
             <div className="intro-data">Check Now!</div>
             <div className="common-heading"> Our Feature Services </div>
             <div className="grid grid-three-column">
-                <NavLink to="/product_detail/:id">
-                    <div className="card">
-                        <div className="card-img">
-                            <figure>
-                                <img src="/images/categories-01.jpg" alt="" />
-                                {/*<figcaption className="caption"></figcaption>*/}
-                            </figure>
-                        </div>
-                        <div className="card-data">
-                            <div className="card-data-flex">
-                                <h3>Game</h3>
-                                <p className="card-data--price-x">{<FormatPrice price="50"/>}</p>
-                            </div>
-                        </div>
-                    </div>
-                </NavLink>
-                <NavLink to="/product_detail/:id">
-                    <div className="card">
-                        <div className="card-img">
-                            <figure>
-                                <img src="/images/categories-01.jpg" alt="" />
-                                {/*<figcaption className="caption"></figcaption>*/}
-                            </figure>
-                        </div>
-                        <div className="card-data">
-                            <div className="card-data-flex">
-                                <h3>Game</h3>
-                                <p className="card-data--price-x">50$</p>
-                            </div>
-                        </div>
-                    </div>
-                </NavLink>
-                <NavLink to="/product_detail/:id">
-                    <div className="card">
-                        <div className="card-img">
-                            <figure>
-                                <img src="/images/categories-01.jpg" alt="" />
-                                {/*<figcaption className="caption"></figcaption>*/}
-                            </figure>
-                        </div>
-                        <div className="card-data">
-                            <div className="card-data-flex">
-                                <h3>Game</h3>
-                                <p className="card-data--price-x">50$</p>
-                            </div>
-                        </div>
-                    </div>
-                </NavLink>
+
+                {/*<NavLink to="/product_detail/:id">*/}
+                {/*    <div className="card" id="listProducts">*/}
+                {/*        <div className="card-img">*/}
+                {/*            <figure>*/}
+                {/*                <img src="/images/categories-01.jpg" alt="" />*/}
+                {/*                /!*<figcaption className="caption"></figcaption>*!/*/}
+                {/*            </figure>*/}
+                {/*        </div>*/}
+                {/*        <div className="card-data">*/}
+                {/*            <div className="card-data-flex">*/}
+                {/*                <h3>Game</h3>*/}
+                {/*                <p className="card-data--price-x">{<FormatPrice price="50"/>}</p>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</NavLink>*/}
+                {/*<NavLink to="/product_detail/:id">*/}
+                {/*    <div className="card">*/}
+                {/*        <div className="card-img">*/}
+                {/*            <figure>*/}
+                {/*                <img src="/images/categories-01.jpg" alt="" />*/}
+                {/*                /!*<figcaption className="caption"></figcaption>*!/*/}
+                {/*            </figure>*/}
+                {/*        </div>*/}
+                {/*        <div className="card-data">*/}
+                {/*            <div className="card-data-flex">*/}
+                {/*                <h3>Game</h3>*/}
+                {/*                <p className="card-data--price-x">50$</p>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</NavLink>*/}
+                {/*<NavLink to="/product_detail/:id">*/}
+                {/*    <div className="card">*/}
+                {/*        <div className="card-img">*/}
+                {/*            <figure>*/}
+                {/*                <img src="/images/categories-01.jpg" alt="" />*/}
+                {/*                /!*<figcaption className="caption"></figcaption>*!/*/}
+                {/*            </figure>*/}
+                {/*        </div>*/}
+                {/*        <div className="card-data">*/}
+                {/*            <div className="card-data-flex">*/}
+                {/*                <h3>Game</h3>*/}
+                {/*                <p className="card-data--price-x">50$</p>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</NavLink>*/}
                 {/*{*/}
                 {/*    featureProducts.map((curElem) => {*/}
                 {/*        return <Product  key={curElem.id} {...curElem} />*/}
