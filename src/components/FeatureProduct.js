@@ -1,79 +1,43 @@
 import React, {useEffect, useState} from "react";
-// import {useProductContext} from "../context/productcontext";
 import styled from "styled-components";
-import Product from "./Product";
 import {NavLink} from "react-router-dom";
-import FormatPrice from "../heplers/FormatPrice";
-import axios from "axios";
-import ProductItem from "./ProductItem";
-
 
 const FeatureProduct = () => {
-    // const { isLoading, featureProducts } = useProductContext();
+    const [products, setProducts] = useState([]);
 
-    // if (isLoading){
-    //     return <div> ......Loading</div>;
-    // }
+    useEffect(() => {
+        fetch('http://localhost:3000/products')
+            .then(response => response.json())
+            .then(data => {
+                setProducts(data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }, []);
 
     return <Wrapper className="section">
         <div className="container">
             <div className="intro-data">Check Now!</div>
             <div className="common-heading"> Our Feature Services </div>
             <div className="grid grid-three-column">
-
-                {/*<NavLink to="/product_detail/:id">*/}
-                {/*    <div className="card" id="listProducts">*/}
-                {/*        <div className="card-img">*/}
-                {/*            <figure>*/}
-                {/*                <img src="/images/categories-01.jpg" alt="" />*/}
-                {/*                /!*<figcaption className="caption"></figcaption>*!/*/}
-                {/*            </figure>*/}
-                {/*        </div>*/}
-                {/*        <div className="card-data">*/}
-                {/*            <div className="card-data-flex">*/}
-                {/*                <h3>Game</h3>*/}
-                {/*                <p className="card-data--price-x">{<FormatPrice price="50"/>}</p>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</NavLink>*/}
-                {/*<NavLink to="/product_detail/:id">*/}
-                {/*    <div className="card">*/}
-                {/*        <div className="card-img">*/}
-                {/*            <figure>*/}
-                {/*                <img src="/images/categories-01.jpg" alt="" />*/}
-                {/*                /!*<figcaption className="caption"></figcaption>*!/*/}
-                {/*            </figure>*/}
-                {/*        </div>*/}
-                {/*        <div className="card-data">*/}
-                {/*            <div className="card-data-flex">*/}
-                {/*                <h3>Game</h3>*/}
-                {/*                <p className="card-data--price-x">50$</p>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</NavLink>*/}
-                {/*<NavLink to="/product_detail/:id">*/}
-                {/*    <div className="card">*/}
-                {/*        <div className="card-img">*/}
-                {/*            <figure>*/}
-                {/*                <img src="/images/categories-01.jpg" alt="" />*/}
-                {/*                /!*<figcaption className="caption"></figcaption>*!/*/}
-                {/*            </figure>*/}
-                {/*        </div>*/}
-                {/*        <div className="card-data">*/}
-                {/*            <div className="card-data-flex">*/}
-                {/*                <h3>Game</h3>*/}
-                {/*                <p className="card-data--price-x">50$</p>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</NavLink>*/}
-                {/*{*/}
-                {/*    featureProducts.map((curElem) => {*/}
-                {/*        return <Product  key={curElem.id} {...curElem} />*/}
-                {/*    })*/}
-                {/*}*/}
+                    {/* Hiển thị danh sách 3 sản phẩm */}
+                    {products.slice(0, 3).map(product => (
+                        <NavLink to={`/product_detail/${product.id}`} key={product.id}>
+                            <div className="card" id="listProducts">
+                                <div className="card-img">
+                                    <figure>
+                                        <img src={product.img} />
+                                    </figure>
+                                </div>
+                                <div className="card-data">
+                                    <div className="card-data-flex">
+                                        <h3>{product.name}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </NavLink>
+                    ))}
             </div>
         </div>
     </Wrapper>;
@@ -157,10 +121,9 @@ const Wrapper = styled.section`
           display: inline-block;
         }
 
-        .card-data--price-x {
+        .card-data--price {
             // color: ${({ theme }) => theme.colors.help};
           display: inline-block;
-          padding-left: 240px;
         }
 
         .btn{
