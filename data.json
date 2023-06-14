@@ -1,0 +1,566 @@
+{
+  "users": [
+    {
+      "email": "nvdan@gmail.com",
+      "fullname": "Nguyễn Văn Dẫn",
+      "username": "nvdan",
+      "pass": "nvd01",
+      "phone": "0123789456"
+    },
+    {
+      "email": "nthau@gmail.com",
+      "fullname": "Nguyễn Thị Hậu",
+      "username": "nvhau",
+      "pass": "nth02",
+      "phone": "0123789753"
+    },
+    {
+      "email": "nntnga@gmail.com",
+      "fullname": "Nguyễn Ngọc Tố Nga",
+      "username": "nntnga",
+      "pass": "nntn03",
+      "phone": "0123219456"
+    }
+  ],
+  "products": [
+    {
+      "Action": [
+        {
+          "id":"AC01",
+          "name": "Grand Theft Auto V",
+          "year": "2013",
+          "publisher": "Rockstar Games",
+          "foundation": "PlayStation 4, Xbox One, PlayStation 3, Xbox 360, Microsoft Windows",
+          "gamemode": "Chơi đơn, chơi đa người trực tuyến",
+          "description": "Grand Theft Auto V (GTA V) là một trong những tựa game nổi tiếng nhất và thành công nhất trong lịch sử ngành công nghiệp game. Game lấy bối cảnh thành phố ảo Los Santos và vùng nông thôn xung quanh nó, nơi người chơi sẽ tham gia vào những cuộc phiêu lưu đầy hành động và tội phạm. Trong GTA V, người chơi sẽ có thể kiểm soát ba nhân vật chính là Michael De Santa, Franklin Clinton và Trevor Philips, mỗi người có những đặc điểm riêng và câu chuyện cá nhân phức tạp. Game mang đến một thế giới mở rộng, cho phép người chơi thực hiện các nhiệm vụ chính, hoàn thành nhiệm vụ phụ, tham gia vào hoạt động tội phạm và khám phá các địa điểm đa dạng.",
+          "mainfeature": "GTA V nổi tiếng với yếu tố đồ họa chất lượng cao, gameplay đa dạng và tình tự lẫn tương tác sâu sắc. Game cung cấp nhiều hoạt động như lái xe, bay máy bay, đi bộ, chiến đấu, trộm cắp và thậm chí cả chơi golf, chơi tennis và đánh bạc. Bên cạnh chế độ chơi đơn, GTA V còn có chế độ chơi đa người trực tuyến mang tên Grand Theft Auto Online, trong đó người chơi có thể tham gia vào một thế giới chia sẻ với hàng chục ngàn người chơi khác, thực hiện các hoạt động tội phạm, hoàn thành nhiệm vụ và xây dựng sự nghiệp tội phạm của riêng mình.",
+          "price": "650000VNĐ",
+          "img": "hhttps://www.hdwallpapers.in/download/grand_theft_auto_v_2013_game-wide.jpg"
+
+        },
+        {
+          "id":"AC02",
+          "name": "Call of Duty: Warzone",
+          "year": "2020",
+          "publisher": "Activision",
+          "foundation": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Microsoft Windows",
+          "gamemode": "Chơi đa người trực tuyến",
+          "description": "Trong Call of Duty: Warzone, người chơi tham gia vào trận chiến với hàng chục người chơi khác, được thả xuống trên một bản đồ rộng và phải tìm kiếm vũ khí, trang bị và tài nguyên khác để tồn tại. Trò chơi chia thành các vùng chiến đấu, và kích thước bản đồ giảm dần theo thời gian, đẩy người chơi lại gần nhau và tạo ra các trận đấu căng thẳng. Call of Duty: Warzone cung cấp các chế độ chơi như Battle Royale và Plunder. Trong chế độ Battle Royale, người chơi và đồng đội của họ cạnh tranh để trở thành người sống sót cuối cùng trong khi chế độ Plunder tập trung vào việc kiếm tiền và đạt được mục tiêu tài chính.",
+          "mainfeature": "Game hỗ trợ chơi đa nền tảng giữa các phiên bản console và PC, cho phép người chơi chơi cùng nhau dù họ sử dụng các nền tảng khác nhau.",
+          "price": "500.000VNĐ",
+          "img": "https://th.bing.com/th/id/OIP.z7GF1vlOcm9uRIg6t7KYjgHaEK?pid=ImgDet&rs=1"
+        },
+        {
+          "id":"AC03",
+          "name": "Assassin's Creed Valhalla",
+          "year": "2020",
+          "publisher": "Ubisoft",
+          "foundation": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Microsoft Windows",
+          "gamemode": "Chơi đơn",
+          "description": "Assassin's Creed Valhalla là một tựa game trong loạt Assassin's Creed, đưa người chơi vào thế giới của những chiến binh Viking vào thời kỳ Trung cổ. Trong game, người chơi sẽ vào vai Eivor, một lãnh chúa Viking, và trải qua cuộc hành trình xâm lược và khám phá vùng đất Anh của thời đại Viking. Trò chơi xây dựng một thế giới mở rộng, cho phép người chơi thám hiểm các vùng đất khác nhau của Anh, từ cảnh quan núi non đến thành phố đông đúc. Assassin's Creed Valhalla cung cấp nhiều hoạt động và nhiệm vụ để người chơi tham gia, bao gồm chiến đấu với kẻ thù, thám hiểm, xây dựng và phát triển cộng đồng Viking, và tham gia vào các hoạt động như đánh cờ, săn bắn và câu cá. Gameplay của Assassin's Creed Valhalla kết hợp các yếu tố hành động và ẩn náu truyền thống của loạt game Assassin's Creed. Người chơi có thể sử dụng vũ khí như kiếm, cung và tên, và các kỹ năng đặc biệt để chiến đấu và tiêu diệt kẻ thù. Trò chơi cũng có yếu tố ẩn náu, cho phép người chơi trèo tường, leo trèo và ám sát trong bóng tối. ",
+          "mainfeature": "Assassin's Creed Valhalla được đánh giá cao với sự khen ngợi về đồ họa đẹp, cốt truyện phong phú, thế giới mở rộng chi tiết và hệ thống gameplay đa dạng. Trò chơi mang đến cho người chơi một trải nghiệm sâu sắc về cuộc sống và cuộc phiêu lưu của người Viking trong thời kỳ lịch sử quan trọng.",
+          "price": "1.000.000VNĐ",
+          "img": "https://tse3.mm.bing.net/th?id=OIP.kusTjgQZef1T_pbDeMMdUQHaEK&pid=Api&P=0&h=180"
+
+        },
+        {
+          "id":"AC04",
+          "name": "God of War",
+          "year": "2018",
+          "publisher": "Sony Interactive Entertainment",
+          "foundation": " PlayStation 4, PlayStation 5",
+          "gamemode": "Chơi đơn",
+          "description": "God of War là một tựa game hành động phiêu lưu được phát triển bởi Santa Monica Studio và được Sony Interactive Entertainment phát hành. Đây là phần thứ tư trong loạt game God of War và đồng thời là phiên bản khởi đầu mới cho dòng game, mang tên cùng nhưng mang một phong cách và cốt truyện hoàn toàn mới. Trong God of War, người chơi vào vai Kratos, một nhân vật chiến đấu huyền thoại, vốn từng là vị thần chiến tranh trong thần thoại Hy Lạp. Lần này, câu chuyện diễn ra trong một thế giới thần thoại Bắc Âu, nơi Kratos sống với con trai của mình, Atreus. Hai cha con bắt đầu cuộc hành trình đầy nguy hiểm và thử thách, khi họ đi qua vùng đất hoang dã và chiến đấu với các thần thần thoại Bắc Âu và yêu quái.",
+          "mainfeature": "Trò chơi God of War sử dụng một hệ thống chiến đấu góc nhìn thứ ba, trong đó người chơi điều khiển Kratos và sử dụng thanh kiếm và các vũ khí khác để chiến đấu với đối thủ. Cốt truyện của trò chơi được trình bày qua các cảnh quay hành động liền mạch và tập trung vào mối quan hệ giữa Kratos và Atreus.  God of War nhận được sự khen ngợi rộng rãi từ giới phê bình và người chơi, đặc biệt với việc cải thiện đáng kể về cốt truyện, nhân vật, đồ họa và hệ thống gameplay so với các phiên bản trước. Trò chơi đã nhận nhiều giải thưởng danh giá và được xem là một trong những tựa game xuất sắc nhất trên PlayStation 4.",
+          "price": "980.000VNĐ",
+          "img": "https://tse2.mm.bing.net/th?id=OIP.P6Ba4cu1zlFrFFnTH1uGPAHaEK&pid=Api&P=0&h=180"
+        },
+        {
+          "id":"AC05",
+          "name": "Marvel's Spider-Man",
+          "year": "2018",
+          "publisher": "Sony Interactive Entertainment",
+          "foundation": "PlayStation 4, PlayStation 5.",
+          "gamemode": "Chơi đơn",
+          "description": "Marvel's Spider-Man là một tựa game hành động phiêu lưu dựa trên nhân vật siêu anh hùng Spider-Man của Marvel Comics. Game được phát triển bởi Insomniac Games và phát hành bởi Sony Interactive Entertainment.  Trong Marvel's Spider-Man, người chơi vào vai Peter Parker, người đã trở thành Spider-Man. Trò chơi diễn ra trong thành phố New York, nơi người chơi có thể di chuyển tự do trong một môi trường mở rộng. Nhiệm vụ của Spider-Man là bảo vệ thành phố khỏi các tên tội phạm và siêu ác nhân, trong khi đồng thời giải quyết các vấn đề cá nhân của Peter Parker.  Người chơi sẽ trải qua nhiều nhiệm vụ và sự kiện trong trò chơi, bao gồm chiến đấu với kẻ thù, giải cứu con tin, điều tra tội phạm, và tham gia vào các trận đánh với những kẻ ác nổi tiếng như Rhino, Scorpion và Doc Ock. Trong quá trình chơi, người chơi sẽ được nâng cấp kỹ năng và trang bị của Spider-Man, giúp tăng cường sức mạnh và khả năng chiến đấu của anh.",
+          "mainfeature": "Marvel's Spider-Man được đánh giá cao với đồ họa tuyệt đẹp, gameplay mượt mà, câu chuyện chất lượng cao và hệ thống điều khiển linh hoạt. Trò chơi đã nhận được sự khen ngợi từ cả giới phê bình và người chơi, và được coi là một trong những tựa game siêu anh hùng xuất sắc nhất trên PlayStation 4.",
+          "price": "1.139.000VNĐ",
+          "img": "https://gamek.mediacdn.vn/zoom/220_160/133514250583805952/2022/7/21/photo-1-1658379021172746572066.jpg"
+        }
+
+
+      ],
+      "Adventure": [
+        {
+          "id":"AD01",
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "year": "2017",
+          "publisher": "Nintendo",
+          "foundation": "Nintendo Switch và Wii U",
+          "gamemode": "Chơi đơn",
+          "description": "The Legend of Zelda: Breath of the Wild là một trò chơi hành động phiêu lưu đầy hấp dẫn. Trò chơi xoay quanh câu chuyện phiêu lưu của nhân vật Link trong vương quốc rộng lớn Hyrule, nơi anh ta phải giải cứu công chúa Zelda và đánh bại kẻ thù cổ xưa Ganon.  Khác với các phiên bản trước, Breath of the Wild mang đến một cốt truyện phi tuyến, mở cửa cho người chơi khám phá thế giới mở rộng của Hyrule. Từ đồng cỏ tươi tốt đến núi non hiểm trở, từ rừng rậm yên bình đến sa mạc bao la, thế giới game sở hữu những cảnh quan tuyệt đẹp và bí mật ẩn giấu chờ đợi người chơi khám phá.",
+          "mainfeature": "Trò chơi mang đến một thế giới rộng lớn, tự do khám phá, với các vùng đất đa dạng và môi trường sống động. Người chơi có tự do lựa chọn cách tiếp cận và hoàn thành các nhiệm vụ, tìm hiểu về câu chuyện và khám phá bảo vật trong trò chơi. Trò chơi cung cấp nhiều cách tiếp cận chiến đấu, sử dụng vũ khí, phép thuật và kỹ năng đặc biệt. Người chơi có thể leo trèo, bơi lội, lượn trên không và tương tác với các yếu tố trong môi trường để vượt qua thử thách và giải quyết câu đố. Trò chơi cho phép người chơi khám phá cốt truyện theo phong cách riêng của họ, tìm hiểu về lịch sử và nhân vật trong thế giới Hyrule.",
+          "price": "2.500.000VNĐ",
+          "img": "https://th.bing.com/th/id/R.d341a9bafc261e7d448aad9806b35634?rik=OAepacxz1EFvBw&pid=ImgRaw&r=0"
+        },
+        {
+          "id":"AD02",
+          "name": "Uncharted 4: A Thief's End",
+          "year": "2016",
+          "publisher": "Sony Interactive Entertainment",
+          "foundation": "PlayStation 4",
+          "gamemode": "Chơi đơn",
+          "description": "Uncharted 4: A Thief's End là một trò chơi video hành động phiêu lưu. Trong Uncharted 4, người chơi sẽ điều khiển nhân vật chính là Nathan Drake, một thợ săn kho báu và nhà khảo cổ học giỏi. Trò chơi đưa người chơi vào cuộc phiêu lưu đầy nguy hiểm trên khắp thế giới, từ rừng rậm Madagascar đến thành phố bị bỏ hoang Libertalia. Nathan Drake cùng với các đồng đội của mình phải đối mặt với những tình huống nguy hiểm, giải quyết các câu đố, và chiến đấu với các kẻ thù trong hành trình tìm kiếm kho báu huyền thoại.",
+          "mainfeature": "Uncharted 4: A Thief's End có cốt truyện và nhân vật hấp dẫn, cốt truyện được viết kịch tính và có sự phát triển sâu sắc về nhân vật. Đồ họa game được sử dụng công nghệ đồ họa tiên tiến để tạo ra môi trường sống động, chi tiết và đẹp mắt. Cảnh quan, chi tiết nhân vật và hiệu ứng đều được thiết kế rất công phu. Trò chơi mang đến những pha hành động hấp dẫn và độc đáo, từ các cuộc chiến đấu đầy kịch tính đến những pha leo trèo và phiêu lưu trong môi trường. Hệ thống điều khiển của Uncharted 4 cho phép người chơi thực hiện các động tác di chuyển, tấn công và tương tác một cách linh hoạt và tự nhiên. ",
+          "price": "800.000VNĐ",
+          "img": "https://th.bing.com/th/id/OIP.Jogl8jUGEq3ca3mtfafZoAHaEK?pid=ImgDet&rs=1"
+        },
+        {
+          "id":"AD03",
+          "name": "Journey",
+          "year": "2012",
+          "publisher": "Thatgamecompany và Sony Computer Entertainment",
+          "foundation": "PlayStation 3, PlayStation 4 và  (qua Epic Games Store).",
+          "gamemode": "Chơi đơn",
+          "description": "Journey là một trò chơi phiêu lưu độc đáo và nghệ thuật được phát triển bởi thatgamecompany. Trò chơi không có các thông tin cụ thể về cốt truyện và nhân vật, mà tập trung vào trải nghiệm cảm xúc và khám phá.  Trong Journey, người chơi sẽ điều khiển một nhân vật với áo choàng màu đỏ đi qua một thế giới mênh mông và bí ẩn. Mục tiêu của người chơi là tìm hiểu và khám phá môi trường xung quanh, vượt qua các cung đường và thử thách, và tương tác với những người chơi khác mà không có bất kỳ hình thức giao tiếp nào trực tiếp. Trò chơi tạo ra một trải nghiệm tĩnh lặng và đậm chất nghệ thuật, mang đến cho người chơi một cảm giác phiêu lưu và thâm nhập vào thế giới ảo. ",
+          "mainfeature": "Journey được chú trọng về mặt âm nhạc, hình ảnh và cảm xúc. Trò chơi sử dụng hình ảnh đẹp mắt và màu sắc tươi sáng để tạo nên một không gian nghệ thuật độc đáo và hấp dẫn. Âm nhạc trong Journey góp phần tạo nên một không gian âm nhạc rất đặc biệt, truyền tải cảm xúc và thúc đẩy người chơi vào trạng thái tĩnh lặng và tương tác sâu hơn với trò chơi.  Journey là một trò chơi ngắn nhưng mang tính độc đáo và tạo cảm hứng trong ngành công nghiệp game. Nó đã nhận được nhiều đánh giá tích cực và giải thưởng, được coi là một trải nghiệm nghệ thuật sâu sắc và đáng trải qua. ",
+          "price": "990.000VNĐ",
+          "img": "https://th.bing.com/th/id/OIP.9m2hA1rTUX9uqv1jK-xtVQHaEK?pid=ImgDet&rs=1"
+        },
+        {
+          "id":"AD04",
+          "name": "Tomb Raider",
+          "year": "1996",
+          "publisher": "Square Enix",
+          "foundation": "PlayStation 2, PlayStation 3, PlayStation4, PC,...",
+          "gamemode": "Chơi đơn",
+          "description": "Tomb Raider là một loạt trò chơi phiêu lưu hành động được tạo ra bởi Core Design và sau đó được phát triển bởi Crystal Dynamics. Trò chơi tập trung vào cuộc phiêu lưu của nhân vật chính, Lara Croft, một nhà khảo cổ học và thám hiểm, khi cô khám phá các ngôi mộ cổ đại, giải quyết các câu đố và chiến đấu với các mối đe dọa trong một loạt các môi trường đa dạng trên toàn thế giới.",
+          "mainfeature": "Tomb Raider nổi tiếng với hành trình phiêu lưu độc đáo, gameplay hỗn hợp giữa hành động, giải đố và khám phá, đồ họa đẹp mắt và cốt truyện gây cấn. Trò chơi tạo ra một thế giới rộng lớn để người chơi khám phá, với các cấp độ phức tạp, mật độ câu đố và mối đe dọa đa dạng. ",
+          "price": "2.300.000VNĐ",
+          "img": "https://i.ytimg.com/vi/S0D41WdHYEg/maxresdefault.jpg"
+        },
+        {
+          "id":"AD05",
+          "name": "Firewatch",
+          "year": "2016",
+          "publisher": "Good Shepherd Entertainment",
+          "foundation": "PlayStation4, Xbox One, Nintendo Switch, PC ( Microsoft Windows, macOS, Linux)",
+          "gamemode": "Chơi đơn",
+          "description": "Firewatch là một trò chơi phiêu lưu giả tưởng được phát triển bởi Campo Santo. Trong trò chơi, người chơi vào vai Henry, một người đàn ông trẻ tình cờ trở thành lính gác cháy rừng ở Wyoming vào những năm 1980. Trong quá trình làm nhiệm vụ, Henry tạo liên kết với Delilah, một nhân viên trạm kiểm soát từ xa, thông qua cuộc trò chuyện radio. Trò chơi tập trung vào việc khám phá môi trường tự nhiên, giải quyết các câu đố và tham gia vào một câu chuyện nghệ thuật đầy bí ẩn và cảm xúc.",
+          "mainfeature": "Firewatch nổi bật với cốt truyện chất lượng cao, hình ảnh đẹp mắt và âm thanh sống động. Trò chơi mang đến một trải nghiệm phiêu lưu tĩnh lặng, tạo ra một không gian yên bình để người chơi khám phá và tìm hiểu câu chuyện của Henry và Delilah. Firewatch cũng được đánh giá cao về việc xây dựng mối quan hệ và tạo cảm xúc cho người chơi thông qua các cuộc trò chuyện và quyết định trong trò chơi.",
+          "price": "5.000.000VNĐ",
+          "img": "https://th.bing.com/th/id/R.f089bdf6659c15a0c767f35d52e166ac?rik=mvE1u2SGbsuFYQ&riu=http%3a%2f%2fgameluster.com%2fwp-content%2fuploads%2f2016%2f12%2fFirewatch-Main-image.jpg&ehk=19NXkUVTJMNK1Tu4HzAPNscHZrfAFyv3XdaLt9WJ7ZE%3d&risl=&pid=ImgRaw&r=0"
+        }
+      ],
+      "Shooter": [
+        {
+          "id":"SH01",
+          "name": "Call of Duty (series)",
+          "year": "2003",
+          "publisher": "Activision",
+          "foundation": "PlayStation 4, Xbox One, Microsoft Windows.",
+          "gamemode": "Chiến dịch đơn lẻ, chế độ multiplayer trực tuyến, và chế độ Battle Royale (Warzone).",
+          "description": "Call of Duty là một loạt trò chơi bắn súng góc nhìn thứ nhất (FPS) tập trung vào trải nghiệm chiến tranh hiện đại hoặc lịch sử. Người chơi tham gia vào các chiến dịch đơn lẻ hoặc chế độ chơi trực tuyến.",
+          "mainfeature": "Đồ họa đẹp mắt, hệ thống vũ khí và trang bị đa dạng, chế độ trực tuyến với nhiều chế độ chơi khác nhau, và hệ thống tiến bộ và cấp độ cho nhân vật.",
+          "price": "850.000VNĐ",
+          "img": "https://tse3.mm.bing.net/th?id=OIP.B7LfKfm6wYu4sxK94SA0FgHaDa&pid=Api&P=0&h=180"
+        },
+        {
+          "id":"SH02",
+          "name": "Overwatch",
+          "year": "2016",
+          "publisher": " Blizzard Entertainment.",
+          "foundation": "PlayStation 4, Xbox One, Nintendo Switch, Microsoft Windows.",
+          "gamemode": "Chế độ chơi trực tuyến đội hình, trong đó người chơi có thể lựa chọn giữa các anh hùng với khả năng đặc biệt và vai trò khác nhau.",
+          "description": " Overwatch là một trò chơi bắn súng đội hình tác chiến góc nhìn thứ nhất (FPS) tập trung vào các cuộc đối đầu đội ngũ đa dạng của các anh hùng. Trò chơi kết hợp yếu tố hành động, chiến thuật, và phối hợp đội. ",
+          "mainfeature": " Hơn 30 anh hùng đa dạng với phong cách chơi riêng, hệ thống phối hợp đội, đồ họa sắc nét, và trải nghiệm nhanh-paced.",
+          "price": "950.000VNĐ",
+          "img": "https://tse2.mm.bing.net/th?id=OIP.Y9TPgac5XN8fg67pr8rGNgHaFj&pid=Api&P=0&h=180"
+
+        },
+        {
+          "id":"SH03",
+          "name": "Fortnite ",
+          "year": "2017",
+          "publisher": " Epic Games.",
+          "foundation": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch, Android, iOS, Microsoft Windows.",
+          "gamemode": "Chế độ chơi trực tuyến đa người, bao gồm chế độ Solo, Duo, Trio và Squad. ",
+          "description": "Fortnite là một trò chơi bắn súng sinh tồn nhiều người chơi trực tuyến, kết hợp với yếu tố xây dựng và hành động góc nhìn thứ ba (TPS). Trò chơi nổi tiếng với chế độ Battle Royale độc đáo.",
+          "mainfeature": " Xây dựng cấu trúc và phá hủy môi trường, chiến đấu trong một trận chiến Battle Royale, sự kiện thú vị và hợp tác với bạn bè. ",
+          "price": "1.190.000VNĐ",
+          "img": "https://tse4.mm.bing.net/th?id=OIP.lpLDu1Qk3iCTct2hcJvvrwHaEK&pid=Api&P=0&h=180"
+        },
+        {
+          "id":"SH04",
+          "name": "Apex Legends",
+          "year": "2019",
+          "publisher": "Electronic Arts",
+          "foundation": " PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch, Microsoft Windows.",
+          "gamemode": "Chế độ chơi trực tuyến đội hình ba người, bao gồm chế độ Trios và chế độ Duos.",
+          "description": " Apex Legends là một trò chơi bắn súng Battle Royale độc đáo, nơi người chơi tham gia vào cuộc chiến sinh tồn trong một đội ba người. Trò chơi nổi tiếng với những nhân vật có kỹ năng đặc biệt và hành động nhanh nhảu.  ",
+          "mainfeature": "Hệ thống nhân vật đa dạng với các kỹ năng riêng, cơ chế ping để giao tiếp với đồng đội, chiến thuật và cân nhắc, cùng với đồ họa đẹp mắt. ",
+          "price": "1.900.900VNĐ",
+          "img": "https://www.mtrend.vn/wp-content/uploads/2019/04/cau-hinh-choi-apex-legends.jpg"
+        },
+        {
+          "id":"SH05",
+          "name": "Rainbow Six Siege",
+          "year": "2015",
+          "publisher": " Ubisoft",
+          "foundation": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Microsoft Windows.",
+          "gamemode": "Chế độ chơi trực tuyến đội hình, bao gồm chế độ Multiplayer và chế độ Thợ săn.",
+          "description": " Rainbow Six Siege là một trò chơi bắn súng tác chiến taktic góc nhìn thứ nhất (FPS), nơi người chơi tham gia vào các trận đấu tưởng tượng giữa đội Rainbow và kẻ thù. Trò chơi tập trung vào yếu tố chiến thuật và phối hợp đội.",
+          "mainfeature": "Bản đồ tương tác, hệ thống phá hủy môi trường, nhân vật có kỹ năng đặc biệt, chiến thuật đội hình, và trải nghiệm taktic chặt chẽ. ",
+          "price": "990.000VNĐ",
+          "img": "https://i.ytimg.com/vi/DKOw1yMIYb4/maxresdefault.jpg"
+        }
+      ],
+      "Sports": [
+        {
+          "id": "SP01",
+          "name": "FIFA 22",
+          "year": "2021",
+          "publisher": "Electronic Arts",
+          "foundation": " PlayStation 5, Xbox Series X/S, PlayStation 4, Xbox One, và PC (Microsoft Windows).",
+          "gamemode": "Chơi đơn, Chơi đa người",
+          "description": "FIFA 22 là phiên bản mới nhất trong loạt game bóng đá nổi tiếng của Electronic Arts. Game được phát triển bởi EA Vancouver và EA Romania và phát hành trên nhiều nền tảng, bao gồm PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch và PC.  Trong FIFA 22, người chơi có thể tham gia vào các trận đấu bóng đá sống động với các câu lạc bộ và đội tuyển hàng đầu trên thế giới. Game mang đến trải nghiệm chân thực với đồ họa tốt, cải tiến gameplay và nhiều tính năng mới.",
+          "mainfeature": "FIFA 22 đi kèm với nhiều chế độ chơi như Chế độ Chuyến nghỉ, Chế độ Trực tuyến, Chế độ Thách thức và Chế độ Quản lý CLB. Người chơi có thể tận hưởng các trận đấu với đội bóng yêu thích, xây dựng đội hình mạnh mẽ, tham gia giải đấu và thách thức bạn bè trong các trận đấu trực tuyến.  FIFA 22 được cải tiến về mặt gameplay, bao gồm hệ thống chuyển động HyperMotion, cho phép các cầu thủ trở nên linh hoạt và tự nhiên hơn. Game cũng cập nhật đội hình cầu thủ mới nhất, sân vận động, âm thanh và các tính năng khác để tăng cường trải nghiệm bóng đá.",
+          "price": "990.000VNĐ",
+          "img": "https://i2-prod.birminghammail.co.uk/incoming/article21158072.ece/ALTERNATES/s1200/0_FIFA-22-pic.jpg"
+        },
+        {
+          "id": "SP02",
+          "name": "NBA 2K22",
+          "year": "2021",
+          "publisher": "2K Sports",
+          "foundation": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch, PC.",
+          "gamemode": "Chơi đơn, Chơi đa người",
+          "description": "NBA 2K22 là một tựa game bóng rổ hàng đầu được phát triển bởi Visual Concepts và phát hành bởi 2K Sports. Game được phát hành trên nhiều nền tảng, bao gồm PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch và PC.  Trong NBA 2K22, người chơi có thể trải nghiệm cuộc sống của một cầu thủ bóng rổ chuyên nghiệp thông qua các chế độ chơi như Chế độ Sự nghiệp, Chế độ Trực tuyến và Chế độ Quản lý đội bóng. Game mang đến trải nghiệm bóng rổ chân thực với đội hình cầu thủ, sân vận động và các yếu tố khác được tái hiện một cách tinh vi.",
+          "mainfeature": "NBA 2K22 cung cấp đồ họa đẹp, gameplay mượt mà và cải tiến về hệ thống điều khiển để mang đến trải nghiệm chơi game mượt mà và đáng nhớ. Người chơi có thể tận hưởng các trận đấu hấp dẫn, thực hiện các pha ghi điểm đẹp mắt và thách thức các cầu thủ khác trên toàn thế giới trong chế độ chơi trực tuyến.  NBA 2K22 cũng cập nhật thông tin về các cầu thủ và đội bóng, đảm bảo tính chính xác và sự tương đồng với giải đấu thực tế. Game cũng có các tính năng độc đáo như tạo dáng và tùy chỉnh nhân vật, xây dựng sự nghiệp cầu thủ, và tham gia vào các hoạt động xã hội bên ngoài sân bóng rổ.",
+          "price": "1.450.000VNĐ",
+          "img": "https://i.imgur.com/BWkBAMb.jpg"
+        },
+        {
+          "id": "SP03",
+          "name": "EA Sports UFC 4",
+          "year": "2020",
+          "publisher": "Electronic Arts",
+          "foundation": "PlayStation 4, Xbox One",
+          "gamemode": "Chơi đơn, Chơi đa người",
+          "description": "EA Sports UFC 4 là một game thể thao đối kháng MMA (Mixed Martial Arts) phát triển bởi EA Vancouver và được xuất bản bởi Electronic Arts. Game được phát hành trên PlayStation 4 và Xbox One.  Trong EA Sports UFC 4, người chơi có thể tham gia vào các trận đấu MMA sống động với các võ sĩ nổi tiếng và các võ đài hàng đầu trên thế giới. Game mang đến trải nghiệm đầy chất lượng với đồ họa tuyệt vời, hệ thống phản ứng và cơ chế chiến đấu chân thực.",
+          "mainfeature": "EA Sports UFC 4 cung cấp nhiều chế độ chơi như Chế độ Sự nghiệp, Chế độ Trực tuyến và Chế độ Đấu đội. Người chơi có thể tạo và tùy chỉnh võ sĩ của mình, tham gia vào các trận đấu hấp dẫn và thách thức bạn bè trong các trận đấu trực tuyến.  Game cung cấp các đội đấu MMA nổi tiếng và nhiều võ sĩ chuyên nghiệp để người chơi có thể tham gia vào những trận đấu độc đáo và phần cứng. Ngoài ra, EA Sports UFC 4 cũng có các yếu tố xã hội, như sự nổi tiếng, quan hệ với đối thủ và các sự kiện đặc biệt để tăng cường trải nghiệm chơi game.",
+          "price": "880.000VNĐ",
+          "img": "https://images.hdqwalls.com/wallpapers/ea-sports-ufc-wide.jpg"
+        },
+        {
+          "id": "SP04",
+          "name": "Mario Tennis Aces",
+          "year": "2018",
+          "publisher": "Nintendo",
+          "foundation": "Nintendo Switch",
+          "gamemode": "Chơi đơn, Chơi đa người",
+          "description": "Mario Tennis Aces là một game thể thao dựa trên bộ sưu tập Mario của Nintendo, được phát triển bởi Camelot Software Planning và phát hành bởi Nintendo. Game được phát hành độc quyền trên hệ máy Nintendo Switch.  Trong Mario Tennis Aces, người chơi sẽ tham gia vào các trận đấu tennis đầy màu sắc với các nhân vật yêu thích trong thế giới Mario. Game mang đến trải nghiệm tennis vui nhộn và hấp dẫn, với các chế độ chơi như Chế độ Story, Chế độ Tournament, Chế độ Online và nhiều nội dung khác.  Người chơi có thể chọn các nhân vật Mario, Luigi, Peach, Bowser, Yoshi và nhiều nhân vật khác, mỗi nhân vật có khả năng và kỹ năng riêng. Game cung cấp hệ thống điều khiển đơn giản và linh hoạt, cho phép người chơi thực hiện các động tác tennis đa dạng và đặc biệt.",
+          "mainfeature": "Mario Tennis Aces cũng có chế độ chơi đa người với hỗ trợ chơi trực tuyến, cho phép người chơi thi đấu với bạn bè hoặc người chơi trên toàn thế giới. Ngoài ra, game cũng cung cấp các sự kiện thường xuyên và nhiệm vụ để người chơi tham gia và nhận được phần thưởng đặc biệt.  Mario Tennis Aces đã nhận được đánh giá tích cực từ cộng đồng game thủ và có điểm số trung bình là 75/100 trên Metacritic. Game mang đến sự kết hợp giữa thể loại thể thao và nhân vật Mario nổi tiếng, tạo nên một trải nghiệm tennis thú vị và đáng chơi trên Nintendo Switch.",
+          "price": "900.000VNĐ",
+          "img": "https://th.bing.com/th/id/OIP.SY_PX9faR_vR55hg3y1Y7gHaDt?pid=ImgDet&rs=1"
+        },
+        {
+          "id": "SP05",
+          "name": "PGA Tour 2K21",
+          "year": "2020",
+          "publisher": "2K Sports",
+          "foundation": "PlayStation 4, Xbox One, Nintendo Switch, Microsoft Windows, Stadia.",
+          "gamemode": "Chơi đơn, Chơi đa người",
+          "description": "PGA Tour 2K21 là một tựa game golf phát triển bởi HB Studios và được phát hành bởi 2K Sports. Game có sẵn trên nhiều nền tảng, bao gồm PlayStation 4, Xbox One, Nintendo Switch, Microsoft Windows và Stadia.  Trong PGA Tour 2K21, người chơi sẽ tham gia vào các giải đấu golf chuyên nghiệp trên các sân golf danh tiếng trên khắp thế giới. Game mang đến trải nghiệm golf chân thực với hệ thống điều khiển tinh tế, đồ họa đẹp mắt và mô phỏng chính xác các cú đánh và yếu tố môi trường.",
+          "mainfeature": "Người chơi có thể tạo và tùy chỉnh nhân vật golf của mình, tham gia vào các giải đấu, nâng cao kỹ năng và thách thức bạn bè trong chế độ chơi đa người. Game cung cấp nhiều sân golf nổi tiếng và thực tế, cùng với các golfer chuyên nghiệp và yếu tố thời tiết đa dạng để làm tăng sự thú vị và thử thách của trò chơi.  PGA Tour 2K21 cũng đi kèm với chế độ Career Mode, trong đó người chơi có thể xây dựng sự nghiệp golf của mình, tham gia vào các giải đấu lớn, kiếm tiền và nâng cấp trình độ của mình.",
+          "price": "1.099.000VNĐ",
+          "img": "https://static.mondoxbox.com/shotsnw/144/144310.jpg"
+        }
+      ],
+      "Stratery": [
+        {
+          "id": "ST01",
+          "name": "Civilization VI",
+          "year": "2016",
+          "publisher": "2K Games.",
+          "foundation": "PC, Mac, Linux, iOS, Nintendo Switch.",
+          "gamemode": "Chế độ chơi đơn lẻ và chế độ chơi nhiều người trực tuyến.",
+          "description": "Civilization VI là một trò chơi chiến lược xây dựng đế chế, nơi người chơi xây dựng và phát triển một vương quốc từ thời tiền sử đến thời đại hiện đại. Trò chơi tập trung vào quản lý nguồn tài nguyên, ngoại giao và chiến tranh.",
+          "mainfeature": "Xây dựng và phát triển đế chế, nghiên cứu công nghệ, quản lý nguồn tài nguyên, thực hiện ngoại giao với các quốc gia khác, chiến đấu và thống trị thế giới.",
+          "price": "549.000VNĐ",
+          "img": "https://th.bing.com/th/id/OIP.kSZCWNGqkq81ielloo-_1QHaEK?pid=ImgDet&rs=1"
+        },
+        {
+          "id": "ST02",
+          "name": "Total War: Warhammer II",
+          "year": "2017",
+          "publisher": "SEGA",
+          "foundation": "PC",
+          "gamemode": "Chế độ chơi đơn lẻ và chế độ chơi nhiều người trực tuyến.",
+          "description": "Total War: Warhammer II là một trò chơi chiến lược thời gian thực kết hợp với yếu tố chiến thuật lượn sóng, nơi người chơi chiếm lĩnh các quốc gia và vương quốc trong thế giới hư cấu của Warhammer.",
+          "mainfeature": "Quản lý quốc gia, xây dựng đội quân, chiến đấu với quân địch, khám phá và chiếm lĩnh lãnh thổ, nghiên cứu công nghệ và thực hiện chiến lược chiến tranh.",
+          "price": "1.062.000VNĐ",
+          "img": "https://static.taigame.org/image/screenshot/201709/total-war-warhammer-ii-3.jpg"
+        },
+        {
+          "id": "ST03",
+          "name": "XCOM 2",
+          "year": "2016",
+          "publisher": "2K Games.",
+          "foundation": "PC, Mac, Xbox One, PlayStation 4.",
+          "gamemode": "Chế độ chơi đơn lẻ.",
+          "description": "XCOM 2 là một trò chơi chiến lược theo lượt, nơi người chơi lãnh đạo một nhóm chiến binh để chống lại xâm lược ngoài hành tinh và giải cứu Trái đất. Trò chơi tập trung vào quản lý nguồn lực, chiến thuật tác chiến và nghiên cứu công nghệ.",
+          "mainfeature": "Xây dựng căn cứ, tuyển chọn và huấn luyện đội quân, nghiên cứu công nghệ, thực hiện nhiệm vụ tác chiến và quản lý nguồn lực.",
+          "price": "1.010.000VNĐ",
+          "img": "https://cdn.tigthai.com/imguploads/202010/14/09296360016026638199052_03-XCOM2CollectioniOS_Main.jpg"
+        },
+        {
+          "id": "ST04",
+          "name": "Starcraft II",
+          "year": "2010",
+          "publisher": "Blizzard Entertainment.",
+          "foundation": "PC, Mac.",
+          "gamemode": "Chế độ chơi đơn lẻ, chế độ chơi nhiều người trực tuyến và chế độ thử thách.",
+          "description": "StarCraft II là một trò chơi chiến lược thời gian thực khoa học viễn tưởng, nơi người chơi chiếm lĩnh các phe phái trong một hệ thống thiên hà và tham gia vào các trận đấu đa người kịch tính.",
+          "mainfeature": "Xây dựng căn cứ, thu thập tài nguyên, huấn luyện quân đội, chiến đấu với phe đối thủ, nghiên cứu công nghệ và thực hiện chiến thuật tác chiến.",
+          "price": "700.000VNĐ",
+          "img": "https://i.ytimg.com/vi/fTOB_uC6gG4/maxresdefault.jpg"
+        },
+        {
+          "id": "ST05",
+          "name": "Crusader Kings III",
+          "year": "2020",
+          "publisher": " Paradox Interactive.",
+          "foundation": "PC, Mac.",
+          "gamemode": "Chế độ chơi đơn lẻ.",
+          "description": "Crusader Kings III là một trò chơi chiến lược quản lý đế chế, nơi người chơi lãnh đạo một gia tộc trong thời kỳ Trung cổ và phải xây dựng và mở rộng đế chế của mình thông qua quản lý gia đình, chính trị và quân sự.",
+          "mainfeature": "Quản lý gia đình và thân tộc, xây dựng đế chế, thực hiện ngoại giao và chiến tranh, tương tác với các nhân vật và sự kiện lịch sử.",
+          "price": "1.500.000VNĐ",
+          "img": "https://i.ytimg.com/vi/iWCGvLXPkQY/maxresdefault.jpg"
+        }
+      ]
+    }
+  ],
+  "System":[
+    {
+      "Action":[
+        {
+          "id": "AC01",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5 3470 @ 3.2GHz (4 CPU) / AMD X8 FX-8350 @ 4GHz (8 CPU)",
+          "dohoa": "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
+          "dungluongocung": "72GB",
+          "hedieuhanh": "Windows 10 (64-bit), Windows 8.1 (64-bit), Windows 8 (64-bit), Windows 7 (64-bit) Service Pack 1 hoặc hơn"
+        },
+        {
+          "id": "AC02",
+          "bonho": "12GB",
+          "bovixuly": "Intel Core i5-2500K hoặc AMD Ryzen R5 1600X",
+          "dohoa": "NVIDIA GeForce GTX 970 / GeForce GTX 1660 hoặc AMD Radeon R9 390 / Radeon RX 580",
+          "dungluongocung": "175GB",
+          "hedieuhanh": "Windows 10 (64-bit)"
+        },
+        {
+          "id": "AC03",
+          "bonho": "16GB",
+          "bovixuly": "Intel Core i7-6700 hoặc AMD Ryzen 7 1700",
+          "dohoa": "NVIDIA GeForce GTX 1080 hoặc AMD Radeon RX Vega 64",
+          "dungluongocung": "50GB",
+          "hedieuhanh": "Windows 10 (64-bit)"
+        },
+        {
+          "id": "AC04",
+          "bonho": "8GB",
+          "bovixuly": "Bộ xử lý tùy chỉnh x86-64 của AMD, 8 lõi",
+          "dohoa": "GPU tùy chỉnh dựa trên kiến trúc AMD Radeon",
+          "dungluongocung": "50GB",
+          "hedieuhanh": "PlayStation 4"
+        },
+        {
+          "id": "AC05",
+          "bonho": "8GB",
+          "bovixuly": "Bộ xử lý tùy chỉnh x86-64 của AMD, 8 lõi",
+          "dohoa": "GPU tùy chỉnh dựa trên kiến trúc AMD Radeon",
+          "dungluongocung": "50GB",
+          "hedieuhanh": "PlayStation 4"
+        }
+      ]
+    },
+    {
+      "Adventure":[
+        {
+          "id": "AD01",
+          "bonho": "4GB",
+          "bovixuly": "CPU ARM Cortex-A57 Quad-Core 1.02 GHz (tích hợp trong Nintendo Switch)",
+          "dohoa": "GPU NVIDIA Tegra (tích hợp trong Nintendo Switch)",
+          "dungluongocung": "13,4GB",
+          "hedieuhanh": "Nintendo Switch OS"
+        },
+        {
+          "id": "AD02",
+          "bonho": "8GB",
+          "bovixuly": "CPU 8 nhân x86-64 AMD Jaguar",
+          "dohoa": "GPU AMD Radeon chạy trên kiến trúc GCN",
+          "dungluongocung": "50GB",
+          "hedieuhanh": "PlayStation 4"
+        },
+        {
+          "id": "AD03",
+          "bonho": "4GB",
+          "bovixuly": "CPU 2 nhân x86-64",
+          "dohoa": "GPU cùng với hỗ trợ OpenGL 4.4",
+          "dungluongocung": "4GB",
+          "hedieuhanh": "PlayStation 4"
+        },
+        {
+          "id": "AD04",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-2500K hoặc AMD Ryzen 5 1600X",
+          "dohoa": "GPU NVIDIA GTX 970 / GTX 1060 hoặc AMD Radeon RX 480",
+          "dungluongocung": "32GB",
+          "hedieuhanh": "Windows 7, Windows 8 hoặc Windows 10"
+        },
+        {
+          "id": "AD05",
+          "bonho": "6GB",
+          "bovixuly": "Intel Core i5-8400 hoặc AMD Ryzen 5 1600",
+          "dohoa": "GPU NVIDIA GTX 1060 hoặc AMD Radeon RX 580",
+          "dungluongocung": "4GB",
+          "hedieuhanh": "Windows 7, Windows 8 hoặc Windows 10"
+        }
+      ]
+    },
+    {
+      "Shooter":[
+        {
+          "id": "SH01",
+          "bonho": "12GB",
+          "bovixuly": "Intel Core i5-2500K / AMD Ryzen R5 1600X hoặc tương đương",
+          "dohoa": "NVIDIA GeForce GTX 970 / NVIDIA GeForce GTX 1660 Super hoặc AMD Radeon R9 390 / AMD Radeon RX 580",
+          "dungluongocung": "175GB",
+          "hedieuhanh": "Windows 10 (64-bit)"
+        },
+        {
+          "id": "SH02",
+          "bonho": "6GB",
+          "bovixuly": "Intel Core i5 hoặc AMD Phenom II X3 hoặc tương đương",
+          "dohoa": "NVIDIA GeForce GTX 660, ATI Radeon HD 7950 hoặc tương đương",
+          "dungluongocung": "30GB",
+          "hedieuhanh": "Windows 10 (64-bit)"
+        },
+        {
+          "id": "SH03",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5 2.8 GHz",
+          "dohoa": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7870 hoặc tương đương",
+          "dungluongocung": "30GB",
+          "hedieuhanh": "Windows 10 (64-bit)"
+        },
+        {
+          "id": "SH04",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5 3570K hoặc tương đương",
+          "dohoa": "NVIDIA GeForce GTX 970 / AMD Radeon R9 290",
+          "dungluongocung": "30GB",
+          "hedieuhanh": "Windows 7/8/10 (64-bit)"
+        },
+        {
+          "id": "SH05",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-2500K / AMD Ryren R5 1500X hoặc tương đương",
+          "dohoa": "NVIDIA GeForce GTX 670 / AMD Radeon HD 7970 (hỗ trợ DirectX 11)",
+          "dungluongocung": "61GB",
+          "hedieuhanh": "Windows 7/8/10 (64-bit)"
+        }
+      ]
+    },
+    {
+      "Sports":[
+        {
+          "id": "SP01",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-3550K hoặc AMD FX 8150",
+          "dohoa": "GPU NVIDIA GeForce GTX 670 hoặc AMD Radeon R9 270X",
+          "dungluongocung": "50GB",
+          "hedieuhanh": "Windows 10 (64-bit)"
+        },
+        {
+          "id": "SP02",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-3550K hoặc AMD FX 8150",
+          "dohoa": "GPU NVIDIA GeForce GTX 670 hoặc AMD Radeon R9 270X",
+          "dungluongocung": "110GB",
+          "hedieuhanh": "Windows 7 (64-bit) hoặc Windows 10 (64-bit)"
+        },
+        {
+          "id": "SP03",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-3550K hoặc AMD FX 8150",
+          "dohoa": "GPU NVIDIA GeForce GTX 670 hoặc AMD Radeon R9 270X",
+          "dungluongocung": "22GB",
+          "hedieuhanh": "Windows 7 (64-bit) hoặc Windows 10 (64-bit)"
+        },
+        {
+          "id": "SP04",
+          "bonho": "4GB",
+          "bovixuly": "CPU Intel Core i5",
+          "dohoa": "GPU NVIDIA GeForce GTX 660",
+          "dungluongocung": "2GB",
+          "hedieuhanh": "Windows 7(64-bit) trở lên hoặc macOS 10.12 trở lên"
+        },
+        {
+          "id": "SP05",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-4670 / AMD FX-8350 hoặc tương đương",
+          "dohoa": "NVIDIA GeForce GTX 970 hoặc AMD Radeon R9 390 hoặc tương đương",
+          "dungluongocung": "20GB",
+          "hedieuhanh": "Windows 10 (64-bit)"
+        }
+      ]
+    },
+    {
+      "Stratery":[
+        {
+          "id": "ST01",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5 2.5 GHz hoặc AMD FX 8350 4.0 GHz hoặc tương đương",
+          "dohoa": "2 GB VRAM, DirectX 11 cùng với card đồ họa tương thích",
+          "dungluongocung": "12GB",
+          "hedieuhanh": "Windows 7 (64-bit) hoặc mới hơn"
+        },
+        {
+          "id": "ST02",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-4570 3.2 GHz hoặc AMD FX-8350 4.0 GHz",
+          "dohoa": "NVIDIA GeForce GTX 770 4GB hoặc AMD Radeon R9 290X 4GB hoặc tương đương ",
+          "dungluongocung": "60GB",
+          "hedieuhanh": "Windows 7/8.1/10 (64-bit)"
+        },
+        {
+          "id": "ST03",
+          "bonho": "8GB",
+          "bovixuly": "CPU Intel Core i3-3225 3.3 GHz hoặc AMD Phenom II X4 980 3.7 GHz",
+          "dohoa": "GPU NVIDIA GeForce GTX 660 hoặc AMD Radeon HD 7970",
+          "dungluongocung": "45GB",
+          "hedieuhanh": "Windows 7/8/10 (64-bit)"
+        },
+        {
+          "id": "ST04",
+          "bonho": "4GB",
+          "bovixuly": "CPU Intel Core i3-3210 hoặc AMD A8-7600",
+          "dohoa": "GPU NVIDIA GeForce GT 740 hoặc AMD Radeon R7 260X",
+          "dungluongocung": "30GB",
+          "hedieuhanh": "Windows 7/8.1/10 (64-bit) hoặc macOS 10.12 trở lên"
+        },
+        {
+          "id": "ST05",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-4670K / AMD Ryzen 5 2400G",
+          "dohoa": "NVIDIA GeForce GTX 1650 / AMD Radeon R9 390",
+          "dungluongocung": "8GB",
+          "hedieuhanh": "Windows 10 (64-bit)"
+        }
+      ]
+    }
+  ]
+}
