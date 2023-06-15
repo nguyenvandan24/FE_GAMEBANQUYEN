@@ -36,26 +36,6 @@ function App() {
             tab: "998px",
         },
     };
-    // const users = ref(database, "users");
-    // onValue(users,(snapshot) => {
-    //
-    // })
-     const dbRef = ref(getDatabase());
-    set(child(dbRef, `users/2`), {
-        email: "nthau@gmail.com",
-        fullname: "Nguyễn Thị Hậu",
-        username: "haunt",
-        password: "0123"
-    });
-    // get(child(dbRef, `users`)).then((snapshot) => {
-    //     if (snapshot.exists()) {
-    //         console.log(snapshot.val());
-    //     } else {
-    //         console.log("No data available");
-    //     }
-    // }).catch((error) => {
-    //     console.error(error);
-    // });
     return (
       <ThemeProvider theme={theme}>
       <BrowserRouter>
@@ -78,22 +58,6 @@ function App() {
           <Footer />
       </BrowserRouter>
       </ThemeProvider>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 
