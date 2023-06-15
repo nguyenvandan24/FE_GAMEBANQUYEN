@@ -20,23 +20,23 @@ const FilterSection = () => {
     const categoryOnlyData= getUniqueData(all_products, "category");
 
     return <Wrapper>
-        <div className="filter-search">
-            <form onSubmit={(e) => e.preventDefault()}>
-                <input type="text" name="text" value={text} onChange={updateFilterValue} placeholder="Search" />
-            </form>
-        </div>
-        <div className="filter-category">
-            <h3> Category</h3>
-            <div>
-                {categoryOnlyData.map((curElem, index) => {
-                    return <button key = {index}
-                        type="button" name =" category" value={category} onClick={updateFilterValue}>
-                        {curElem}
-                    </button>
+        {/*<div className="filter-search">*/}
+        {/*    <form onSubmit={(e) => e.preventDefault()}>*/}
+        {/*        <input type="text" name="text" value={text} onChange={updateFilterValue} placeholder="Search" />*/}
+        {/*    </form>*/}
+        {/*</div>*/}
+        {/*<div className="filter-category">*/}
+        {/*    <h3> Category</h3>*/}
+        {/*    <div>*/}
+        {/*        {categoryOnlyData.map((curElem, index) => {*/}
+        {/*            return <button key = {index}*/}
+        {/*                type="button" name =" category" value={category} onClick={updateFilterValue}>*/}
+        {/*                {curElem}*/}
+        {/*            </button>*/}
 
-                })}
-            </div>
-        </div>
+        {/*        })}*/}
+        {/*    </div>*/}
+        {/*</div>*/}
     </Wrapper>
 };
 const Wrapper = styled.section`
