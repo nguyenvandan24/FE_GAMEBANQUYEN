@@ -1,11 +1,68 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
-import ProductItem from "./ProductItem";
-const GridView = ({products}) => {
+import {NavLink} from "react-router-dom";
+const GridView = () => {
+    const [products, setProducts] = useState([]);
+    const [defaultProducts, setDefaultProducts] =useState([]);
+    const [sortOption, setSortOption] = useState('default');
+
+    useEffect(() => {
+        fetch('http://localhost:3000/products')
+            .then(response => response.json())
+            .then(data => {
+                setProducts(data);
+                setDefaultProducts(data)
+        })
+            .catch(error => {
+                console.log("Lỗi:" , error);
+            });
+    },[]);
+
+    const sortProducts = (option) => {
+        if(option === 'default'){
+            setProducts(defaultProducts);
+        }else {
+            let sortedProducts = [...products];
+
+            if(option === 'priceDescending'){
+                sortedProducts.sort((a,b) => b.price - a.price);
+            }else {
+                if (option === 'priceAscending'){
+                    sortedProducts.sort((a,b) => a.price - b.price)
+                }
+            }
+            setProducts(sortedProducts);
+        }
+        setSortOption(option);
+    }
     return (
         <Wrapper className="section">
+            <div className="arrange-price">
+                <label>Sắp xếp:</label>
+                <select id="sort" value={sortOption} onChange={(e) => sortProducts(e.target.value)}>
+                    <option value="default">Mặc định</option>
+                    <option value="priceDescending">Giá giảm dần</option>
+                    <option value="priceAscending">Giá tăng dần</option>
+                </select>
+            </div>
         <div className="container grid grid-three-column">
-               <ProductItem/>
+            {products.map(product => (
+                <NavLink to={`/product_detail/${product.id}`} key={product.id}>
+                    <div className="card" id="listProducts">
+                        <div className="card-img">
+                            <figure>
+                                <img src={product.img} alt="" />
+                            </figure>
+                        </div>
+                        <div className="card-data">
+                            <div className="card-data-flex">
+                                <h3>{product.name}</h3>
+                                <p className="card-data--price-x">{product.price}VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
+            ))}
         </div>
     </Wrapper>
     );
@@ -13,6 +70,9 @@ const GridView = ({products}) => {
 
 const Wrapper = styled.section`
   padding: 9rem 0;
+  .arrange-price {
+    padding-bottom: 2rem;
+  }
   .container {
     max-width: 120rem;
   }

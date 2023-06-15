@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {BsFillGridFill, BsList} from "react-icons/bs";
 import {useFilterContext} from "../context/filter_context";
@@ -20,30 +20,11 @@ const Sort = () => {
                 </button>
             </div>
             {/* 2st column */}
-            <div className="product-data">
-                {/* tong san pham*/}
-                <h3><b>Game</b></h3>
-            </div>
+            {/*<div className="product-data">*/}
+            {/*    /!* tong san pham*!/*/}
+            {/*    <h3><b>Game</b></h3>*/}
+            {/*</div>*/}
             {/* 3rd column */}
-            <div className="sort-section">
-                <form action="#">
-                    <label htmlFor="sort"></label>
-                    <select form="sort" id="sort" className="sort-seclect--style" onClick={sorting}>
-                        <option value="lowest">Price(lowest)</option>
-                        <option value="#" disabled></option>
-                        <option value="lowest">Price(highest)</option>
-                        <option value="#" disabled></option>
-                        <option value="lowest">Price(a-z)</option>
-                        <option value="#" disabled></option>
-                        <option value="lowest">Price(z-a)</option>
-
-                    </select>
-                </form>
-            </div>
-
-
-
-
         </Wrapper>
     )
 };
@@ -73,17 +54,6 @@ const Wrapper = styled.section`
       color: #61dafb;
     }
   }
-
-  .sort-selection .sort-selection--style {
-    padding: 0.5rem;
-    cursor: pointer;
-
-    .sort-select--option {
-      padding: 0.5rem 0;
-      cursor: pointer;
-      height: 2rem;
-      padding: 10px;
-    }
-  }
+  
 `;
 export default Sort;
