@@ -5,6 +5,7 @@ const GridView = () => {
     const [products, setProducts] = useState([]);
     const [defaultProducts, setDefaultProducts] =useState([]);
     const [sortOption, setSortOption] = useState('default');
+    const [categoryOption, setCategoryOption] = useState('all');
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
@@ -35,8 +36,54 @@ const GridView = () => {
         }
         setSortOption(option);
     }
+
+    const categoryProducts = (option) => {
+        if (option === 'all'){
+            setProducts(defaultProducts);
+        } else {
+            if (option === 'action'){
+                const filteredProducts = defaultProducts.filter(product => product.category === 'Action');
+                setProducts(filteredProducts);
+            }
+            if (option === 'adventure'){
+                const filteredProducts = defaultProducts.filter(product => product.category === 'Adventure');
+                setProducts(filteredProducts);
+            }
+            if (option === 'shooter'){
+                const filteredProducts = defaultProducts.filter(product => product.category === 'Shooter');
+                setProducts(filteredProducts);
+            }
+            if (option === 'sports'){
+                const filteredProducts = defaultProducts.filter(product => product.category === 'Sports');
+                setProducts(filteredProducts);
+            }
+            if (option === 'stratery'){
+                const filteredProducts = defaultProducts.filter(product => product.category === 'Stratery');
+                setProducts(filteredProducts);
+            }
+        }
+        setCategoryOption(option);
+    };
+
     return (
         <Wrapper className="section">
+            <div className="grid grid-three-column">
+                <div className="arrange-price">
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <input class="search" type="text" name="text"  placeholder="Search" />
+                    </form>
+                </div>
+                <div className="arrange-category">
+                    <label>Thể loại game:</label>
+                    <select id="category" value={categoryOption} onChange={(e) => categoryProducts(e.target.value)}>
+                        <option value="all">Tất cả</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="shooter">Shooter</option>
+                        <option value="sports">Sports</option>
+                        <option value="stratery">Stratery</option>
+                    </select>
+                </div>
             <div className="arrange-price">
                 <label>Sắp xếp:</label>
                 <select id="sort" value={sortOption} onChange={(e) => sortProducts(e.target.value)}>
@@ -44,6 +91,7 @@ const GridView = () => {
                     <option value="priceDescending">Giá giảm dần</option>
                     <option value="priceAscending">Giá tăng dần</option>
                 </select>
+            </div>
             </div>
             <div className="container grid grid-three-column">
                 {products.map(product => (
@@ -64,11 +112,16 @@ const GridView = () => {
                     </NavLink>
                 ))}
             </div>
+
         </Wrapper>
     );
 };
 
 const Wrapper = styled.section`
+  .search{
+    height: 15px;
+    width: 200px;
+  }
   padding: 9rem 0;
   .arrange-price {
     padding-bottom: 2rem;
