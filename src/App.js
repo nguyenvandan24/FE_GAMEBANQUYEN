@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, BrowserRouter} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
@@ -17,7 +17,8 @@ import Register from "./pages/Register";
 import { getDatabase, ref, child, get, set } from "firebase/database";
 import { database } from "./firebase/firebase";
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
     const theme = {
         colors: {
@@ -57,9 +58,12 @@ function App() {
     // });
     return (
       <ThemeProvider theme={theme}>
-      <Router>
+      <BrowserRouter>
           <GlobalStyle />
           <Header />
+          <ToastContainer></ToastContainer>
+          <ToastContainer></ToastContainer>
+
           <Routes>
               <Route path="/"  element={<Home />}/>
               <Route path="/products" element={<Products />}/>
@@ -72,7 +76,7 @@ function App() {
               <Route path="*" element={<ErrorPage />}/>
           </Routes>
           <Footer />
-      </Router>
+      </BrowserRouter>
       </ThemeProvider>
     // <div className="App">
     //   <header className="App-header">

@@ -78,8 +78,8 @@ const Wrapper = styled.section`
   }
   .contact-short {
     max-width: 60vw;
-    margin: auto;
-    padding: 5rem 10rem;
+    margin: -71px 0px -43px 260px;
+    padding: 3rem 9rem;
     background-color: ${({ theme }) => theme.colors.bg};
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.colors.shadowSupport};

@@ -1,30 +1,64 @@
 {
   "users": [
     {
-      "email": "nvdan@gmail.com",
-      "fullname": "Nguyễn Văn Dẫn",
-      "username": "nvdan",
-      "pass": "nvd01",
-      "phone": "0123789456"
-    },
-    {
+      "id": "hau01",
       "email": "nthau@gmail.com",
       "fullname": "Nguyễn Thị Hậu",
-      "username": "nvhau",
       "pass": "nth02",
       "phone": "0123789753"
     },
     {
-      "email": "nntnga@gmail.com",
-      "fullname": "Nguyễn Ngọc Tố Nga",
-      "username": "nntnga",
-      "pass": "nntn03",
-      "phone": "0123219456"
+      "fullname": "g",
+      "email": "danrer@gamil.com",
+      "phone": "0356481519",
+      "id": "gg",
+      "pass": "gggggggg",
+      "repass": "gggggggg"
+    },
+    {
+      "fullname": "h",
+      "email": "hdan@gamil.com",
+      "phone": "0356481519",
+      "id": "h",
+      "pass": "hhhhhhhh",
+      "repass": "hhhhhhhh"
+    },
+    {
+      "fullname": "Nguyễn Văn Dẫn",
+      "email": "dan@gamil.com",
+      "phone": "0878979798",
+      "id": "dan",
+      "pass": "12345678",
+      "repass": "12345678"
+    },
+    {
+      "fullname": "f",
+      "email": "fdan@gamil.com",
+      "phone": "0356481519",
+      "id": "f",
+      "pass": "ffffffff",
+      "repass": "ffffffff"
+    },
+    {
+      "fullname": "n",
+      "email": "nnga@gmail.com",
+      "phone": "0808721321",
+      "id": "w",
+      "pass": "nnnnnnnnnn",
+      "repass": "nnnnnnnnnn"
+    },
+    {
+      "fullname": "j",
+      "email": "nga@gmail.com",
+      "phone": "0808721321",
+      "id": "j",
+      "pass": "jjjjjjjjj",
+      "repass": "jjjjjjjjj"
     }
   ],
   "products": [
     {
-      "id":"AC01",
+      "id": "AC01",
       "name": "Grand Theft Auto V",
       "year": "2013",
       "publisher": "Rockstar Games",
@@ -42,7 +76,7 @@
       "hedieuhanh": "Windows 10 (64-bit), Windows 8.1 (64-bit), Windows 8 (64-bit), Windows 7 (64-bit) Service Pack 1 hoặc hơn"
     },
     {
-      "id":"AC02",
+      "id": "AC02",
       "name": "Call of Duty: Warzone",
       "year": "2020",
       "publisher": "Activision",
@@ -60,7 +94,7 @@
       "hedieuhanh": "Windows 10 (64-bit)"
     },
     {
-      "id":"AC03",
+      "id": "AC03",
       "name": "Assassin's Creed Valhalla",
       "year": "2020",
       "publisher": "Ubisoft",
@@ -78,7 +112,7 @@
       "hedieuhanh": "Windows 10 (64-bit)"
     },
     {
-      "id":"AC04",
+      "id": "AC04",
       "name": "God of War",
       "year": "2018",
       "publisher": "Sony Interactive Entertainment",
@@ -96,7 +130,7 @@
       "hedieuhanh": "PlayStation 4"
     },
     {
-      "id":"AC05",
+      "id": "AC05",
       "name": "Marvel's Spider-Man",
       "year": "2018",
       "publisher": "Sony Interactive Entertainment",
@@ -113,9 +147,8 @@
       "dungluongocung": "50GB",
       "hedieuhanh": "PlayStation 4"
     },
-
     {
-      "id":"AD01",
+      "id": "AD01",
       "name": "The Legend of Zelda",
       "year": "2017",
       "publisher": "Nintendo",
@@ -133,7 +166,7 @@
       "hedieuhanh": "Nintendo Switch OS"
     },
     {
-      "id":"AD02",
+      "id": "AD02",
       "name": "Uncharted 4: A Thief's End",
       "year": "2016",
       "publisher": "Sony Interactive Entertainment",
@@ -151,7 +184,7 @@
       "hedieuhanh": "PlayStation 4"
     },
     {
-      "id":"AD03",
+      "id": "AD03",
       "name": "Journey",
       "year": "2012",
       "publisher": "Thatgamecompany và Sony Computer Entertainment",
@@ -169,7 +202,7 @@
       "hedieuhanh": "PlayStation 4"
     },
     {
-      "id":"AD04",
+      "id": "AD04",
       "name": "Tomb Raider",
       "year": "1996",
       "publisher": "Square Enix",
@@ -185,10 +218,9 @@
       "dohoa": "GPU NVIDIA GTX 970 / GTX 1060 hoặc AMD Radeon RX 480",
       "dungluongocung": "32GB",
       "hedieuhanh": "Windows 7, Windows 8 hoặc Windows 10"
-
     },
     {
-      "id":"AD05",
+      "id": "AD05",
       "name": "Firewatch",
       "year": "2016",
       "publisher": "Good Shepherd Entertainment",
@@ -206,7 +238,7 @@
       "hedieuhanh": "Windows 7, Windows 8 hoặc Windows 10"
     },
     {
-      "id":"SH01",
+      "id": "SH01",
       "name": "Call of Duty (series)",
       "year": "2003",
       "publisher": "Activision",
@@ -224,7 +256,7 @@
       "hedieuhanh": "Windows 10 (64-bit)"
     },
     {
-      "id":"SH02",
+      "id": "SH02",
       "name": "Overwatch",
       "year": "2016",
       "publisher": " Blizzard Entertainment.",
@@ -242,7 +274,7 @@
       "hedieuhanh": "Windows 10 (64-bit)"
     },
     {
-      "id":"SH03",
+      "id": "SH03",
       "name": "Fortnite ",
       "year": "2017",
       "publisher": " Epic Games.",
@@ -260,7 +292,7 @@
       "hedieuhanh": "Windows 10 (64-bit)"
     },
     {
-      "id":"SH04",
+      "id": "SH04",
       "name": "Apex Legends",
       "year": "2019",
       "publisher": "Electronic Arts",
@@ -278,7 +310,7 @@
       "hedieuhanh": "Windows 7/8/10 (64-bit)"
     },
     {
-      "id":"SH05",
+      "id": "SH05",
       "name": "Rainbow Six Siege",
       "year": "2015",
       "publisher": " Ubisoft",

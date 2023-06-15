@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {NavLink} from "react-router-dom";
+import {NavLink, useFetcher} from "react-router-dom";
 import {TbShoppingBag} from "react-icons/tb";
 import {CgClose, CgMenu} from "react-icons/cg";
 
@@ -161,6 +161,7 @@ class Nav extends React.Component{
             }
           }
         `;
+
         return(
             <Nav>
                 <div className="navbar">
@@ -183,6 +184,10 @@ class Nav extends React.Component{
                         <li>
                             <NavLink to="/register" className="navbar-link">Register</NavLink>
                         </li>
+                        {/*<li>*/}
+                        {/*    <NavLink to="/login" className="navbar-link">logout</NavLink>*/}
+                        {/*</li>*/}
+
                         <li>
                             <NavLink to="/cart" className="navbar-link cart-trolley--link">
                                 <TbShoppingBag className="cart-trolley" />
