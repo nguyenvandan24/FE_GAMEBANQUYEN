@@ -12,7 +12,7 @@ const GridView = () => {
             .then(data => {
                 setProducts(data);
                 setDefaultProducts(data)
-        })
+            })
             .catch(error => {
                 console.log("Lỗi:" , error);
             });
@@ -45,26 +45,26 @@ const GridView = () => {
                     <option value="priceAscending">Giá tăng dần</option>
                 </select>
             </div>
-        <div className="container grid grid-three-column">
-            {products.map(product => (
-                <NavLink to={`/product_detail/${product.id}`} key={product.id}>
-                    <div className="card" id="listProducts">
-                        <div className="card-img">
-                            <figure>
-                                <img src={product.img} alt="" />
-                            </figure>
-                        </div>
-                        <div className="card-data">
-                            <div className="card-data-flex">
-                                <h3>{product.name}</h3>
-                                <p className="card-data--price-x">{product.price}VNĐ</p>
+            <div className="container grid grid-three-column">
+                {products.map(product => (
+                    <NavLink to={`/product_detail/${product.id}`} key={product.id}>
+                        <div className="card" id="listProducts">
+                            <div className="card-img">
+                                <figure>
+                                    <img width={250} src={product.img} alt="" />
+                                </figure>
+                            </div>
+                            <div className="card-data">
+                                <div className="card-data-flex">
+                                    <h3>{product.name}</h3>
+                                    <p className="card-data--price-x">{product.price}VNĐ</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </NavLink>
-            ))}
-        </div>
-    </Wrapper>
+                    </NavLink>
+                ))}
+            </div>
+        </Wrapper>
     );
 };
 

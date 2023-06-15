@@ -91,7 +91,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .grid {
     display: grid;
-    gap: 9rem;
+    gap: 1rem;
   }
 
   .grid-two-column {

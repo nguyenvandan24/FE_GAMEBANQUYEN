@@ -6,6 +6,7 @@ import {Container} from "../styles/Container";
 import Star from "../components/Star";
 import AddToCart from "../components/AddToCart";
 import Tabs from "../components/Tabs";
+import Comment from "../components/Comment";
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -72,6 +73,7 @@ const ProductDetail = () => {
                         Hoàn tất quá trình cài đặt và thưởng thức {product.name} một cách tự do!
                     </div>
                 </Tabs>
+                <Comment/>
             </Container>
         </Wrapper>
     );

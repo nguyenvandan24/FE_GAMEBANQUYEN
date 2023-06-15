@@ -52,7 +52,7 @@ const ListView = () => {
                         <div className="card" id="listProducts">
                             <div className="card-img">
                                 <figure>
-                                    <img src={product.img} alt="" />
+                                    <img width={500} src={product.img} alt="" />
                                 </figure>
                             </div>
                             <div className="card-data">
@@ -119,7 +119,7 @@ const Wrapper = styled.section`
   .card {
     background-color: aliceblue;
     border-radius: 1rem;
-    
+
 
     .card-img{
       border-radius: 1rem;
