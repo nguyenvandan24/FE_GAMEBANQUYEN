@@ -9,7 +9,7 @@ import {useNavigate} from "react-router-dom";
 
 
 
-const Regiser = () =>{
+const Register = () =>{
     const [fullname, fullnamechange] = useState("");
     const [email, emailchange] = useState("");
     const [phone, phonechange] = useState("");
@@ -84,10 +84,15 @@ const Regiser = () =>{
     const handledsubmit=(e) => {
         e.preventDefault();
         if (IsValidate()) {
-                if (pass.length < 8) {
-                    toast.error('Password must be at least 8 characters long');
+                if (pass.length <= 8 || repass <= 8) {
+                    toast.error('Mật khẩu phải lớn hơn hoặc bằng 8 ký tự.');
                     return;
                 }
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]+$/;
+            if (!passwordRegex.test(pass)){
+                toast.error("Mật khẩu phải chứa chữ cái và ký tự đặc biệt.")
+                return;
+            }
             let regobj = {fullname, email, phone, id, pass, repass};
             console.log(regobj);
 
@@ -236,4 +241,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Regiser;
+export default Register;

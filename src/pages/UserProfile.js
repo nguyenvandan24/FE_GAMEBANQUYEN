@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
-import {useNavigate} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
 import {toast} from "react-toastify";
 
 const UserProfile = () => {
@@ -87,6 +87,7 @@ const UserProfile = () => {
                 console.log("Error:", error);
             });
     };
+
 
     return (
         <Wrapper>
@@ -175,7 +176,17 @@ const UserProfile = () => {
                                 <Button className="btn" type="submit" onClick={handleEditClick}>
                                     Edit
                                 </Button>
+                                <Button className="btn" type="submit" onClick={handleEditClick}>
+
+
+
+                                    <Link to="/login" className="navbar-link">logout</Link>
+                                </Button>
+
+
+
                             </div>
+
                         </div>
                     )}
                 </div>
