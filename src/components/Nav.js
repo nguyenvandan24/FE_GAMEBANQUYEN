@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {NavLink, useFetcher, useNavigate} from "react-router-dom";
 import {TbShoppingBag} from "react-icons/tb";
 import {CgClose, CgMenu} from "react-icons/cg";
+import {FaUser} from "react-icons/fa";
 
 const Nav=()=>{
 
@@ -195,7 +196,11 @@ const Nav=()=>{
                     <li>
                         <NavLink to="/login" className="navbar-link">logout</NavLink>
                     </li>
-
+                    <li>
+                        <NavLink to="/user" className="navbar-link">
+                            <FaUser className="fa-user" />
+                        </NavLink>
+                    </li>
                     <li>
                         <NavLink to="/cart" className="navbar-link cart-trolley--link">
                             <TbShoppingBag className="cart-trolley" />

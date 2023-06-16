@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": "hau01",
-      "email": "nthau@gmail.com",
-      "fullname": "Nguyễn Thị Hậu",
-      "pass": "nth02",
-      "phone": "0123789753"
-    },
-    {
       "fullname": "g",
       "email": "danrer@gamil.com",
       "phone": "0356481519",
@@ -24,20 +17,20 @@
       "repass": "hhhhhhhh"
     },
     {
-      "fullname": "Nguyễn Văn Dẫn",
-      "email": "dan@gamil.com",
-      "phone": "0878979798",
       "id": "dan",
-      "pass": "12345678",
-      "repass": "12345678"
+      "email": "dan@gamil.com",
+      "fullname": "Nguyễn Dẫn",
+      "phone": "0878979798",
+      "pass": "nvd123456#",
+      "repass": "nvd123456#"
     },
     {
-      "fullname": "f",
-      "email": "fdan@gamil.com",
-      "phone": "0356481519",
       "id": "f",
-      "pass": "ffffffff",
-      "repass": "ffffffff"
+      "email": "fdan@gamil.com",
+      "fullname": "Nguyễn Văn Trung",
+      "phone": "0356481519",
+      "pass": "nvt1234567",
+      "repass": "nvt1234567"
     },
     {
       "fullname": "n",
@@ -56,12 +49,12 @@
       "repass": "jjjjjjjjj"
     },
     {
-      "fullname": "h",
-      "email": "hau@gmail.com",
-      "phone": "0808721321",
       "id": "l",
-      "pass": "llllllll",
-      "repass": "llllllll"
+      "email": "haung@gmail.com",
+      "fullname": "Nguyễn Thị Hậu",
+      "phone": "0808721321",
+      "pass": "hau002789",
+      "repass": "hau002789"
     },
     {
       "fullname": "Lê Thị Hoa",
