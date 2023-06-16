@@ -99,7 +99,7 @@ const Login =()=>{
                                     checked={rememberMe}
                                     onChange={handleRememberMeChange}
                                 />
-                                <label>Remember Me</label>
+                                <label style={{fontSize: "medium"}}>Remember Me</label>
                             </div>
                             <div className="text" style={{textAlign: "left", color: "gray"}}>
                                 Forgot password?
@@ -129,8 +129,11 @@ const Wrapper = styled.section`
     background-color: aliceblue;
     border-radius: 5rem;
     max-width: 35rem;
-    height: 47rem;
+    height: 51rem;
     margin: auto;
+  }
+  .remember-me {
+    margin-right: auto;
   }
   .common-heading {
     padding-top: 2rem;

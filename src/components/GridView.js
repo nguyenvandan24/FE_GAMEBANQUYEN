@@ -77,8 +77,22 @@ const GridView = () => {
     const getCurrentPageData = () => {
         const startIndex = currentPage * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
-        return products.slice(startIndex, endIndex);
+        return filteredProducts.slice(startIndex, endIndex);
     };
+    const [search, setSearch] = useState("");
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
+    useEffect(() => {
+        const filteredData = products.filter((item) => {
+            return item.name.toLowerCase().includes(search.toLowerCase());
+        });
+        setFilteredProducts(filteredData);
+    }, [products, search]);
+
+    const handleChange = (e) => {
+        setSearch(e.target.value);
+    };
+
 
 
     return (
@@ -86,7 +100,14 @@ const GridView = () => {
             <div className="grid grid-three-column">
                 <div className="arrange-price">
                     <form onSubmit={(e) => e.preventDefault()}>
-                        <input class="search" type="text" name="text"  placeholder="Search" />
+                        <input
+                            className="search"
+                            value={search}
+                            type="text"
+                            name="text"
+                            placeholder="Search"
+                            onChange={handleChange}
+                        />
                     </form>
                 </div>
                 <div className="arrange-category">

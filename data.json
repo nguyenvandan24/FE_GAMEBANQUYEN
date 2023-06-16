@@ -71,6 +71,14 @@
       "phone": "0800861321",
       "pass": "quametmoi@1",
       "repass": "quametmoi@1"
+    },
+    {
+      "id": "anhanh",
+      "email": "toanh@gmail.com",
+      "fullname": "Lý Tố Anh",
+      "phone": "0808721321",
+      "pass": "qwertyuiop@1",
+      "repass": "qwertyuiop@1"
     }
   ],
   "products": [
