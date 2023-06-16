@@ -54,6 +54,22 @@
       "id": "j",
       "pass": "jjjjjjjjj",
       "repass": "jjjjjjjjj"
+    },
+    {
+      "fullname": "h",
+      "email": "hau@gmail.com",
+      "phone": "0808721321",
+      "id": "l",
+      "pass": "llllllll",
+      "repass": "llllllll"
+    },
+    {
+      "fullname": "Lê Thị Hoa",
+      "email": "hoa@gmail.com",
+      "phone": "0808721321",
+      "id": "Lê Thị Hoa",
+      "pass": "12345678",
+      "repass": "12345678"
     }
   ],
   "products": [

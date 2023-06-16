@@ -36,28 +36,29 @@ function App() {
             tab: "998px",
         },
     };
-    return (
-      <ThemeProvider theme={theme}>
-      <BrowserRouter>
-          <GlobalStyle />
-          <Header />
-          <ToastContainer></ToastContainer>
-          <ToastContainer></ToastContainer>
 
-          <Routes>
-              <Route path="/"  element={<Home />}/>
-              <Route path="/products" element={<Products />}/>
-              <Route path="/about" element={<About />}/>
-              <Route path="/contact" element={<Contact />}/>
-              <Route path="/product_detail/:id" element={<ProductDetail />}/>
-              <Route path="/cart" element={<Cart />}/>
-              <Route path="/login" element={<Login />}/>
-              <Route path="/register" element={<Register />}/>
-              <Route path="*" element={<ErrorPage />}/>
-          </Routes>
-          <Footer />
-      </BrowserRouter>
-      </ThemeProvider>
+    return (
+        <ThemeProvider theme={theme}>
+            <BrowserRouter>
+                <GlobalStyle />
+                <Header />
+                <ToastContainer></ToastContainer>
+                <ToastContainer></ToastContainer>
+
+                <Routes>
+                    <Route path="/"  element={<Home />}/>
+                    <Route path="/products" element={<Products />}/>
+                    <Route path="/about" element={<About />}/>
+                    <Route path="/contact" element={<Contact />}/>
+                    <Route path="/product_detail/:id" element={<ProductDetail />}/>
+                    <Route path="/cart" element={<Cart />}/>
+                    <Route path="/login" element={<Login />}/>
+                    <Route path="/register" element={<Register />}/>
+                    <Route path="*" element={<ErrorPage />}/>
+                </Routes>
+                <Footer />
+            </BrowserRouter>
+        </ThemeProvider>
   );
 }
 

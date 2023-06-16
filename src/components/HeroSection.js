@@ -5,33 +5,33 @@ import {Button} from "../styles/Button";
 
 const HeroSection = ({ myData}) =>{
     const {name} = myData;
-        return(
-            <Wrapper>
-                <div className="container">
-                    <div className="grid grid-two-column">
-                        <div className="hero-section-data">
-                            <p className="intro-data">Welcome to </p>
-                            <h1>{name}</h1>
-                            <p>Chào mừng bạn đã đến với thế giới game bản quyền uy tín.</p>
-                            <NavLink>
-                                <Button>
-                                    Shop now
-                                </Button>
-                            </NavLink>
-                        </div>
+    const loggedInUsername = sessionStorage.getItem('username');
+    return(
+        <Wrapper>
+            <div className="container">
+                <div className="grid grid-two-column">
+                    <div className="hero-section-data">
+                        <p className="intro-data">Welcome to </p>
+                        <h1>{name}</h1>
+                        <p>Chào mừng <b> {loggedInUsername}</b> đến với thế giới game bản quyền uy tín.</p>
+                        <NavLink>
+                            <Button>
+                                Shop now
+                            </Button>
+                        </NavLink>
+                    </div>
 
-                        <div className="hero-section-image">
-                            <figure>
-                                <img src="/images/cta-bg.jpg" alt="hero-section-photo" className="img-style"/>
+                    <div className="hero-section-image">
+                        <figure>
+                            <img src="/images/cta-bg.jpg" alt="hero-section-photo" className="img-style"/>
 
-                            </figure>
-                        </div>
+                        </figure>
                     </div>
                 </div>
-            </Wrapper>
-        );
+            </div>
+        </Wrapper>
+    );
 }
-
 const Wrapper = styled.section`
   padding: 12rem 0;
   img {

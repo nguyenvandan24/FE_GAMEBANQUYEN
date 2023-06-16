@@ -1,13 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
-import {NavLink, useFetcher} from "react-router-dom";
+import {NavLink, useFetcher, useNavigate} from "react-router-dom";
 import {TbShoppingBag} from "react-icons/tb";
 import {CgClose, CgMenu} from "react-icons/cg";
 
-class Nav extends React.Component{
-    render() {
+const Nav=()=>{
 
-        const Nav = styled.nav`
+    const Nav = styled.nav`
             .navbar-lists {
               display: flex;
               gap: 4.8rem;
@@ -161,49 +160,58 @@ class Nav extends React.Component{
             }
           }
         `;
+    const usenavigate = useNavigate();
+    useEffect(() => {
+        let username = sessionStorage.getItem('username');
+        if (username === '' || username === null) {
+            usenavigate('/Login');
 
-        return(
-            <Nav>
-                <div className="navbar">
-                    <ul className="navbar-lists">
-                        <li>
-                            <NavLink to="/" className="navbar-link home-link">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/products" className="navbar-link">Products</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/about" className="navbar-link">About</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contact" className="navbar-link">Contact</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/login" className="navbar-link">Login</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/register" className="navbar-link">Register</NavLink>
-                        </li>
-                        {/*<li>*/}
-                        {/*    <NavLink to="/login" className="navbar-link">logout</NavLink>*/}
-                        {/*</li>*/}
+        }
 
-                        <li>
-                            <NavLink to="/cart" className="navbar-link cart-trolley--link">
-                                <TbShoppingBag className="cart-trolley" />
-                                <span className="cart-total--item">1</span>
-                            </NavLink>
-                        </li>
-                    </ul>
+    }, []);
 
-                    <div className="mobile-navbar-btn">
-                        <CgMenu name="menu-outline"  className="mobile-nav-icon"/>
-                        <CgClose name="close-outline"  className="mobile-nav-icon close-outline"/>
-                    </div>
+    return(
+        <Nav>
+            <div className="navbar">
+                <ul className="navbar-lists">
+                    <li>
+                        <NavLink to="/" className="navbar-link home-link">Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/products" className="navbar-link">Products</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about" className="navbar-link">About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/contact" className="navbar-link">Contact</NavLink>
+                    </li>
+                    {/*<li>*/}
+                    {/*    <NavLink to="/login" className="navbar-link">Login</NavLink>*/}
+                    {/*</li>*/}
+                    {/*<li>*/}
+                    {/*    <NavLink to="/register" className="navbar-link">Register</NavLink>*/}
+                    {/*</li>*/}
+                    <li>
+                        <NavLink to="/login" className="navbar-link">logout</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/cart" className="navbar-link cart-trolley--link">
+                            <TbShoppingBag className="cart-trolley" />
+                            <span className="cart-total--item">1</span>
+                        </NavLink>
+                    </li>
+                </ul>
+
+                <div className="mobile-navbar-btn">
+                    <CgMenu name="menu-outline"  className="mobile-nav-icon"/>
+                    <CgClose name="close-outline"  className="mobile-nav-icon close-outline"/>
                 </div>
-            </Nav>
-        );
-    }
+            </div>
+        </Nav>
+    );
 }
+//}
 
 export default Nav;
