@@ -1,11 +1,16 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
+import ReactPaginate from "react-paginate";
 const GridView = () => {
     const [products, setProducts] = useState([]);
     const [defaultProducts, setDefaultProducts] =useState([]);
     const [sortOption, setSortOption] = useState('default');
     const [categoryOption, setCategoryOption] = useState('all');
+
+    const [currentPage, setCurrentPage] = useState(0); // Trang hiện tại
+    const itemsPerPage = 6; // Số lượng mục trên mỗi trang
+    const pageCount = Math.ceil(products.length / itemsPerPage); // Tổng số trang
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
@@ -65,6 +70,17 @@ const GridView = () => {
         setCategoryOption(option);
     };
 
+    const handlePageChange = ({ selected }) => {
+        setCurrentPage(selected);
+    };
+
+    const getCurrentPageData = () => {
+        const startIndex = currentPage * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        return products.slice(startIndex, endIndex);
+    };
+
+
     return (
         <Wrapper className="section">
             <div className="grid grid-three-column">
@@ -94,7 +110,7 @@ const GridView = () => {
             </div>
             </div>
             <div className="container grid grid-three-column">
-                {products.map(product => (
+                {getCurrentPageData().map((product) => (
                     <NavLink to={`/product_detail/${product.id}`} key={product.id}>
                         <div className="card" id="listProducts">
                             <div className="card-img">
@@ -112,7 +128,16 @@ const GridView = () => {
                     </NavLink>
                 ))}
             </div>
-
+            <div className="pagination-container">
+                <ReactPaginate
+                    pageCount={pageCount}
+                    onPageChange={handlePageChange}
+                    containerClassName={"pagination"}
+                    activeClassName={"active"}
+                    previousLabel={"Previous"}
+                    nextLabel={"Next"}
+                />
+            </div>
         </Wrapper>
     );
 };
@@ -199,6 +224,41 @@ const Wrapper = styled.section`
       a {
         color: rgb(98 84 243);
         font-size: 1.4rem;
+      }
+    }
+  }
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .pagination {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-right: 0.5rem;
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.5rem;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        color: #333333;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #eeeeee;
+        }
+
+        &.active {
+          background-color: #333333;
+          color: #ffffff;
+        }
       }
     }
   }
