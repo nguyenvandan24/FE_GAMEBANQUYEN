@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import React, {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
+import ReactPaginate from "react-paginate";
 
 const ListView = () => {
     const [products, setProducts] = useState([]);
     const [defaultProducts, setDefaultProducts] =useState([]);
     const [sortOption, setSortOption] = useState('default');
     const [categoryOption, setCategoryOption] = useState('all');
+
+    const [currentPage, setCurrentPage] = useState(0); // Trang hiện tại
+    const itemsPerPage = 5; // Số lượng mục trên mỗi trang
+    const pageCount = Math.ceil(products.length / itemsPerPage); // Tổng số trang
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
@@ -66,6 +71,16 @@ const ListView = () => {
         setCategoryOption(option);
     };
 
+    const handlePageChange = ({ selected }) => {
+        setCurrentPage(selected);
+    };
+
+    const getCurrentPageData = () => {
+        const startIndex = currentPage * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        return products.slice(startIndex, endIndex);
+    };
+
     return (
         <Wrapper className="section">
             <div className="grid grid-three-column">
@@ -95,7 +110,7 @@ const ListView = () => {
                 </div>
             </div>
             <div className="container grid">
-                {products.map(product => (
+                {getCurrentPageData().map((product) => (
                     <NavLink to={`/product_detail/${product.id}`} key={product.id}>
                         <div className="card" id="listProducts">
                             <div className="card-img">
@@ -113,6 +128,16 @@ const ListView = () => {
                     </NavLink>
                 ))}
             </div>
+            <div className="pagination-container">
+                <ReactPaginate
+                    pageCount={pageCount}
+                    onPageChange={handlePageChange}
+                    containerClassName={"pagination"}
+                    activeClassName={"active"}
+                    previousLabel={"Previous"}
+                    nextLabel={"Next"}
+                />
+            </div>
         </Wrapper>
     );
 };
@@ -123,18 +148,15 @@ const Wrapper = styled.section`
     width: 200px;
   }
   padding: 9rem 0;
-
   .arrange-price {
     padding-bottom: 2rem;
   }
   .container {
     max-width: 120rem;
   }
-
   .grid {
     gap: 3.2rem;
   }
-
   figure {
     width: auto;
     display: flex;
@@ -167,18 +189,11 @@ const Wrapper = styled.section`
       transition: all 0.2s linear;
     }
   }
-
   .card {
-    background-color: aliceblue;
+    background-color: ${({ theme }) => theme.colors.bg};
     border-radius: 1rem;
-
-
-    .card-img{
-      border-radius: 1rem;
-    }
     .card-data {
-      padding: 0 2rem;
-      display: inline-block;
+      padding: 0 1rem;
     }
     .card-data-flex {
       margin: 2rem 0;
@@ -186,38 +201,64 @@ const Wrapper = styled.section`
       justify-content: space-between;
       align-items: center;
     }
-
-    h3{
+    .card-data--price {
+      color: ${({ theme }) => theme.colors.helper};
+    }
+    h3 {
       color: ${({ theme }) => theme.colors.text};
       text-transform: capitalize;
-      display: inline-block;
     }
-
-    .card-data--price {
-        // color: ${({ theme }) => theme.colors.help};
-      display: inline-block;
-      padding-left: 700px;
-    }
-
-    .btn{
+    .btn {
       margin: 2rem auto;
       background-color: rgb(0 0 0 / 0%);
       border: 0.1rem solid rgb(98 84 243);
       display: flex;
       justify-content: center;
       align-items: center;
-
       &:hover {
         background-color: rgb(98 84 243);
       }
-
       &:hover a {
         color: #fff;
       }
-
       a {
         color: rgb(98 84 243);
         font-size: 1.4rem;
+      }
+    }
+  }
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .pagination {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-right: 0.5rem;
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.5rem;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        color: #333333;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #eeeeee;
+        }
+
+        &.active {
+          background-color: #333333;
+          color: #ffffff;
+        }
       }
     }
   }
