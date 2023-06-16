@@ -63,6 +63,14 @@
       "id": "Lê Thị Hoa",
       "pass": "12345678",
       "repass": "12345678"
+    },
+    {
+      "id": "hau",
+      "email": "haunguyen@gmail.com",
+      "fullname": "haunguyen",
+      "phone": "0800861321",
+      "pass": "quametmoi@1",
+      "repass": "quametmoi@1"
     }
   ],
   "products": [

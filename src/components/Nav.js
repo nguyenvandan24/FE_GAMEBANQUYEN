@@ -161,15 +161,15 @@ const Nav=()=>{
             }
           }
         `;
-    const usenavigate = useNavigate();
-    useEffect(() => {
-        let username = sessionStorage.getItem('username');
-        if (username === '' || username === null) {
-            usenavigate('/Login');
-
-        }
-
-    }, []);
+    // const usenavigate = useNavigate();
+    // useEffect(() => {
+    //     let username = sessionStorage.getItem('username');
+    //     if (username === '' || username === null) {
+    //         usenavigate('/Login');
+    //
+    //     }
+    //
+    // }, []);
 
     return(
         <Nav>
@@ -193,9 +193,9 @@ const Nav=()=>{
                     {/*<li>*/}
                     {/*    <NavLink to="/register" className="navbar-link">Register</NavLink>*/}
                     {/*</li>*/}
-                    <li>
-                        <NavLink to="/login" className="navbar-link">logout</NavLink>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <NavLink to="/login" className="navbar-link">logout</NavLink>*/}
+                    {/*</li>*/}
                     <li>
                         <NavLink to="/user" className="navbar-link">
                             <FaUser className="fa-user" />
