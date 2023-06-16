@@ -19,6 +19,8 @@ import { database } from "./firebase/firebase";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UserProfile from "./pages/UserProfile";
+import {UserProvider} from "./context/UserContext";
 function App() {
     const theme = {
         colors: {
@@ -38,27 +40,52 @@ function App() {
     };
 
     return (
-        <ThemeProvider theme={theme}>
-            <BrowserRouter>
-                <GlobalStyle />
-                <Header />
-                <ToastContainer></ToastContainer>
-                <ToastContainer></ToastContainer>
+        // <ThemeProvider theme={theme}>
+        //     <BrowserRouter>
+        //         <GlobalStyle />
+        //         <Header />
+        //         <ToastContainer></ToastContainer>
+        //         <ToastContainer></ToastContainer>
+        //
+        //         <Routes>
+        //             <Route path="/"  element={<Home />}/>
+        //             <Route path="/products" element={<Products />}/>
+        //             <Route path="/about" element={<About />}/>
+        //             <Route path="/contact" element={<Contact />}/>
+        //             <Route path="/product_detail/:id" element={<ProductDetail />}/>
+        //             <Route path="/cart" element={<Cart />}/>
+        //             <Route path="/login" element={<Login />}/>
+        //             <Route path="/register" element={<Register />}/>
+        //             <Route path="/user" element={<UserProfile />}/>
+        //             <Route path="*" element={<ErrorPage />}/>
+        //         </Routes>
+        //         <Footer />
+        //     </BrowserRouter>
+        // </ThemeProvider>
+        <UserProvider>
+            <ThemeProvider theme={theme}>
+                <BrowserRouter>
+                    <GlobalStyle />
+                    <Header />
+                    <ToastContainer></ToastContainer>
+                    <ToastContainer></ToastContainer>
 
-                <Routes>
-                    <Route path="/"  element={<Home />}/>
-                    <Route path="/products" element={<Products />}/>
-                    <Route path="/about" element={<About />}/>
-                    <Route path="/contact" element={<Contact />}/>
-                    <Route path="/product_detail/:id" element={<ProductDetail />}/>
-                    <Route path="/cart" element={<Cart />}/>
-                    <Route path="/login" element={<Login />}/>
-                    <Route path="/register" element={<Register />}/>
-                    <Route path="*" element={<ErrorPage />}/>
-                </Routes>
-                <Footer />
-            </BrowserRouter>
-        </ThemeProvider>
+                    <Routes>
+                        <Route path="/"  element={<Home />}/>
+                        <Route path="/products" element={<Products />}/>
+                        <Route path="/about" element={<About />}/>
+                        <Route path="/contact" element={<Contact />}/>
+                        <Route path="/product_detail/:id" element={<ProductDetail />}/>
+                        <Route path="/cart" element={<Cart />}/>
+                        <Route path="/login" element={<Login />}/>
+                        <Route path="/register" element={<Register />}/>
+                        <Route path="/user" element={<UserProfile />}/>
+                        <Route path="*" element={<ErrorPage />}/>
+                    </Routes>
+                    <Footer />
+                </BrowserRouter>
+            </ThemeProvider>
+        </UserProvider>
   );
 }
 
