@@ -226,12 +226,16 @@ const Wrapper = styled.section`
 
   .button {
     padding-top: 10px;
-    margin-right: 43px;
+    display: flex;
+    justify-content: space-between;
+
 
     .btn {
       border-radius: 15px;
       text-transform: none;
       height: 50px;
+      margin-left: 30px;
+      margin-right: 33px;
     }
   }
 
