@@ -176,10 +176,7 @@ const UserProfile = () => {
                                 <Button className="btn" type="submit" onClick={handleEditClick}>
                                     Edit
                                 </Button>
-                                <Button className="btn" type="submit" onClick={handleEditClick}>
-
-
-
+                                <Button className="btn">
                                     <Link to="/login" className="navbar-link">logout</Link>
                                 </Button>
 
