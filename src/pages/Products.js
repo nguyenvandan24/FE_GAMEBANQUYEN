@@ -1,27 +1,37 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import FilterSection from "../components/FilterSection";
 import Sort from "../components/Sort";
 import ProductList from "../components/ProductList";
+import {useNavigate} from "react-router-dom";
 
 const Products = () => {
+    const usenavigate = useNavigate();
+    useEffect(() => {
+        let username = sessionStorage.getItem('username');
+        if (username === '' || username === null) {
+            usenavigate('/Login');
+
+        }
+
+    }, []);
 
     return( <Wrapper>
-        <div className="container grid grid-filter-column">
-            <div>
-                <FilterSection />
+            <div className="container grid grid-filter-column">
+                <div>
+                    <FilterSection />
+                </div>
+                <section className="product-view--sort">
+                    <div className="sort-filter">
+                        <Sort />
+                    </div>
+                    <div className="main-product">
+                        <ProductList />
+                    </div>
+                </section>
             </div>
-            <section className="product-view--sort">
-                <div className="sort-filter">
-                    <Sort />
-                </div>
-                <div className="main-product">
-                    <ProductList />
-                </div>
-            </section>
-        </div>
-    </Wrapper>
-);
+        </Wrapper>
+    );
 };
 const Wrapper = styled.section`
   .grid-filter-column {

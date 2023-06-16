@@ -1,14 +1,23 @@
-import React from "react";
+import React, {useEffect} from "react";
 import HeroSection from "../components/HeroSection";
 import Services from "../components/Services";
 import Trusted from "../components/Trusted";
 import FeatureProduct from "../components/FeatureProduct";
+import {useNavigate} from "react-router-dom";
 
-class Home extends React.Component{
-    render() {
-        const data = {
-            name: "DNHCODE"
-        };
+const Home=()=>{
+    const data = {
+        name: "DNHCODE"
+    };
+    const usenavigate = useNavigate();
+    useEffect(() => {
+        let username = sessionStorage.getItem('username');
+        if (username === '' || username === null) {
+            usenavigate('/Login');
+
+        }
+
+    }, []);
         return(
             <>
                 <HeroSection myData={data} />
@@ -18,7 +27,7 @@ class Home extends React.Component{
             </>
         );
     }
-}
+
 
 
 export default Home;
