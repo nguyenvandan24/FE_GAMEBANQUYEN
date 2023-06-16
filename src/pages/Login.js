@@ -5,18 +5,28 @@ import {Button} from "../styles/Button";
 import {Link, useFetchers, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Cookies from 'js-cookie'
 
 // class Login extends React.Component{
 //     render() {
 const Login =()=>{
     const [username, usernameupdate]=useState('');
     const [pass, passupdate]=useState('');
+    const [rememberMe, setRememberMe] = useState(false);
 
     const usenavigate=useNavigate();
     useEffect(()=>{
         sessionStorage.clear();
+        const savedUsername = Cookies.get('username');
+        const savedPassword = Cookies.get('password');
+        const savedRememberMe = Cookies.get('rememberMe') === 'true';
 
+        if (savedUsername && savedPassword && savedRememberMe) {
+            passupdate(savedPassword);
+            usernameupdate(savedUsername);
+        }
     }, []);
+
 
     const ProceedLogin = (e) =>{
         e.preventDefault();
@@ -33,6 +43,14 @@ const Login =()=>{
                     if(resp.pass===pass){
                         toast.success('Success')
                         sessionStorage.setItem('username', username);
+                        if (rememberMe) {
+                            const loginInfo = { username, password: pass };
+                            Cookies.set('username', username, { expires: 7 });
+                            Cookies.set('password', pass, { expires: 7 });
+                            Cookies.set('rememberMe', rememberMe ? 'true' : 'false', { expires: 7 });
+                        } else {
+                            Cookies.remove('loginInfo');
+                        }
                         usenavigate('/')
 
                     }else {
@@ -59,6 +77,9 @@ const Login =()=>{
 
     }
 
+    const handleRememberMeChange = (e) => {
+        setRememberMe(e.target.checked);
+    };
 
     return (
         <Wrapper>
@@ -71,6 +92,15 @@ const Login =()=>{
                             <input value={username} onChange={e=>usernameupdate(e.target.value)} className="input" type="text" placeholder="Username" name="username" autoComplete="off" required/>
                             <lebel className="text">Password</lebel>
                             <input value={pass} onChange={e=>passupdate(e.target.value)}className="input" type="password" name="Password" placeholder="Password" autoComplete="off" required/>
+
+                            <div className="remember-me">
+                                <input
+                                    type="checkbox"
+                                    checked={rememberMe}
+                                    onChange={handleRememberMeChange}
+                                />
+                                <label>Remember Me</label>
+                            </div>
                             <div className="text" style={{textAlign: "left", color: "gray"}}>
                                 Forgot password?
 
