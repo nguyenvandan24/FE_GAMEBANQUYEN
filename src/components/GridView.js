@@ -77,8 +77,10 @@ const GridView = () => {
     const getCurrentPageData = () => {
         const startIndex = currentPage * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
+        //filteredProducts tim kiem trong tung trang
         return filteredProducts.slice(startIndex, endIndex);
     };
+    //search
     const [search, setSearch] = useState("");
     const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -167,6 +169,7 @@ const Wrapper = styled.section`
   .search{
     height: 15px;
     width: 200px;
+    text-transform: none;
   }
   padding: 9rem 0;
   .arrange-price {

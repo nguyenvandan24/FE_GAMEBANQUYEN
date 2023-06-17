@@ -173,12 +173,13 @@ const UserProfile = () => {
                                 </div>
                             </div>
                             <div className="button-btn" style={{ textAlign: "right" }}>
-                                <Button className="btn" type="submit" onClick={handleEditClick}>
-                                    Edit
-                                </Button>
                                 <Button className="btn">
                                     <Link to="/login" className="navbar-link">logout</Link>
                                 </Button>
+                                <Button className="btn" type="submit" onClick={handleEditClick}>
+                                    Edit
+                                </Button>
+
 
 
 
@@ -226,9 +227,21 @@ const Wrapper = styled.section`
 
   .button {
     padding-top: 10px;
+   margin-right: 49px;
+
+
+    .btn {
+      border-radius: 15px;
+      text-transform: none;
+      height: 50px;
+      
+    }
+  }
+
+  .button-btn {
+    padding-top: 50px;
     display: flex;
     justify-content: space-between;
-
 
     .btn {
       border-radius: 15px;
@@ -236,17 +249,6 @@ const Wrapper = styled.section`
       height: 50px;
       margin-left: 30px;
       margin-right: 33px;
-    }
-  }
-
-  .button-btn {
-    padding-top: 50px;
-    margin-right: 43px;
-
-    .btn {
-      border-radius: 15px;
-      text-transform: none;
-      height: 50px;
     }
   }
 
