@@ -52,7 +52,7 @@ const UserProfile = () => {
             toast.error("Mật khẩu nhập vào không trùng khớp.");
             return;
         }
-        if(pass.length <= 8 || repass <= 8){
+        if(pass.length < 8 || repass < 8){
             toast.error("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự.");
                 return;
         }

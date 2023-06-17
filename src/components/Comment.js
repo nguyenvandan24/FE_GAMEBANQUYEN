@@ -1,24 +1,59 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {Button} from "../styles/Button";
+import {toast} from "react-toastify";
 
-const Comment = () => {
-    const [comments, setComments] = useState([]);
-    const [newComment, setNewComment] = useState('');
+const Comment = ({id}) => {
+    const [comments, setComments] = useState(() => {
+        const savedComments = localStorage.getItem(`comments_${id}`);
+        return savedComments ? JSON.parse(savedComments) : [];
+    });
+    const [newComment, setNewComment] = useState("");
     const [newRating, setNewRating] = useState(0);
-    const [newName, setNewName] = useState('');
+    const [newName, setNewName] = useState("");
+
+    useEffect(() => {
+        const savedComments = localStorage.getItem(`comments_${id}`);
+        if (savedComments) {
+            setComments(JSON.parse(savedComments));
+        }
+    }, [id]);
+
+    useEffect(() => {
+        const handleBeforeUnload = () => {
+            localStorage.setItem(`comments_${id}`, JSON.stringify(comments));
+        };
+
+        window.addEventListener("beforeunload", handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener("beforeunload", handleBeforeUnload);
+        };
+    }, [comments, id]);
+
     const handleAddComment = () => {
         if (newComment && newRating && newName) {
             const comment = {
                 name: newName,
                 content: newComment,
-                rating: newRating
+                rating: newRating,
             };
 
-            setComments([...comments, comment]);
-            setNewComment('');
+            setComments((prevComments) => {
+                const updatedComments = { ...prevComments };
+                if (updatedComments[id]) {
+                    updatedComments[id] = [...updatedComments[id], comment];
+                } else {
+                    updatedComments[id] = [comment];
+                }
+                return updatedComments;
+            });
+
+            setNewComment("");
             setNewRating(0);
-            setNewName('');
+            setNewName("");
+
+            localStorage.setItem(`comments_${id}`, JSON.stringify(comments));
         }
     };
 
@@ -26,12 +61,70 @@ const Comment = () => {
         setNewRating(rating);
     };
 
+    // const [comments, setComments] = useState(() => {
+    //     const savedComments = localStorage.getItem(`comments_${id}`);
+    //     return savedComments ? JSON.parse(savedComments) : [];
+    // });
+    // const [newComment, setNewComment] = useState('');
+    // const [newRating, setNewRating] = useState(0);
+    // const [newName, setNewName] = useState('');
+    //
+    // useEffect(() => {
+    //     const savedComments = localStorage.getItem(`comments_${id}`);
+    //     if(savedComments){
+    //         setComments(JSON.parse(savedComments))
+    //     }
+    // }, [id]);
+    //
+    // useEffect(() => {
+    //     const handleBeforeUnload = () => {
+    //         localStorage.setItem(`comments_${id}`, JSON.stringify(comments));
+    //     };
+    //
+    //     window.addEventListener("beforeunload", handleBeforeUnload);
+    //
+    //     return () => {
+    //         window.removeEventListener("beforeunload", handleBeforeUnload);
+    //     };
+    // },[comments, id]);
+    //
+    // const handleAddComment = () => {
+    //     if (newComment && newRating && newName) {
+    //         const comment = {
+    //             name: newName,
+    //             content: newComment,
+    //             rating: newRating
+    //         };
+    //
+    //         setComments(prevComments => {
+    //             const updatedComments = {...prevComments};
+    //             if(updatedComments[id]){
+    //                 updatedComments[id]= [...updatedComments[id], comment];
+    //             }else {
+    //                 updatedComments[id] = [comment];
+    //             }
+    //             return updatedComments;
+    //         })
+    //
+    //         setNewComment('');
+    //         setNewRating(0);
+    //         setNewName('');
+    //
+    //         localStorage.setItem(`comments_${id}`, JSON.stringify(comments));
+    //     }
+    // };
+    //
+    //
+    // const handleRatingChange = (rating) => {
+    //     setNewRating(rating);
+    // };
+
     return (
         <Wrapper>
             <div className="container-comment">
                 <h3 className="line">Bình luận và đánh giá</h3>
                 <ul className="comment-list">
-                    {comments.map((comment, index) => (
+                    {comments[id]?.map((comment, index) => (
                         <li key={index}>
                             <div className="show">
                                 <div className="grid grid-two-column">

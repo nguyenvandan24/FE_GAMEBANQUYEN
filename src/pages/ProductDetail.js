@@ -73,7 +73,7 @@ const ProductDetail = () => {
                         Hoàn tất quá trình cài đặt và thưởng thức {product.name} một cách tự do!
                     </div>
                 </Tabs>
-                <Comment/>
+                <Comment id={id}/>
             </Container>
         </Wrapper>
     );
