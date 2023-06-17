@@ -1,16 +1,11 @@
-import React, {useRef, useState} from "react";
+import React, { useState} from "react";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from "styled-components";
 import {Button} from "../styles/Button";
 import {useNavigate} from "react-router-dom";
 import bcrypt from 'bcryptjs';
-import sha256 from 'crypto-js/sha256';
-
-
-
-
 
 
 const Register = () =>{

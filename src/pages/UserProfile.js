@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "../styles/Button";
 import {Link, NavLink, useNavigate} from "react-router-dom";
 import {toast} from "react-toastify";
+import bcrypt from "bcryptjs";
 
 const UserProfile = () => {
     const usenavigate = useNavigate();
@@ -48,6 +49,12 @@ const UserProfile = () => {
     };
 
     const handleSaveClick = () => {
+        const hashedPass = bcrypt.hashSync(pass, 10);
+        window.localStorage.setItem(
+            "login",
+            JSON.stringify({ id, hashedPass })
+        );
+
         if (pass !== repass){
             toast.error("Mật khẩu nhập vào không trùng khớp.");
             return;
@@ -66,8 +73,8 @@ const UserProfile = () => {
             email: email,
             fullname: fullname,
             phone: phone,
-            pass: pass,
-            repass: repass,
+            pass: hashedPass,
+            repass: hashedPass,
         };
 
         fetch(`http://localhost:3000/users/${loginInUsername}`, {

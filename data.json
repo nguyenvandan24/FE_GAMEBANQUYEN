@@ -167,6 +167,22 @@
       "id": "vvvv",
       "pass": "$2a$10$1a9k..tJfLuUnW3SoZqDSODZ1UtExC/7uZDlbOj4Owtck0oFO6Fa.",
       "repass": "$2a$10$1a9k..tJfLuUnW3SoZqDSODZ1UtExC/7uZDlbOj4Owtck0oFO6Fa."
+    },
+    {
+      "id": "nvh",
+      "email": "nvhieu@gmail.com",
+      "fullname": "Nguyễn Văn Hiếu",
+      "phone": "0963573246",
+      "pass": "$2a$10$1cT1J.2D/aFOO3KuBGmR0OKKTayUv/YubUsUq0C0RkYIdooxsC6mm",
+      "repass": "$2a$10$1cT1J.2D/aFOO3KuBGmR0OKKTayUv/YubUsUq0C0RkYIdooxsC6mm"
+    },
+    {
+      "id": "hthieu",
+      "email": "hthieu@gmail.com",
+      "fullname": "Hồ Trung Hiếu",
+      "phone": "0945733425",
+      "pass": "$2a$10$WPIxCwypUP7G076Bqxf6kORrw5jQbRU.yU3u9KK4gCbvILTnRUROS",
+      "repass": "$2a$10$WPIxCwypUP7G076Bqxf6kORrw5jQbRU.yU3u9KK4gCbvILTnRUROS"
     }
   ],
   "products": [
