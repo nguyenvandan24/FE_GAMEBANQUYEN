@@ -32,10 +32,15 @@ const GridView = () => {
 
             if(option === 'priceDescending'){
                 sortedProducts.sort((a,b) => b.price - a.price);
-            }else {
-                if (option === 'priceAscending'){
-                    sortedProducts.sort((a,b) => a.price - b.price)
-                }
+            }else
+            if (option === 'priceAscending'){
+                sortedProducts.sort((a,b) => a.price - b.price);
+            }else
+            if (option === 'nameDescending'){
+                sortedProducts.sort((a,b) => b.name.localeCompare(a.name));
+            }else
+            if (option === 'nameAscending') {
+                sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
             }
             setProducts(sortedProducts);
         }
@@ -129,6 +134,8 @@ const GridView = () => {
                     <option value="default">Mặc định</option>
                     <option value="priceDescending">Giá giảm dần</option>
                     <option value="priceAscending">Giá tăng dần</option>
+                    <option value="nameAscending">Tên A-Z</option>
+                    <option value="nameDescending">Tên Z-A</option>
                 </select>
             </div>
             </div>
