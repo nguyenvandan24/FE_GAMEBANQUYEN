@@ -78,23 +78,15 @@ const ListView = () => {
     const getCurrentPageData = () => {
         const startIndex = currentPage * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
-        return products.slice(startIndex, endIndex);
+        return filteredProducts.slice(startIndex, endIndex);
     };
+
+    //SEARCH
     //const [products, setProducts] = useState([]);
     const [search, setSearch] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
 
-    // useEffect(() => {
-    //     fetch('http://localhost:3000/products')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setProducts(data);
-    //             setFilteredProducts(data);
-    //         })
-    //         .catch(error => {
-    //             console.log("Lỗi:", error);
-    //         });
-    // }, []);
+
 
     useEffect(() => {
         const filteredData = products.filter((item) => {
@@ -114,7 +106,14 @@ const ListView = () => {
             <div className="grid grid-three-column">
                 <div className="arrange-price">
                     <form onSubmit={(e) => e.preventDefault()}>
-                        <input className="search" type="text" name="text" placeholder="Search" onChange={handleChange} />
+                        <input
+                            className="search"
+                            value={search}
+                            type="text"
+                            name="text"
+                            placeholder="Search"
+                            onChange={handleChange}
+                        />
                     </form>
                 </div>
                 <div className="arrange-category">
@@ -174,6 +173,7 @@ const Wrapper = styled.section`
   .search{
     height: 15px;
     width: 200px;
+    text-transform: none;
   }
   padding: 9rem 0;
   .arrange-price {

@@ -1,10 +1,14 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from "styled-components";
 import {Button} from "../styles/Button";
 import {useNavigate} from "react-router-dom";
+import bcrypt from 'bcryptjs';
+import sha256 from 'crypto-js/sha256';
+
+
 
 
 
@@ -17,6 +21,8 @@ const Register = () =>{
     const [pass, passchange] = useState("");
     const [repass, repasschange] = useState("");
     const [errorMessage, setErrorMessage] = useState('');
+
+
 
     const navigate=useNavigate();
     const IsValidate= () =>{
@@ -81,19 +87,28 @@ const Register = () =>{
 
 
 
-    const handledsubmit=(e) => {
+    const handledsubmit= (e) => {
         e.preventDefault();
+
+        // Mã hóa mật khẩu
+        const hashedPass = bcrypt.hashSync(pass, 10);
+        window.localStorage.setItem(
+            "login",
+            JSON.stringify({ id, hashedPass })
+        );
+        // console.log(hashedPass);
+
         if (IsValidate()) {
-                if (pass.length <= 8 || repass <= 8) {
-                    toast.error('Mật khẩu phải lớn hơn hoặc bằng 8 ký tự.');
-                    return;
-                }
+            if (pass.length <= 8 || repass <= 8) {
+                toast.error('Mật khẩu phải lớn hơn hoặc bằng 8 ký tự.');
+                return;
+            }
             const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]+$/;
-            if (!passwordRegex.test(pass)){
+            if (!passwordRegex.test(pass)) {
                 toast.error("Mật khẩu phải chứa chữ cái và ký tự đặc biệt.")
                 return;
             }
-            let regobj = {fullname, email, phone, id, pass, repass};
+            let regobj = {fullname, email, phone, id, pass: hashedPass, repass:hashedPass};
             console.log(regobj);
 
             // fetch('http://localhost:3000/users', {
@@ -110,22 +125,22 @@ const Register = () =>{
             //
             //
             //     });
-           // Kiểm tra username, email đã tồn tại trong cơ sở dữ liệu
+            // Kiểm tra username, email đã tồn tại trong cơ sở dữ liệu
             fetch('http://localhost:3000/users')
                 .then((response) => response.json())
                 .then((data) => {
                     const existingUser = data.find((user) => user.id === id);
                     const existingEmail = data.find((user) => user.email === email);
 
-                    if (existingUser  ) {
+                    if (existingUser) {
                         toast.error('Username already exists');
-                    } else if(existingEmail){
+                    } else if (existingEmail) {
                         toast.error('Email already exists');
 
-                    }else {
+                    } else {
                         fetch('http://localhost:3000/users', {
                             method: "POST",
-                            headers: { 'Content-Type': 'application/json' },
+                            headers: {'Content-Type': 'application/json'},
                             body: JSON.stringify(regobj)
                         })
                             .then(() => {
@@ -144,6 +159,8 @@ const Register = () =>{
         }
 
     }
+
+
 
 // class Regiser extends React.Component{
 //     render() {
@@ -173,7 +190,7 @@ const Register = () =>{
                             <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder="Re-password" autoComplete="off" required/>
 
                             <div style={{textAlign: "right"}}>
-                                <Button className="register" type="submit">Register</Button>
+                                <Button  className="register" type="submit"  >Register</Button>
                             </div>
                         </form>
                     </div>

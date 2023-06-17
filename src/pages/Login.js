@@ -6,6 +6,7 @@ import {Link, useFetchers, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'js-cookie'
+import bcrypt from "bcryptjs";
 
 // class Login extends React.Component{
 //     render() {
@@ -28,11 +29,21 @@ const Login =()=>{
     }, []);
 
 
-    const ProceedLogin = (e) =>{
+    const ProceedLogin =  (e) =>{
         e.preventDefault();
+
         if(validate()){
             //implentation
             //console.log('proceed');
+            //mã hóa mật khẩu
+            const getHashedPass =  JSON.parse(window.localStorage.getItem('login')).hashedPass;
+            bcrypt.compare(pass, getHashedPass, function (err, isMatch){
+                if (err) {
+                    throw err;
+                }else if(!isMatch){
+                    toast.error('nhập lại mật khẩu')
+                }else {
+
             fetch("http://localhost:3000/users/" + username).then((res)=>{
                 return res.json();
             }).then((resp)=>{
@@ -40,11 +51,13 @@ const Login =()=>{
                 if(Object.keys(resp).length===0){
                     toast.error('Please enter valid user')
                 }else {
-                    if(resp.pass===pass){
-                        toast.success('Success')
+                    if(resp.pass=== getHashedPass){
+                        toast.success(' Đăng nhập thành công')
                         sessionStorage.setItem('username', username);
+
                         if (rememberMe) {
                             const loginInfo = { username, password: pass };
+
                             Cookies.set('username', username, { expires: 7 });
                             Cookies.set('password', pass, { expires: 7 });
                             Cookies.set('rememberMe', rememberMe ? 'true' : 'false', { expires: 7 });
@@ -61,6 +74,8 @@ const Login =()=>{
                 toast.error('login faile due to:' + err.message());
             })
 
+        }
+    });
         }
     }
     const validate=() =>{
