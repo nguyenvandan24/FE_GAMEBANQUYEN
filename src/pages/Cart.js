@@ -3,11 +3,35 @@ import React, {useContext, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import {Button} from "../styles/Button";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faMinus, faPlus, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 
 const Cart = () => {
     const usenavigate = useNavigate();
     const [cartItems, setCartItems] = useState([]);
     const username = sessionStorage.getItem("username");
+
+    const handleIncreaseQuantity = (productId) => {
+        const updatedCartItems = cartItems.map((item) => {
+            if (item.id === productId) {
+                return { ...item, quantity: item.quantity + 1 };
+            }
+            return item;
+        });
+        setCartItems(updatedCartItems);
+        localStorage.setItem(`cartItems_${username}`, JSON.stringify(updatedCartItems));
+    };
+
+    const handleDecreaseQuantity = (productId) => {
+        const updatedCartItems = cartItems.map((item) => {
+            if (item.id === productId && item.quantity > 1) {
+                return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+        });
+        setCartItems(updatedCartItems);
+        localStorage.setItem(`cartItems_${username}`, JSON.stringify(updatedCartItems));
+    };
 
     const removeFromCart = (username, productId) => {
         const updatedCartItems = cartItems.filter((item) => item.id !== productId);
@@ -32,7 +56,10 @@ const Cart = () => {
     }, [username]);
 
     const calculateTotalPrice = () => {
-        const totalPrice = cartItems.reduce((total, item) => total + Number(item.price), 0);
+        const totalPrice = cartItems.reduce(
+            (total, item) => total + Number(item.price) * item.quantity,
+            0
+        );
         return totalPrice.toLocaleString(); // Convert the total price to localized string format
     };
 
@@ -45,6 +72,8 @@ const Cart = () => {
                         <th>Sản phẩm</th>
                         <th>Tên</th>
                         <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
                         <th>Xóa</th>
                     </tr>
                     </thead>
@@ -55,7 +84,21 @@ const Cart = () => {
                             <td><img src={item.img}/></td>
                             <td>{item.name}</td>
                             <td>{item.price}VNĐ</td>
-                            <td><button onClick={() => removeFromCart(username, item.id)}>Xóa</button></td>
+                            <td>
+                                <div className="quantity-container">
+                                    <button onClick={() => handleDecreaseQuantity(item.id)}>
+                                        <FontAwesomeIcon icon={faMinus} />
+                                    </button>
+                                    <span className="quantity">{item.quantity}</span>
+                                    <button onClick={() => handleIncreaseQuantity(item.id)}>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </button>
+                                </div>
+                            </td>
+                            <td>{item.price * item.quantity}</td>
+                            <td><div className="remove">
+                                <FontAwesomeIcon icon={faTrashAlt} onClick={() => removeFromCart(username, item.id)}/>
+                            </div></td>
                         </tr>
                     ))}
                     </tbody>
@@ -90,12 +133,34 @@ const Wrapper = styled.section`
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    font-size: 2rem;
   }
   .total,
   .checkout {
     display: flex;
     margin-left: 81%;
     padding-bottom: 50px;
+  }
+  .quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .quantity-container button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .quantity {
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  .remove{
+    color: red;
   }
 `;
 export default Cart;
