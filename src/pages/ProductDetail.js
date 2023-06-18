@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {NavLink, useParams} from "react-router-dom";
 import PageNavigation from "../components/PageNavigation";
@@ -8,12 +8,24 @@ import Tabs from "../components/Tabs";
 import Comment from "../components/Comment";
 import {Button} from "../styles/Button";
 import {toast} from "react-toastify";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [cartItems, setCartItems] = useState([]);
     const username = sessionStorage.getItem("username");
+    const [quantity, setQuantity] = useState(1);
+    const handleIncreaseQuantity = () => {
+        setQuantity(quantity + 1);
+    };
+
+    const handleDecreaseQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
+    };
 
     useEffect(() => {
         fetch(`http://localhost:3000/products/${id}`)
@@ -54,7 +66,7 @@ const ProductDetail = () => {
             return;
         }
 
-        updatedCartItems.push(product);
+        updatedCartItems.push({...product, quantity});
 
         localStorage.setItem(userCartKey, JSON.stringify(updatedCartItems));
         setCartItems(updatedCartItems);
@@ -85,6 +97,15 @@ const ProductDetail = () => {
                             </p>
                         </div>
                         <hr/>
+                       <div className="amount">
+                            <button onClick={handleDecreaseQuantity}>
+                                <FontAwesomeIcon icon={faMinus} />
+                            </button>
+                            <span className="quantity">{quantity}</span>
+                            <button onClick={handleIncreaseQuantity}>
+                                <FontAwesomeIcon icon={faPlus} />
+                            </button>
+                       </div>
                         <div className="addToCart">
                             <NavLink to="/cart">
                                 <Button className="btn" onClick={handleAddToCart}>Thêm vào giỏ hàng</Button>
@@ -119,11 +140,7 @@ const ProductDetail = () => {
         </Wrapper>
     );
 }
-const Wrapper = styled.section`
-  .addToCart{
-    padding: 5rem 0;
-  }
-  
+const Wrapper = styled.section`  
   .container {
     padding: 9rem 0;
   }
@@ -205,6 +222,28 @@ const Wrapper = styled.section`
   }
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     padding: 0 2.4rem;
+  }
+  .addToCart{
+    padding-top: 2em;
+  }
+  
+  .amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    padding-top: 2em;
+  }
+  
+  .amount button{
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    margin: 0 10px;
+    font-size: 2rem;
   }
 `;
 export default ProductDetail;
