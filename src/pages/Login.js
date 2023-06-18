@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react";
 
 import styled from "styled-components";
 import {Button} from "../styles/Button";
-import {Link, useFetchers, useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'js-cookie'
@@ -15,7 +16,9 @@ const Login =()=>{
     const [pass, passupdate]=useState('');
     const [rememberMe, setRememberMe] = useState(false);
 
-    const usenavigate=useNavigate();
+    const navigate = useNavigate();
+
+
     useEffect(()=>{
         sessionStorage.clear();
         const savedUsername = Cookies.get('username');
@@ -29,21 +32,12 @@ const Login =()=>{
     }, []);
 
 
-    const ProceedLogin =  (e) =>{
-        e.preventDefault();
 
+    const ProceedLogin = (e) =>{
+        e.preventDefault();
         if(validate()){
             //implentation
             //console.log('proceed');
-            //mã hóa mật khẩu
-            const getHashedPass =  JSON.parse(window.localStorage.getItem('login')).hashedPass;
-            bcrypt.compare(pass, getHashedPass, function (err, isMatch){
-                if (err) {
-                    throw err;
-                }else if(!isMatch){
-                    toast.error('nhập lại mật khẩu')
-                }else {
-
             fetch("http://localhost:3000/users/" + username).then((res)=>{
                 return res.json();
             }).then((resp)=>{
@@ -51,33 +45,41 @@ const Login =()=>{
                 if(Object.keys(resp).length===0){
                     toast.error('Please enter valid user')
                 }else {
-                    if(resp.pass=== getHashedPass){
-                        toast.success(' Đăng nhập thành công')
-                        sessionStorage.setItem('username', username);
+                     if(resp.pass=== btoa(pass)){
+                         console.log('thanhcong');
+                         sessionStorage.setItem("username", username );
+                         navigate('/');
 
+                     }
+
+
+
+
+                          else {
+                            toast.error('erorr');
+                        }
                         if (rememberMe) {
-                            const loginInfo = { username, password: pass };
-
-                            Cookies.set('username', username, { expires: 7 });
-                            Cookies.set('password', pass, { expires: 7 });
-                            Cookies.set('rememberMe', rememberMe ? 'true' : 'false', { expires: 7 });
+                            const loginInfo = {username, password: pass};
+                            Cookies.set('username', username, {expires: 7});
+                            Cookies.set('password', pass, {expires: 7});
+                            Cookies.set('rememberMe', rememberMe ? 'true' : 'false', {expires: 7});
                         } else {
                             Cookies.remove('loginInfo');
                         }
-                        usenavigate('/')
 
-                    }else {
-                        toast.error('Please enter valid credentials')
+
+
                     }
-                }
-            }).catch((err)=>{
+
+                })
+
+                .catch((err)=>{
                 toast.error('login faile due to:' + err.message());
             })
 
         }
-    });
-        }
     }
+
     const validate=() =>{
         let result =true;
         if(username==='' || username === null){

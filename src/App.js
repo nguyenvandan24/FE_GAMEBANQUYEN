@@ -1,6 +1,6 @@
 
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, BrowserRouter} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
@@ -62,13 +62,15 @@ function App() {
         //         <Footer />
         //     </BrowserRouter>
         // </ThemeProvider>
-        <UserProvider>
+        <BrowserRouter>
+
             <ThemeProvider theme={theme}>
-                <BrowserRouter>
+
                     <GlobalStyle />
                     <Header />
                     <ToastContainer></ToastContainer>
                     <ToastContainer></ToastContainer>
+                <UserProvider>
 
                     <Routes>
                         <Route path="/"  element={<Home />}/>
@@ -83,9 +85,11 @@ function App() {
                         <Route path="*" element={<ErrorPage />}/>
                     </Routes>
                     <Footer />
-                </BrowserRouter>
+                </UserProvider>
+
             </ThemeProvider>
-        </UserProvider>
+
+         </BrowserRouter>
   );
 }
 

@@ -86,11 +86,11 @@ const Register = () =>{
         e.preventDefault();
 
         // Mã hóa mật khẩu
-        const hashedPass = bcrypt.hashSync(pass, 10);
-        window.localStorage.setItem(
-            "login",
-            JSON.stringify({ id, hashedPass })
-        );
+        const hashedPass =btoa(pass);
+        // window.localStorage.setItem(
+        //     "login",
+        //     JSON.stringify({ id, hashedPass })
+        // );
         // console.log(hashedPass);
 
         if (IsValidate()) {
