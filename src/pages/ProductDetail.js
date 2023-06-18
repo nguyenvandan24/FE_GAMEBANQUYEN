@@ -1,16 +1,19 @@
 import {useEffect, useState} from "react";
 import styled from "styled-components";
-import {useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 import PageNavigation from "../components/PageNavigation";
 import {Container} from "../styles/Container";
 import Star from "../components/Star";
-import AddToCart from "../components/AddToCart";
 import Tabs from "../components/Tabs";
 import Comment from "../components/Comment";
+import {Button} from "../styles/Button";
+import {toast} from "react-toastify";
 
 const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
+    const [cartItems, setCartItems] = useState([]);
+    const username = sessionStorage.getItem("username");
 
     useEffect(() => {
         fetch(`http://localhost:3000/products/${id}`)
@@ -22,6 +25,40 @@ const ProductDetail = () => {
                 console.log(error);
             });
     }, [id]);
+
+    useEffect(() => {
+        const userCartKey = `cartItems_${username}`;
+        const storedCartItems = localStorage.getItem(userCartKey);
+        if (storedCartItems) {
+            setCartItems(JSON.parse(storedCartItems));
+        }
+    }, [username]);
+
+    const handleAddToCart = (event) => {
+
+        const userCartKey = `cartItems_${username}`;
+        const storedCartItems = localStorage.getItem(userCartKey);
+
+        let updatedCartItems = [];
+
+        if(storedCartItems){
+            updatedCartItems = JSON.parse(storedCartItems);
+        }
+
+        const existingProduct = updatedCartItems.find((item) => item.id === product.id);
+        if (existingProduct) {
+            event.preventDefault();
+            // Product already exists in the cart
+            // Perform any desired action like showing a message
+            toast.warning("Sản phẩm đã tồn tại trong giỏ hàng");
+            return;
+        }
+
+        updatedCartItems.push(product);
+
+        localStorage.setItem(userCartKey, JSON.stringify(updatedCartItems));
+        setCartItems(updatedCartItems);
+    }
 
     if (!product) {
         return <div>Loading...</div>;
@@ -48,7 +85,11 @@ const ProductDetail = () => {
                             </p>
                         </div>
                         <hr/>
-                        <AddToCart />
+                        <div className="addToCart">
+                            <NavLink to="/cart">
+                                <Button className="btn" onClick={handleAddToCart}>Thêm vào giỏ hàng</Button>
+                            </NavLink>
+                        </div>
                     </div>
                 </div>
                 <Tabs>
@@ -79,6 +120,10 @@ const ProductDetail = () => {
     );
 }
 const Wrapper = styled.section`
+  .addToCart{
+    padding: 5rem 0;
+  }
+  
   .container {
     padding: 9rem 0;
   }
