@@ -96,7 +96,6 @@ const Cart = () => {
                 note: note,
             },
             createDate: `${hours}:${minutes}:${seconds}  ${day}:${month}:${year}`,
-            //createDate: new Date().getFullYear(),//Thêm ngày tạo đơn hàng
         }
         localStorage.setItem(`order_${username}`, JSON.stringify(order));
         localStorage.removeItem(`cartItems_${username}`);
@@ -141,7 +140,11 @@ const Cart = () => {
         }
     };
     const handleShowCheckout = () => {
-        setShowCheckout(true);
+        if (cartItems.length === 0){
+            toast.error("Không có sản phẩm trong giỏ hàng.")
+        }else {
+            setShowCheckout(true);
+        }
     };
     return (
         <Wrapper>
