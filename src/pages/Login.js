@@ -95,10 +95,11 @@ const Login =()=>{
     return (
         <Wrapper>
             <div className="login-container">
-                <h2 className="common-heading">Login</h2>
+                <h2 className="common-heading">Đăng nhập</h2>
                 <div className="container">
                     <div className="contact-form">
                         <form onSubmit={ProceedLogin} method="POST" className="contact-inputs">
+
                             <label className="text">Username</label>
                             <input value={username} onChange={e=>usernameupdate(e.target.value)} className="input" type="text" placeholder={t('userName')} name="username" autoComplete="off" required/>
                             <lebel className="text">Password</lebel>
@@ -110,7 +111,11 @@ const Login =()=>{
                                     checked={rememberMe}
                                     onChange={handleRememberMeChange}
                                 />
+
                                 <label style={{fontSize: "medium"}}>{t('remember')}</label>
+
+                                <label style={{fontSize: "medium"}}>Nhớ mật khẩu</label>
+
                             </div>
                             <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
                                 {t('notAcc')}
@@ -119,7 +124,9 @@ const Login =()=>{
                             </div>
 
                             <div style={{textAlign: "right"}}>
+
                                 <Button className="login" type="submit">{t('login')}</Button>
+
                             </div>
                         </form>
                     </div>

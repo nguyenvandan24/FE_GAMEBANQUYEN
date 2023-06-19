@@ -96,12 +96,16 @@ const UserProfile = () => {
         <Wrapper>
             <div className="conn">
                 <div className="container-profile">
+
                     <h2>{t('userProfile')}</h2>
+
                     {showForm ? (
                         <div>
                             <div className="grid grid-two-column">
                                 <div className="data-form">
+
                                     <label>{t('userName')}: </label>
+
                                     <input
                                         className="input"
                                         value={id}
@@ -117,7 +121,9 @@ const UserProfile = () => {
                                     />
                                 </div>
                                 <div className="data-form">
+
                                     <label>{t('fullName')}: </label>
+                                            
                                     <input
                                         className="input"
                                         value={fullname}
@@ -125,7 +131,9 @@ const UserProfile = () => {
                                     />
                                 </div>
                                 <div className="data-form">
+
                                     <label>{t('phone')}: </label>
+
                                     <input
                                         className="input"
                                         value={phone}
@@ -133,7 +141,9 @@ const UserProfile = () => {
                                     />
                                 </div>
                                 <div className="data-form">
+
                                     <label>{t('pass')}: </label>
+
                                     <input
                                         className="input"
                                         value={pass}
@@ -141,7 +151,9 @@ const UserProfile = () => {
                                     />
                                 </div>
                                 <div className="data-form">
+
                                     <label>{t('rePass')}: </label>
+
                                     <input
                                         className="input"
                                         value={repass}
@@ -159,7 +171,9 @@ const UserProfile = () => {
                         <div>
                             <div className="grid grid-two-column">
                                 <div className="data-form">
+
                                     <label>{t('userName')}:</label>
+
                                     <span>{id}</span>
                                 </div>
                                 <div className="data-form">
@@ -167,20 +181,24 @@ const UserProfile = () => {
                                     <span>{email}</span>
                                 </div>
                                 <div className="data-form">
+
                                     <label>{t('fullName')}:</label>
                                     <span>{fullname}</span>
                                 </div>
                                 <div className="data-form">
                                     <label>{t('phone')}:</label>
+
                                     <span>{phone}</span>
                                 </div>
                             </div>
                             <div className="button-btn" style={{ textAlign: "right" }}>
                                 <StyledButton className="btn">
+
                                     <Link to="/login" className="navbar-link">{t('logout')}</Link>
                                 </StyledButton>
                                 <Button className="btn" type="submit" onClick={handleEditClick}>
                                     {t('edit')}
+
                                 </Button>
                             </div>
                         </div>

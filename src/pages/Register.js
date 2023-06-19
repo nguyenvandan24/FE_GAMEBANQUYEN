@@ -130,6 +130,7 @@ const Register = () =>{
     return (
         <Wrapper>
             <div className="register-container">
+
                 <h2 className="common-heading">{t('register')}</h2>
                 <div className="container" onSubmit={handledsubmit}>
                     <div className="contact-form">
@@ -137,8 +138,10 @@ const Register = () =>{
                             <label className="text">{t('fullName')}</label>
                             <input value={fullname} onChange={e=>fullnamechange(e.target.value)} className="input" type="text" placeholder={t('fullName')} name="username" autoComplete="off" required/>
 
+
                             <label className="text">Email</label>
                             <input value={email} onChange={e=>emailchange(e.target.value)} className="input" type="email" name="Email" placeholder="Email" autoComplete="off" required/>
+
 
                             <label className="text">{t('phone')}</label>
                             <input value={phone} onChange={e=>phonechange(e.target.value)} className="input" type="phone" name="Phone" placeholder={t('phone')} autoComplete="off" required/>
@@ -151,13 +154,16 @@ const Register = () =>{
 
                             <label className="text">{t('rePass')}</label>
                             <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder={t('rePass')} autoComplete="off" required/>
+
                             <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
 
                                 <Link to={'/Login'}>{t('acc')}</Link>
                             </div>
 
                             <div style={{textAlign: "right"}}>
+
                                 <Button  className="register" type="submit"  >{t('register')}</Button>
+
                             </div>
                         </form>
                     </div>
