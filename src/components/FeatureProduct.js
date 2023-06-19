@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const FeatureProduct = () => {
+    const { t, i18n } = useTranslation();
+
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -18,7 +21,7 @@ const FeatureProduct = () => {
 
     return <Wrapper className="section">
         <div className="container">
-            <div className="common-heading"> Sản Phẩm Nổi Bật </div>
+            <div className="common-heading"> {t('featureProduct')} </div>
             <div className="grid grid-three-column">
                     {/* Hiển thị danh sách 3 sản phẩm */}
                     {products.slice(0, 3).map(product => (

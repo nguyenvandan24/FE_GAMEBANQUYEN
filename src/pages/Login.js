@@ -7,10 +7,12 @@ import {Link, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'js-cookie'
+import {useTranslation} from "react-i18next";
 
 
 
 const Login =()=>{
+    const { t, i18n } = useTranslation();
     const [username, usernameupdate]=useState('');
     const [pass, passupdate]=useState('');
     const [rememberMe, setRememberMe] = useState(false);
@@ -29,8 +31,6 @@ const Login =()=>{
             usernameupdate(savedUsername);
         }
     }, []);
-
-
 
     const ProceedLogin = (e) =>{
         e.preventDefault();
@@ -99,10 +99,11 @@ const Login =()=>{
                 <div className="container">
                     <div className="contact-form">
                         <form onSubmit={ProceedLogin} method="POST" className="contact-inputs">
-                            <label className="text">Tên tài khoản </label>
-                            <input value={username} onChange={e=>usernameupdate(e.target.value)} className="input" type="text" placeholder="Tên tài khoản" name="username" autoComplete="off" required/>
-                            <lebel className="text">Mật khẩu</lebel>
-                            <input value={pass} onChange={e=>passupdate(e.target.value)}className="input" type="password" name="Password" placeholder="Mật khẩu" autoComplete="off" required/>
+
+                            <label className="text">Username</label>
+                            <input value={username} onChange={e=>usernameupdate(e.target.value)} className="input" type="text" placeholder={t('userName')} name="username" autoComplete="off" required/>
+                            <lebel className="text">Password</lebel>
+                            <input value={pass} onChange={e=>passupdate(e.target.value)}className="input" type="password" name="Password" placeholder={t('pass')} autoComplete="off" required/>
 
                             <div className="remember-me">
                                 <input
@@ -110,16 +111,22 @@ const Login =()=>{
                                     checked={rememberMe}
                                     onChange={handleRememberMeChange}
                                 />
+
+                                <label style={{fontSize: "medium"}}>{t('remember')}</label>
+
                                 <label style={{fontSize: "medium"}}>Nhớ mật khẩu</label>
+
                             </div>
                             <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
-                                Bạn chưa có tài khoản?
+                                {t('notAcc')}
 
-                                <Link to={'/Register'}> Tạo tài khoản</Link>
+                                <Link to={'/Register'}> {t('createAcc')}</Link>
                             </div>
 
                             <div style={{textAlign: "right"}}>
-                                <Button className="login" type="submit">Đăng nhập</Button>
+
+                                <Button className="login" type="submit">{t('login')}</Button>
+
                             </div>
                         </form>
                     </div>

@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import {useTranslation} from "react-i18next";
 
-class Trusted extends React.Component{
-    render() {
+export default function Trusted(){
+    const { t, i18n } = useTranslation();
         return(
             <Wrapper className="brand-section">
                 <div className="container">
-                    <h3>Được tin cậy bởi 100+ công ty</h3>
+                    <h3>{t('trust')}</h3>
                 </div>
             </Wrapper>
         );
-    }
 }
 
 const Wrapper = styled.section`
@@ -48,4 +48,3 @@ const Wrapper = styled.section`
       }
     }
 `;
-export default Trusted;

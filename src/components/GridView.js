@@ -2,7 +2,10 @@ import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import {useTranslation} from "react-i18next";
+
 const GridView = () => {
+    const { t, i18n } = useTranslation();
     const [products, setProducts] = useState([]);
     const [defaultProducts, setDefaultProducts] =useState([]);
     const [sortOption, setSortOption] = useState('default');
@@ -112,15 +115,15 @@ const GridView = () => {
                             value={search}
                             type="text"
                             name="text"
-                            placeholder="Search"
+                            placeholder={t('search')}
                             onChange={handleChange}
                         />
                     </form>
                 </div>
                 <div className="arrange-category">
-                    <label>Thể loại game:</label>
+                    <label>{t('category')}:</label>
                     <select id="category" value={categoryOption} onChange={(e) => categoryProducts(e.target.value)}>
-                        <option value="all">Tất cả</option>
+                        <option value="all">{t('all')}</option>
                         <option value="action">Action</option>
                         <option value="adventure">Adventure</option>
                         <option value="shooter">Shooter</option>
@@ -129,13 +132,13 @@ const GridView = () => {
                     </select>
                 </div>
                 <div className="arrange-price">
-                    <label>Sắp xếp:</label>
+                    <label>{t('sort')}:</label>
                     <select id="sort" value={sortOption} onChange={(e) => sortProducts(e.target.value)}>
-                        <option value="default">Mặc định</option>
-                        <option value="priceDescending">Giá giảm dần</option>
-                        <option value="priceAscending">Giá tăng dần</option>
-                        <option value="nameAscending">Tên A-Z</option>
-                        <option value="nameDescending">Tên Z-A</option>
+                        <option value="default">{t('default')}</option>
+                        <option value="priceDescending">{t('priceDescending')}</option>
+                        <option value="priceAscending">{t('priceIncreasing')}</option>
+                        <option value="nameAscending">{t('name')} A-Z</option>
+                        <option value="nameDescending">{t('name')} Z-A</option>
                     </select>
                 </div>
             </div>
@@ -164,8 +167,8 @@ const GridView = () => {
                     onPageChange={handlePageChange}
                     containerClassName={"pagination"}
                     activeClassName={"active"}
-                    previousLabel={"Previous"}
-                    nextLabel={"Next"}
+                    previousLabel={t('previous')}
+                    nextLabel={t('next')}
                 />
             </div>
         </Wrapper>

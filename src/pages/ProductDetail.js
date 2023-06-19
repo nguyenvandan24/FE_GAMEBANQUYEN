@@ -9,8 +9,10 @@ import {Button} from "../styles/Button";
 import {toast} from "react-toastify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import {useTranslation} from "react-i18next";
 
 const ProductDetail = () => {
+    const { t, i18n } = useTranslation();
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [cartItems, setCartItems] = useState([]);
@@ -88,11 +90,11 @@ const ProductDetail = () => {
                     <div className="product_data">
                         <h2>{product.name}</h2>
                         <p className="product-data-price product-data-real-price">
-                            Giá: {product.price} VNĐ
+                            {t('price')}: {product.price}VNĐ
                         </p>
                         <div className="product-data-info">
                             <p>
-                                Thể loại :<span> {product.category} </span>
+                                {t('category')} :<span> {product.category} </span>
                             </p>
                         </div>
                         <hr/>
@@ -107,31 +109,31 @@ const ProductDetail = () => {
                        </div>
                         <div className="addToCart">
                             <NavLink to="/cart">
-                                <Button className="btn" onClick={handleAddToCart}>Thêm vào giỏ hàng</Button>
+                                <Button className="btn" onClick={handleAddToCart}>{t('addToCart')}</Button>
                             </NavLink>
                         </div>
                     </div>
                 </div>
                 <Tabs>
-                    <div label="Mô tả">
+                    <div label={t('description')}>
                         {product.description}
                     </div>
-                    <div label="Tính năng khác">
+                    <div label={t('otherFeature')}>
                         {product.mainfeature}
                     </div>
-                    <div label="Yêu cầu hệ thống">
-                        Để có trải nghiệm tốt nhất khi chơi {product.name}, hãy đảm bảo rằng máy tính của bạn đáp ứng các yêu cầu hệ thống sau:<br/>
+                    <div label={t('system')}>
+                        {t('experience')} {product.name}, {t('computer')}:<br/>
 
-                        <b>Hệ điều hành:</b> {product.hedieuhanh}<br/>
-                        <b>Bộ vi xử lý:</b> {product.bovixuly}<br/>
+                        <b>{t('opera')}:</b> {product.hedieuhanh}<br/>
+                        <b>{t('microprocessor')}:</b> {product.bovixuly}<br/>
                         <b>RAM:</b> {product.bonho}<br/>
-                        <b>Đồ họa:</b> {product.dohoa}<br/>
-                        <b>Không gian đĩa cứng:</b> {product.dungluongocung}<br/>
+                        <b>{t('graphics')}:</b> {product.dohoa}<br/>
+                        <b>{t('hardDisk')}:</b> {product.dungluongocung}<br/>
                     </div>
-                    <div label="Hướng dẫn tải">
-                        Khách hàng sẽ nhận được mã code hoặc đường link để tải game. Sau đó tiến hành nhấn tải game.<br/>
-                        Chạy file cài đặt và làm theo hướng dẫn trên màn hình.<br/>
-                        Hoàn tất quá trình cài đặt và thưởng thức {product.name} một cách tự do!
+                    <div label={t('download')}>
+                        {t('link')}<br/>
+                        {t('file')}<br/>
+                        {t('complete')} {product.name} {t('freely')}
                     </div>
                 </Tabs>
                 <Comment id={id}/>

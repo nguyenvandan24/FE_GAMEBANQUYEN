@@ -4,10 +4,11 @@ import {TbTruckDelivery} from "react-icons/tb";
 import {GiReceiveMoney} from "react-icons/gi";
 import {RiSecurePaymentLine} from "react-icons/ri";
 import {MdSecurity} from "react-icons/md";
+import {useTranslation} from "react-i18next";
 
 
-class Services extends React.Component{
-    render() {
+export default function Services () {
+    const { t, i18n } = useTranslation();
         return(
             <Wrapper>
                 <div className="container">
@@ -15,32 +16,31 @@ class Services extends React.Component{
                         <div className="services-1">
                             <div>
                                 <TbTruckDelivery className="icon" />
-                                <h3>Dịch vụ nhanh và miễn phí</h3>
+                                <h3>{t('ship')}</h3>
                             </div>
                         </div>
 
                         <div className="services-2">
                             <div className="services-column-2">
                                 <MdSecurity className="icon"/>
-                                <h3>Vận chuyển không tiếp xúc</h3>
+                                <h3>{t('shipping')}</h3>
                             </div>
                             <div className="services-column-2">
                                 <GiReceiveMoney  className="icon"/>
-                                <h3>Đảm bảo hoàn tiền</h3>
+                                <h3>{t('money')}</h3>
                             </div>
                         </div>
 
                         <div className="services-3">
                             <div>
                                 <RiSecurePaymentLine className="icon"/>
-                                <h3>Hệ thống thanh toán an toàn</h3>
+                                <h3>{t('paymentSystem')}</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </Wrapper>
         );
-    }
 }
 
 const Wrapper = styled.section`
@@ -104,5 +104,3 @@ const Wrapper = styled.section`
     color: #5138ee;
   }
 `;
-
-export default Services;

@@ -1,4 +1,3 @@
-// Cart.js
 import React, {useContext, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -7,8 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMinus, faPlus, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 import {toast} from "react-toastify";
 import CheckoutForm from "../components/CheckoutForm";
+import {useTranslation} from "react-i18next";
 
 const Cart = () => {
+    const { t, i18n } = useTranslation();
     const usenavigate = useNavigate();
     const [cartItems, setCartItems] = useState([]);
     const [showCheckout, setShowCheckout] = useState(false);
@@ -96,6 +97,7 @@ const Cart = () => {
                 note: note,
             },
             createDate: `${hours}:${minutes}:${seconds}  ${day}:${month}:${year}`,
+            //createDate: new Date().getFullYear(),//Thêm ngày tạo đơn hàng
         }
         localStorage.setItem(`order_${username}`, JSON.stringify(order));
         localStorage.removeItem(`cartItems_${username}`);
@@ -140,6 +142,7 @@ const Cart = () => {
         }
     };
     const handleShowCheckout = () => {
+        setShowCheckout(true);
         if (cartItems.length === 0){
             toast.error("Không có sản phẩm trong giỏ hàng.")
         }else {
@@ -148,17 +151,17 @@ const Cart = () => {
     };
     return (
         <Wrapper>
-            <div className="totalProduct">Tổng số lượng sản phẩm trong giỏ hàng: {totalAmount()} </div>
+            <div className="totalProduct">{t('totalQuantity')}: {totalAmount()} </div>
             <div className="cart">
                 <table>
                     <thead>
                     <tr>
-                        <th>Sản phẩm</th>
-                        <th>Tên</th>
-                        <th>Giá</th>
-                        <th>Số lượng</th>
-                        <th>Tổng</th>
-                        <th>Xóa</th>
+                        <th>{t('product')}</th>
+                        <th>{t('name')}</th>
+                        <th>{t('price')}</th>
+                        <th>{t('quantity')}</th>
+                        <th>{t('total')}</th>
+                        <th>{t('remove')}</th>
                     </tr>
                     </thead>
 
@@ -189,7 +192,7 @@ const Cart = () => {
                 </table>
 
             </div>
-            <p className="total">Tổng tiền: {calculateTotalPrice()} VNĐ</p>
+            <p className="total">{t('totalMoney')}: {calculateTotalPrice()} VNĐ</p>
             <div>
                 {showCheckout ? (
                     <CheckoutForm
@@ -207,7 +210,7 @@ const Cart = () => {
                     />
                 ):(
                     <div className="checkout">
-                        <Button  onClick={handleShowCheckout}>Thanh toán</Button>
+                        <Button  onClick={handleShowCheckout}>{t('checkout')}</Button>
                     </div>
                 )}
             </div>

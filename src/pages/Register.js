@@ -6,9 +6,11 @@ import styled from "styled-components";
 import {Button} from "../styles/Button";
 import {Link, useNavigate} from "react-router-dom";
 import bcrypt from 'bcryptjs';
+import {useTranslation} from "react-i18next";
 
 
 const Register = () =>{
+    const { t, i18n } = useTranslation();
     const [fullname, fullnamechange] = useState("");
     const [email, emailchange] = useState("");
     const [phone, phonechange] = useState("");
@@ -16,8 +18,6 @@ const Register = () =>{
     const [pass, passchange] = useState("");
     const [repass, repasschange] = useState("");
     const [errorMessage, setErrorMessage] = useState('');
-
-
 
     const navigate=useNavigate();
     const IsValidate= () =>{
@@ -130,34 +130,40 @@ const Register = () =>{
     return (
         <Wrapper>
             <div className="register-container">
-                <h2 className="common-heading">Đăng ký</h2>
+
+                <h2 className="common-heading">{t('register')}</h2>
                 <div className="container" onSubmit={handledsubmit}>
                     <div className="contact-form">
                         <form method="POST" className="contact-inputs">
-                            <label className="text">Họ tên</label>
-                            <input value={fullname} onChange={e=>fullnamechange(e.target.value)} className="input" type="text" placeholder="Họ và tên" name="username" autoComplete="off" required/>
+                            <label className="text">{t('fullName')}</label>
+                            <input value={fullname} onChange={e=>fullnamechange(e.target.value)} className="input" type="text" placeholder={t('fullName')} name="username" autoComplete="off" required/>
+
 
                             <label className="text">Email</label>
                             <input value={email} onChange={e=>emailchange(e.target.value)} className="input" type="email" name="Email" placeholder="Email" autoComplete="off" required/>
 
-                            <label className="text">SĐT</label>
-                            <input value={phone} onChange={e=>phonechange(e.target.value)} className="input" type="phone" name="Phone" placeholder="xxx.xxx.xxx" autoComplete="off" required/>
 
-                            <label className="text">Tên tài khoản</label>
-                            <input value={id} onChange={e=>idchange(e.target.value)} className="input" type="text" placeholder="Tên ta khoản" name="username" autoComplete="off" required/>
+                            <label className="text">{t('phone')}</label>
+                            <input value={phone} onChange={e=>phonechange(e.target.value)} className="input" type="phone" name="Phone" placeholder={t('phone')} autoComplete="off" required/>
 
-                            <label className="text">Mật khẩu</label>
-                            <input value={pass} onChange={e=>passchange(e.target.value)} className="input" type="password" name="password" placeholder="Nhập mật khẩu" autoComplete="off" required/>
+                            <label className="text">{t('userName')}</label>
+                            <input value={id} onChange={e=>idchange(e.target.value)} className="input" type="text" placeholder={t('userName')} autoComplete="off" required/>
 
-                            <label className="text">Nhập lại mật khẩu</label>
-                            <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder="Nhập lại mật khẩu" autoComplete="off" required/>
+                            <label className="text">{t('pass')}</label>
+                            <input value={pass} onChange={e=>passchange(e.target.value)} className="input" type="password" name="password" placeholder={t('pass')} autoComplete="off" required/>
+
+                            <label className="text">{t('rePass')}</label>
+                            <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder={t('rePass')} autoComplete="off" required/>
+
                             <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
 
-                                <Link to={'/Login'}>Bạn đã có tài khoản?</Link>
+                                <Link to={'/Login'}>{t('acc')}</Link>
                             </div>
 
                             <div style={{textAlign: "right"}}>
-                                <Button  className="register" type="submit"  >Đăng ký</Button>
+
+                                <Button  className="register" type="submit"  >{t('register')}</Button>
+
                             </div>
                         </form>
                     </div>

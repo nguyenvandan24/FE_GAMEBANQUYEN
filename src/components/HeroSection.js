@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import {Button} from "../styles/Button";
+import {useTranslation} from "react-i18next";
 
 const HeroSection = ({ myData}) =>{
+    const { t, i18n } = useTranslation();
     const {name} = myData;
     const loggedInUsername = sessionStorage.getItem('username');
     return(
@@ -12,10 +14,10 @@ const HeroSection = ({ myData}) =>{
                 <div className="grid grid-two-column">
                     <div className="hero-section-data">
                         <h1>{name}</h1>
-                        <p>Chào mừng <b> {loggedInUsername}</b> đến với thế giới game bản quyền uy tín.</p>
-                        <NavLink to={`/products`}>
+                        <p>{t('welcome')} <b> {loggedInUsername}</b> {t('gameWorld')}</p>
+                        <NavLink>
                             <Button>
-                                Mua sắm ngay
+                                {t('shopNow')}
                             </Button>
                         </NavLink>
                     </div>
@@ -23,6 +25,7 @@ const HeroSection = ({ myData}) =>{
                     <div className="hero-section-image">
                         <figure>
                             <img src="/images/cta-bg.jpg" alt="hero-section-photo" className="img-style"/>
+
                         </figure>
                     </div>
                 </div>
