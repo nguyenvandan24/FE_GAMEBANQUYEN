@@ -49,11 +49,7 @@ const UserProfile = () => {
     };
 
     const handleSaveClick = () => {
-        const hashedPass = bcrypt.hashSync(pass, 10);
-        window.localStorage.setItem(
-            "login",
-            JSON.stringify({ id, hashedPass })
-        );
+        const hashedPass = btoa(pass);
 
         if (pass !== repass){
             toast.error("Mật khẩu nhập vào không trùng khớp.");
@@ -186,12 +182,7 @@ const UserProfile = () => {
                                 <Button className="btn" type="submit" onClick={handleEditClick}>
                                     Edit
                                 </Button>
-
-
-
-
                             </div>
-
                         </div>
                     )}
                 </div>
