@@ -70,6 +70,7 @@ const ProductDetail = () => {
 
         localStorage.setItem(userCartKey, JSON.stringify(updatedCartItems));
         setCartItems(updatedCartItems);
+        toast.success("Thêm vào giỏ hàng thành công");
     }
 
     if (!product) {
