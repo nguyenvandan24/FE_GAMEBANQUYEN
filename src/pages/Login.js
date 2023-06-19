@@ -114,7 +114,7 @@ const Login =()=>{
 
                                 <label style={{fontSize: "medium"}}>{t('remember')}</label>
 
-                                <label style={{fontSize: "medium"}}>Nhớ mật khẩu</label>
+                                <label style={{fontSize: "medium"}}></label>
 
                             </div>
                             <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>

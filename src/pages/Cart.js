@@ -142,7 +142,6 @@ const Cart = () => {
         }
     };
     const handleShowCheckout = () => {
-        setShowCheckout(true);
         if (cartItems.length === 0){
             toast.error("Không có sản phẩm trong giỏ hàng.")
         }else {

@@ -3,10 +3,10 @@
     {
       "id": "nvdan",
       "email": "nvdan@gmail.com",
-      "fullname": "Nguyễn Văn Dẫn",
+      "fullname": "Nguyễn Dẫn",
       "phone": "0781424548",
-      "pass": "bnZkYW4xMjNA",
-      "repass": "bnZkYW4xMjNA"
+      "pass": "bnZkYW4yMDAyQA==",
+      "repass": "bnZkYW4yMDAyQA=="
     },
     {
       "id": "nthau",
@@ -779,7 +779,7 @@
       "publisher": "Sony Interactive Entertainment",
       "foundation": "PlayStation 4",
       "gamemode": "Chơi đơn",
-      "description":"Uncharted 4: A Thief's End là một trò chơi hành động phiêu lưu góc nhìn thứ ba. Trong trò chơi, người chơi vào vai Nathan Drake, một nhà thám hiểm và tìm kiếm kho báu. Trò chơi diễn ra nhiều năm sau các sự kiện của phần trước, khi Nathan Drake bị kéo trở lại cuộc phiêu lưu sau khi anh trai cũ của mình xuất hiện. Nathan phải tìm kiếm huyền thoại về Avalon để giải quyết những câu hỏi về quá khứ của mình và bảo vệ những người mà anh yêu thương.\n\nTrong trò chơi, người chơi sẽ khám phá các địa điểm tuyệt đẹp trên khắp thế giới, thực hiện các nhiệm vụ, giải đố và chiến đấu với kẻ thù. Trò chơi kết hợp cả các pha chạy trốn, leo trèo, bắn súng và đánh đấu để tạo nên một trải nghiệm hành động đầy kịch tính và phiêu lưu.",
+      "description": "Uncharted 4: A Thief's End là một trò chơi hành động phiêu lưu góc nhìn thứ ba. Trong trò chơi, người chơi vào vai Nathan Drake, một nhà thám hiểm và tìm kiếm kho báu. Trò chơi diễn ra nhiều năm sau các sự kiện của phần trước, khi Nathan Drake bị kéo trở lại cuộc phiêu lưu sau khi anh trai cũ của mình xuất hiện. Nathan phải tìm kiếm huyền thoại về Avalon để giải quyết những câu hỏi về quá khứ của mình và bảo vệ những người mà anh yêu thương.\n\nTrong trò chơi, người chơi sẽ khám phá các địa điểm tuyệt đẹp trên khắp thế giới, thực hiện các nhiệm vụ, giải đố và chiến đấu với kẻ thù. Trò chơi kết hợp cả các pha chạy trốn, leo trèo, bắn súng và đánh đấu để tạo nên một trải nghiệm hành động đầy kịch tính và phiêu lưu.",
       "mainfeature": "ncharted 4: A Thief's End được đánh giá cao với đồ họa tuyệt đẹp, cốt truyện chất lượng và gameplay sáng tạo. Nó được coi là một trong những tựa game xuất sắc nhất trên PlayStation 4 và là phần kết của loạt game Uncharted.",
       "price": 1150000,
       "img": "https://th.bing.com/th/id/OIP.evT2nQpDB1dw1qaIhXWQbAHaEK?pid=ImgDet&rs=1",
@@ -825,7 +825,8 @@
       "dohoa": "Nvidia GeForce GTX 660 hoặc AMD R9 285.",
       "dungluongocung": "8GB",
       "hedieuhanh": " Windows 7/8/10 (64-bit)."
-    },{
+    },
+    {
       "id": "AD10",
       "name": "Minecraft",
       "year": "2011",
@@ -842,7 +843,8 @@
       "dohoa": " Nvidia GeForce 700 Series hoặc AMD Radeon Rx 200 Series.",
       "dungluongocung": "4GB",
       "hedieuhanh": " Windows 7/8/10, macOS, Linux."
-    },{
+    },
+    {
       "id": "AD11",
       "name": "Red Dead Redemption 2",
       "year": "2018",
@@ -950,7 +952,6 @@
       "dungluongocung": "5GB",
       "hedieuhanh": " Windows 7/8/10 (64-bit)."
     },
-
     {
       "id": "AD17",
       "name": "Ori and the Will of the Wisps",
@@ -1177,6 +1178,38 @@
       },
       "createDate": "14:21:18  19:6:2023",
       "id": 3
+    },
+    {
+      "items": [
+        {
+          "id": "AD20",
+          "name": "Celeste",
+          "year": "2018",
+          "publisher": "Matt Makes Games",
+          "foundation": " PlayStation 4, Xbox One, PC, Nintendo Switch",
+          "gamemode": "chơi đơn",
+          "description": "Celeste kể câu chuyện về Madeline, một cô gái trẻ quyết tâm leo lên đỉnh núi Celeste. Trò chơi tập trung vào gameplay platforming, trong đó người chơi phải vượt qua các thử thách khó khăn và giải quyết các câu đố trong môi trường núi đầy nguy hiểm. Madeline có khả năng nhảy, leo trèo và di chuyển qua các chướng ngại vật để tiến lên phía trước.\n\nCeleste nổi bật với cấu trúc level phức tạp, đòi hỏi sự tinh thông và sự tập trung cao để vượt qua. Trò chơi cung cấp nhiều điểm lưu để người chơi có thể thử lại nếu gặp khó khăn và tạo ra sự thách thức tùy chỉnh thông qua các phụ bản khó hơn.\n\nNgoài gameplay xuất sắc, Celeste cũng nhận được sự khen ngợi rất lớn về cốt truyện và cách nó xử lý vấn đề sức khỏe tâm thần. Trò chơi khám phá chủ đề lo lắng, sự tự chấp nhận và sự vượt qua khó khăn trong cuộc sống.",
+          "mainfeature": " Celeste đã nhận được sự công nhận rộng rãi từ cả người chơi và giới phê bình, được coi là một trong những trò chơi platformer tốt nhất trong thập kỷ. Đồ họa đơn giản nhưng tinh tế, âm nhạc đáng nhớ và cốt truyện độc đáo đã đóng góp vào thành công của trò chơi này. ",
+          "price": 655331,
+          "img": "https://tse1.explicit.bing.net/th?id=OIP.C8xE-2xwmi2FcgvulB4a2AHaEK&pid=Api&P=0&h=180",
+          "category": "Adventure",
+          "bonho": "2GB",
+          "bovixuly": "Intel Core i3 M380 hoặc AMD Phenom II X3.",
+          "dohoa": "Intel HD Graphics 4000 hoặc AMD Radeon HD 5450 hoặc Nvidia GeForce 205.",
+          "dungluongocung": "1GB",
+          "hedieuhanh": " Windows 7/8/10.",
+          "quantity": 2
+        }
+      ],
+      "totalPrice": "1,310,662VNĐ",
+      "user": {
+        "name": "Nguyễn Văn Dẫn",
+        "email": "nvdan@gmail.com",
+        "phone": "0781424548",
+        "note": ""
+      },
+      "createDate": "2:47:12  20:6:2023",
+      "id": 4
     }
   ]
 }
