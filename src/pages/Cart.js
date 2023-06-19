@@ -5,11 +5,26 @@ import styled from "styled-components";
 import {Button} from "../styles/Button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMinus, faPlus, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
+import {toast} from "react-toastify";
+import CheckoutForm from "../components/CheckoutForm";
 
 const Cart = () => {
     const usenavigate = useNavigate();
     const [cartItems, setCartItems] = useState([]);
+    const [showCheckout, setShowCheckout] = useState(false);
     const username = sessionStorage.getItem("username");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [note, setNote] = useState("");
+
+    const currentDate = new Date();
+    const seconds = currentDate.getSeconds();
+    const minutes = currentDate.getMinutes();
+    const hours = currentDate.getHours();
+    const day = currentDate.getDate();
+    const month = currentDate.getMonth() + 1;
+    const year = currentDate.getFullYear();
 
     const handleIncreaseQuantity = (productId) => {
         const updatedCartItems = cartItems.map((item) => {
@@ -63,6 +78,64 @@ const Cart = () => {
         return totalPrice.toLocaleString(); // Convert the total price to localized string format
     };
 
+    const clearCart =() => {
+        const order = {
+            items: cartItems,
+            totalPrice: calculateTotalPrice() + "VNĐ",
+            user: {
+                name: name,
+                email: email,
+                phone: phone,
+                note: note,
+            },
+            createDate: `${hours}:${minutes}:${seconds}  ${day}:${month}:${year}`,
+            //createDate: new Date().getFullYear(),//Thêm ngày tạo đơn hàng
+        }
+        localStorage.setItem(`order_${username}`, JSON.stringify(order));
+        localStorage.removeItem(`cartItems_${username}`);
+        setCartItems([]);
+    }
+    const handleCheckout = () => {
+        const order = {
+            items: cartItems,
+            totalPrice: calculateTotalPrice() + "VNĐ",
+            user: {
+                name: name,
+                email: email,
+                phone: phone,
+                note: note,
+            },
+            createDate: `${hours}:${minutes}:${seconds}  ${day}:${month}:${year}`,
+        };
+
+        fetch(`http://localhost:3000/orders`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(order),
+        }).then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                clearCart();
+                setShowCheckout(false);
+                toast.success("Thanh toán thành công (-_-).");
+            }).catch(() => {
+            toast.error("Lỗi");
+        });
+    };
+
+    const handleFormCheckout = (event) => {
+        event.preventDefault();//Ngăn chặn hành vi mặc định của trinh duyệt
+        if (name && email && phone){
+            handleCheckout()
+        }else {
+            toast.error("Vui lòng nhập đầy đủ thông tin.");
+        }
+    };
+    const handleShowCheckout = () => {
+        setShowCheckout(true);
+    };
     return (
         <Wrapper>
             <div className="cart">
@@ -83,7 +156,7 @@ const Cart = () => {
                         <tr key={item.id}>
                             <td><img src={item.img}/></td>
                             <td>{item.name}</td>
-                            <td>{item.price}VNĐ</td>
+                            <td>{item.price} VNĐ</td>
                             <td>
                                 <div className="quantity-container">
                                     <button onClick={() => handleDecreaseQuantity(item.id)}>
@@ -95,7 +168,7 @@ const Cart = () => {
                                     </button>
                                 </div>
                             </td>
-                            <td>{item.price * item.quantity}</td>
+                            <td>{item.price * item.quantity} VNĐ</td>
                             <td><div className="remove">
                                 <FontAwesomeIcon icon={faTrashAlt} onClick={() => removeFromCart(username, item.id)}/>
                             </div></td>
@@ -106,8 +179,26 @@ const Cart = () => {
 
             </div>
             <p className="total">Tổng tiền: {calculateTotalPrice()} VNĐ</p>
-            <div className="checkout">
-                <Button>Thanh toán</Button>
+            <div>
+                {showCheckout ? (
+                    <CheckoutForm
+                        name={name}
+                        email={email}
+                        phone={phone}
+                        note={note}
+                        handleFormCheckout={handleFormCheckout}
+                        setName={setName}
+                        setEmail={setEmail}
+                        setPhone={setPhone}
+                        setNote={setNote}
+                        totalPrice={calculateTotalPrice()}
+                        cartItems={cartItems}
+                    />
+                ):(
+                    <div className="checkout">
+                        <Button  onClick={handleShowCheckout}>Thanh toán</Button>
+                    </div>
+                )}
             </div>
         </Wrapper>
     );
@@ -133,12 +224,12 @@ const Wrapper = styled.section`
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .total,
   .checkout {
     display: flex;
-    margin-left: 81%;
+    margin-left: 77%;
     padding-bottom: 50px;
   }
   .quantity-container {

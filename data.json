@@ -1,260 +1,36 @@
 {
   "users": [
     {
-      "fullname": "g",
-      "email": "danrer@gamil.com",
-      "phone": "0356481519",
-      "id": "gg",
-      "pass": "gggggggg",
-      "repass": "gggggggg"
+      "id": "nvdan",
+      "email": "nvdan@gmail.com",
+      "fullname": "Nguyễn Văn Dẫn",
+      "phone": "0781424548",
+      "pass": "bnZkYW4xMjNA",
+      "repass": "bnZkYW4xMjNA"
     },
     {
-      "fullname": "h",
-      "email": "hdan@gamil.com",
-      "phone": "0356481519",
-      "id": "h",
-      "pass": "hhhhhhhh",
-      "repass": "hhhhhhhh"
-    },
-    {
-      "id": "dan",
-      "email": "dan@gamil.com",
-      "fullname": "Nguyễn Dẫn",
-      "phone": "0878979798",
-      "pass": "nvd12345@",
-      "repass": "nvd12345@"
-    },
-    {
-      "id": "f",
-      "email": "fdan@gamil.com",
-      "fullname": "Nguyễn Văn Trung",
-      "phone": "0356481519",
-      "pass": "nvt1234567",
-      "repass": "nvt1234567"
-    },
-    {
-      "fullname": "n",
-      "email": "nnga@gmail.com",
-      "phone": "0808721321",
-      "id": "w",
-      "pass": "nnnnnnnnnn",
-      "repass": "nnnnnnnnnn"
-    },
-    {
-      "fullname": "j",
-      "email": "nga@gmail.com",
-      "phone": "0808721321",
-      "id": "j",
-      "pass": "jjjjjjjjj",
-      "repass": "jjjjjjjjj"
-    },
-    {
-      "id": "l",
-      "email": "haung@gmail.com",
+      "id": "nthau",
+      "email": "nthau@gmail.com",
       "fullname": "Nguyễn Thị Hậu",
-      "phone": "0808721321",
-      "pass": "hau002789",
-      "repass": "hau002789"
+      "phone": "01542363425",
+      "pass": "bnRoYXUyMDAyQA==",
+      "repass": "bnRoYXUyMDAyQA=="
     },
     {
-      "fullname": "Lê Thị Hoa",
-      "email": "hoa@gmail.com",
-      "phone": "0808721321",
-      "id": "Lê Thị Hoa",
-      "pass": "12345678",
-      "repass": "12345678"
+      "fullname": "Nguyễn Hữu Duyên",
+      "email": "nhduyen@gmail.com",
+      "phone": "0124586971",
+      "id": "nhduyen",
+      "pass": "bmhkdXllbjIwMDJA",
+      "repass": "bmhkdXllbjIwMDJA"
     },
     {
-      "id": "hau",
-      "email": "haunguyen@gmail.com",
-      "fullname": "haunguyen",
-      "phone": "0800861321",
-      "pass": "quametmoi@1",
-      "repass": "quametmoi@1"
-    },
-    {
-      "id": "anhanh",
-      "email": "toanh@gmail.com",
-      "fullname": "Lý Tố Anh",
-      "phone": "0808721321",
-      "pass": "qwertyuiop@1",
-      "repass": "qwertyuiop@1"
-    },
-    {
-      "fullname": "hhh",
-      "email": "ngattt@gmail.com",
-      "phone": "0808721321",
-      "id": "mmmmm",
-      "pass": "cXdlcnR5dWlvcEAx",
-      "repass": "qwertyuiop@1"
-    },
-    {
-      "fullname": "fff",
-      "email": "drren@gamil.com",
-      "phone": "0356481519",
-      "id": "Rrr",
-      "pass": "YXNkZmdoamtsQDE=",
-      "repass": "YXNkZmdoamtsQDE="
-    },
-    {
-      "fullname": "fjjj",
-      "email": "hauulo2002@gmail.com",
-      "phone": "0356481519",
-      "id": "kkk",
-      "pass": "$2a$10$cVxZvItSA9fA4uyu7mPQN.XPDK7Y7LsV1Ekg7oePO9nndDd9LJ43e",
-      "repass": "$2a$10$cVxZvItSA9fA4uyu7mPQN.XPDK7Y7LsV1Ekg7oePO9nndDd9LJ43e"
-    },
-    {
-      "fullname": "Hồ Mỹ Hân",
-      "email": "han@gmail.com",
-      "phone": "0356481519",
-      "id": "Hồ Mỹ Hân",
-      "pass": "$2a$10$FJ.oHcAgsAgIEGzgRezm9Oy4QyZzQNKIYhR7Nr5I1Ai/tmim6zCgy",
-      "repass": "$2a$10$FJ.oHcAgsAgIEGzgRezm9Oy4QyZzQNKIYhR7Nr5I1Ai/tmim6zCgy"
-    },
-    {
-      "fullname": "kk",
-      "email": "kkdan@gamil.com",
-      "phone": "0356481519",
-      "id": "mko",
-      "pass": "$2a$10$bcNzN3j39VBbTvTuTmJSPuFUHbuv.0bt7ltiXLuF.n66qHd3eqjPq",
-      "repass": "$2a$10$bcNzN3j39VBbTvTuTmJSPuFUHbuv.0bt7ltiXLuF.n66qHd3eqjPq"
-    },
-    {
-      "fullname": "mko",
-      "email": "dddan@gamil.com",
-      "phone": "0356481519",
-      "id": "mlo",
-      "pass": "$2a$10$QtHhl85vac2HOLhczHkb/OPnPzng3tqZ/EpnTOdB3HygKSoCx17vi",
-      "repass": "$2a$10$QtHhl85vac2HOLhczHkb/OPnPzng3tqZ/EpnTOdB3HygKSoCx17vi"
-    },
-    {
-      "fullname": "vvv",
-      "email": "danvv@gamil.com",
-      "phone": "0356481519",
-      "id": "vv",
-      "pass": "$2a$10$XmFD1Sp2Xu8DoJkIxyWe9u3l7N4dichukE9m3GdS24FtrlknjUR9.",
-      "repass": "$2a$10$XmFD1Sp2Xu8DoJkIxyWe9u3l7N4dichukE9m3GdS24FtrlknjUR9."
-    },
-    {
-      "fullname": "milo",
-      "email": "milo@gmail.com",
-      "phone": "0356481519",
-      "id": "milo",
-      "pass": "$2a$10$4TYSauYwbNafMhPSoGXxiOwrx9GFeSfvWP3/fPlc.buQm7otsb5Ey",
-      "repass": "$2a$10$4TYSauYwbNafMhPSoGXxiOwrx9GFeSfvWP3/fPlc.buQm7otsb5Ey"
-    },
-    {
-      "fullname": "bb",
-      "email": "hunn@gamil.com",
-      "phone": "0356481519",
-      "id": "bbv",
-      "pass": "$2a$10$BmIldHkBUQYO3bTriAEmSuZkuncbfEVaqdcrk8nbb9cyp/TDLfLQ6",
-      "repass": "$2a$10$BmIldHkBUQYO3bTriAEmSuZkuncbfEVaqdcrk8nbb9cyp/TDLfLQ6"
-    },
-    {
-      "fullname": "gg",
-      "email": "dangg@gamil.com",
-      "phone": "0356481519",
-      "id": "ggg",
-      "pass": "$2a$10$k./Ek/xg287X1f2adZ0QeuCLh9keIpi.RcwwDJXI3kUvCs56GC4tC",
-      "repass": "$2a$10$k./Ek/xg287X1f2adZ0QeuCLh9keIpi.RcwwDJXI3kUvCs56GC4tC"
-    },
-    {
-      "fullname": "vvv",
-      "email": "vdan@gamil.com",
-      "phone": "0356481519",
-      "id": "vvvv",
-      "pass": "$2a$10$1a9k..tJfLuUnW3SoZqDSODZ1UtExC/7uZDlbOj4Owtck0oFO6Fa.",
-      "repass": "$2a$10$1a9k..tJfLuUnW3SoZqDSODZ1UtExC/7uZDlbOj4Owtck0oFO6Fa."
-    },
-    {
-      "id": "nvh",
-      "email": "nvhieu@gmail.com",
-      "fullname": "Nguyễn Văn Hiếu",
-      "phone": "0963573246",
-      "pass": "$2a$10$1cT1J.2D/aFOO3KuBGmR0OKKTayUv/YubUsUq0C0RkYIdooxsC6mm",
-      "repass": "$2a$10$1cT1J.2D/aFOO3KuBGmR0OKKTayUv/YubUsUq0C0RkYIdooxsC6mm"
-    },
-    {
-      "id": "hthieu",
-      "email": "hthieu@gmail.com",
-      "fullname": "Hồ Trung Hiếu",
-      "phone": "0945733425",
-      "pass": "$2a$10$WPIxCwypUP7G076Bqxf6kORrw5jQbRU.yU3u9KK4gCbvILTnRUROS",
-      "repass": "$2a$10$WPIxCwypUP7G076Bqxf6kORrw5jQbRU.yU3u9KK4gCbvILTnRUROS"
-    },
-    {
-      "fullname": "cvvs",
-      "email": "wwdan@gamil.com",
-      "phone": "0356481519",
-      "id": "qa",
-      "pass": "$2a$10$u2YfipkDkTjmzkTSqhgy2eKL9p/EgyW7Mseyo/ubeWF533BsMDtV.",
-      "repass": "$2a$10$u2YfipkDkTjmzkTSqhgy2eKL9p/EgyW7Mseyo/ubeWF533BsMDtV."
-    },
-    {
-      "fullname": "sfvsg",
-      "email": "dfsfsgsban@gamil.com",
-      "phone": "0356481519",
-      "id": "lop",
-      "pass": "$2a$10$ROwqGex8davdm7a6mFvHGeWX9TjPg8qBoQaGORtrwvbHCwrc288xm",
-      "repass": "$2a$10$ROwqGex8davdm7a6mFvHGeWX9TjPg8qBoQaGORtrwvbHCwrc288xm"
-    },
-    {
-      "fullname": "scc",
-      "email": "dsdsdan@gamil.com",
-      "phone": "0356481519",
-      "id": "thi",
-      "pass": "$2a$10$8zGRavnQZN9jIiL4UKBCuu2UMYpTvKYXapaAFvWT2R4qT7WFmkb26",
-      "repass": "$2a$10$8zGRavnQZN9jIiL4UKBCuu2UMYpTvKYXapaAFvWT2R4qT7WFmkb26"
-    },
-    {
-      "fullname": "fsfs",
-      "email": "kkyydan@gamil.com",
-      "phone": "0356481519",
-      "id": "lap",
-      "pass": "$2a$10$rHKQsF.eW6RmE1LP9WD4I.32aj7pXLv2FrdKuTqyV2wgpoP1Bbd.y",
-      "repass": "$2a$10$rHKQsF.eW6RmE1LP9WD4I.32aj7pXLv2FrdKuTqyV2wgpoP1Bbd.y"
-    },
-    {
-      "fullname": "ewfef",
-      "email": "danee@gamil.com",
-      "phone": "0356481519",
-      "id": "er",
-      "pass": "$2a$10$6kQgc7H3ENYwSbwkKcRPNugq2ATMcD93n2X05Qn1wrAMsAu7A7Jqq",
-      "repass": "$2a$10$6kQgc7H3ENYwSbwkKcRPNugq2ATMcD93n2X05Qn1wrAMsAu7A7Jqq"
-    },
-    {
-      "id": "rt",
-      "email": "danc@gamil.com",
-      "fullname": "afssgs",
-      "phone": "0356487519",
-      "pass": "$2a$10$6a3aUyKuS76BAbksSg6iH.7L2dU47Pe4iKAv509g4UNSqlSjbXDSW",
-      "repass": "$2a$10$6a3aUyKuS76BAbksSg6iH.7L2dU47Pe4iKAv509g4UNSqlSjbXDSW"
-    },
-    {
-      "id": "haulo",
-      "email": "fsfsngua@gmail.com",
-      "fullname": "sfdfs",
-      "phone": "0808721321",
-      "pass": "enhjdmJubUAx",
-      "repass": "enhjdmJubUAx"
-    },
-    {
-      "fullname": "vffdfs",
-      "email": "fdzgzdm@gamil.com",
-      "phone": "0356481519",
-      "id": "hau03",
-      "pass": "cWF6d3N4ZWRjQDE=",
-      "repass": "cWF6d3N4ZWRjQDE="
-    },
-    {
-      "id": "hue",
-      "email": "hue@gamil.com",
-      "fullname": "Nguyễn Thị Huệ",
-      "phone": "0356481519",
-      "pass": "$2a$10$kc3Uz3vlMdpUvzFPBQbpqOgrXglq1r37m1douRg0.x3bDS.J3NP3K",
-      "repass": "$2a$10$kc3Uz3vlMdpUvzFPBQbpqOgrXglq1r37m1douRg0.x3bDS.J3NP3K"
+      "fullname": "Nguyễn Hồng Quân",
+      "email": "nhquan@gmail.com",
+      "phone": "0258763159",
+      "id": "nhquan",
+      "pass": "bmhxdWFuMjAwMkA=",
+      "repass": "bmhxdWFuMjAwMkA="
     }
   ],
   "products": [
@@ -707,6 +483,129 @@
       "dohoa": "NVIDIA GeForce GTX 1650 / AMD Radeon R9 390",
       "dungluongocung": "8GB",
       "hedieuhanh": "Windows 10 (64-bit)"
+    }
+  ],
+  "orders": [
+    {
+      "items": [
+        {
+          "id": "AC01",
+          "name": "Grand Theft Auto V",
+          "year": "2013",
+          "publisher": "Rockstar Games",
+          "foundation": "PlayStation 4, Xbox One, PlayStation 3, Xbox 360, Microsoft Windows",
+          "gamemode": "Chơi đơn, chơi đa người trực tuyến",
+          "description": "Grand Theft Auto V (GTA V) là một trong những tựa game nổi tiếng nhất và thành công nhất trong lịch sử ngành công nghiệp game. Game lấy bối cảnh thành phố ảo Los Santos và vùng nông thôn xung quanh nó, nơi người chơi sẽ tham gia vào những cuộc phiêu lưu đầy hành động và tội phạm. Trong GTA V, người chơi sẽ có thể kiểm soát ba nhân vật chính là Michael De Santa, Franklin Clinton và Trevor Philips, mỗi người có những đặc điểm riêng và câu chuyện cá nhân phức tạp. Game mang đến một thế giới mở rộng, cho phép người chơi thực hiện các nhiệm vụ chính, hoàn thành nhiệm vụ phụ, tham gia vào hoạt động tội phạm và khám phá các địa điểm đa dạng.",
+          "mainfeature": "GTA V nổi tiếng với yếu tố đồ họa chất lượng cao, gameplay đa dạng và tình tự lẫn tương tác sâu sắc. Game cung cấp nhiều hoạt động như lái xe, bay máy bay, đi bộ, chiến đấu, trộm cắp và thậm chí cả chơi golf, chơi tennis và đánh bạc. Bên cạnh chế độ chơi đơn, GTA V còn có chế độ chơi đa người trực tuyến mang tên Grand Theft Auto Online, trong đó người chơi có thể tham gia vào một thế giới chia sẻ với hàng chục ngàn người chơi khác, thực hiện các hoạt động tội phạm, hoàn thành nhiệm vụ và xây dựng sự nghiệp tội phạm của riêng mình.",
+          "price": 1500000,
+          "img": "https://www.hdwallpapers.in/download/grand_theft_auto_v_2013_game-wide.jpg",
+          "category": "Action",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5 3470 @ 3.2GHz (4 CPU) / AMD X8 FX-8350 @ 4GHz (8 CPU)",
+          "dohoa": "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
+          "dungluongocung": "72GB",
+          "hedieuhanh": "Windows 10 (64-bit), Windows 8.1 (64-bit), Windows 8 (64-bit), Windows 7 (64-bit) Service Pack 1 hoặc hơn",
+          "quantity": 1
+        },
+        {
+          "id": "ST02",
+          "name": "Total War: Warhammer II",
+          "year": "2017",
+          "publisher": "SEGA",
+          "foundation": "PC",
+          "gamemode": "Chế độ chơi đơn lẻ và chế độ chơi nhiều người trực tuyến.",
+          "description": "Total War: Warhammer II là một trò chơi chiến lược thời gian thực kết hợp với yếu tố chiến thuật lượn sóng, nơi người chơi chiếm lĩnh các quốc gia và vương quốc trong thế giới hư cấu của Warhammer.",
+          "mainfeature": "Quản lý quốc gia, xây dựng đội quân, chiến đấu với quân địch, khám phá và chiếm lĩnh lãnh thổ, nghiên cứu công nghệ và thực hiện chiến lược chiến tranh.",
+          "price": 1062000,
+          "img": "https://static.taigame.org/image/screenshot/201709/total-war-warhammer-ii-3.jpg",
+          "category": "Stratery",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-4570 3.2 GHz hoặc AMD FX-8350 4.0 GHz",
+          "dohoa": "NVIDIA GeForce GTX 770 4GB hoặc AMD Radeon R9 290X 4GB hoặc tương đương ",
+          "dungluongocung": "60GB",
+          "hedieuhanh": "Windows 7/8.1/10 (64-bit)",
+          "quantity": 4
+        },
+        {
+          "id": "AC03",
+          "name": "Assassin's Creed Valhalla",
+          "year": "2020",
+          "publisher": "Ubisoft",
+          "foundation": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Microsoft Windows",
+          "gamemode": "Chơi đơn",
+          "description": "Assassin's Creed Valhalla là một tựa game trong loạt Assassin's Creed, đưa người chơi vào thế giới của những chiến binh Viking vào thời kỳ Trung cổ. Trong game, người chơi sẽ vào vai Eivor, một lãnh chúa Viking, và trải qua cuộc hành trình xâm lược và khám phá vùng đất Anh của thời đại Viking. Trò chơi xây dựng một thế giới mở rộng, cho phép người chơi thám hiểm các vùng đất khác nhau của Anh, từ cảnh quan núi non đến thành phố đông đúc. Assassin's Creed Valhalla cung cấp nhiều hoạt động và nhiệm vụ để người chơi tham gia, bao gồm chiến đấu với kẻ thù, thám hiểm, xây dựng và phát triển cộng đồng Viking, và tham gia vào các hoạt động như đánh cờ, săn bắn và câu cá. Gameplay của Assassin's Creed Valhalla kết hợp các yếu tố hành động và ẩn náu truyền thống của loạt game Assassin's Creed. Người chơi có thể sử dụng vũ khí như kiếm, cung và tên, và các kỹ năng đặc biệt để chiến đấu và tiêu diệt kẻ thù. Trò chơi cũng có yếu tố ẩn náu, cho phép người chơi trèo tường, leo trèo và ám sát trong bóng tối. ",
+          "mainfeature": "Assassin's Creed Valhalla được đánh giá cao với sự khen ngợi về đồ họa đẹp, cốt truyện phong phú, thế giới mở rộng chi tiết và hệ thống gameplay đa dạng. Trò chơi mang đến cho người chơi một trải nghiệm sâu sắc về cuộc sống và cuộc phiêu lưu của người Viking trong thời kỳ lịch sử quan trọng.",
+          "price": 1000000,
+          "img": "https://tse3.mm.bing.net/th?id=OIP.kusTjgQZef1T_pbDeMMdUQHaEK&pid=Api&P=0&h=180",
+          "category": "Action",
+          "bonho": "16GB",
+          "bovixuly": "Intel Core i7-6700 hoặc AMD Ryzen 7 1700",
+          "dohoa": "NVIDIA GeForce GTX 1080 hoặc AMD Radeon RX Vega 64",
+          "dungluongocung": "50GB",
+          "hedieuhanh": "Windows 10 (64-bit)",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": "6,748,000VNĐ",
+      "user": {
+        "name": "Trung",
+        "email": "trungg@gmail.com",
+        "phone": "0124578946",
+        "note": ""
+      },
+      "createDate": "11:24:59  19:6:2023",
+      "id": 1
+    },
+    {
+      "items": [
+        {
+          "id": "AC01",
+          "name": "Grand Theft Auto V",
+          "year": "2013",
+          "publisher": "Rockstar Games",
+          "foundation": "PlayStation 4, Xbox One, PlayStation 3, Xbox 360, Microsoft Windows",
+          "gamemode": "Chơi đơn, chơi đa người trực tuyến",
+          "description": "Grand Theft Auto V (GTA V) là một trong những tựa game nổi tiếng nhất và thành công nhất trong lịch sử ngành công nghiệp game. Game lấy bối cảnh thành phố ảo Los Santos và vùng nông thôn xung quanh nó, nơi người chơi sẽ tham gia vào những cuộc phiêu lưu đầy hành động và tội phạm. Trong GTA V, người chơi sẽ có thể kiểm soát ba nhân vật chính là Michael De Santa, Franklin Clinton và Trevor Philips, mỗi người có những đặc điểm riêng và câu chuyện cá nhân phức tạp. Game mang đến một thế giới mở rộng, cho phép người chơi thực hiện các nhiệm vụ chính, hoàn thành nhiệm vụ phụ, tham gia vào hoạt động tội phạm và khám phá các địa điểm đa dạng.",
+          "mainfeature": "GTA V nổi tiếng với yếu tố đồ họa chất lượng cao, gameplay đa dạng và tình tự lẫn tương tác sâu sắc. Game cung cấp nhiều hoạt động như lái xe, bay máy bay, đi bộ, chiến đấu, trộm cắp và thậm chí cả chơi golf, chơi tennis và đánh bạc. Bên cạnh chế độ chơi đơn, GTA V còn có chế độ chơi đa người trực tuyến mang tên Grand Theft Auto Online, trong đó người chơi có thể tham gia vào một thế giới chia sẻ với hàng chục ngàn người chơi khác, thực hiện các hoạt động tội phạm, hoàn thành nhiệm vụ và xây dựng sự nghiệp tội phạm của riêng mình.",
+          "price": 1500000,
+          "img": "https://www.hdwallpapers.in/download/grand_theft_auto_v_2013_game-wide.jpg",
+          "category": "Action",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5 3470 @ 3.2GHz (4 CPU) / AMD X8 FX-8350 @ 4GHz (8 CPU)",
+          "dohoa": "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
+          "dungluongocung": "72GB",
+          "hedieuhanh": "Windows 10 (64-bit), Windows 8.1 (64-bit), Windows 8 (64-bit), Windows 7 (64-bit) Service Pack 1 hoặc hơn",
+          "quantity": 3
+        },
+        {
+          "id": "ST05",
+          "name": "Crusader Kings III",
+          "year": "2020",
+          "publisher": " Paradox Interactive.",
+          "foundation": "PC, Mac.",
+          "gamemode": "Chế độ chơi đơn lẻ.",
+          "description": "Crusader Kings III là một trò chơi chiến lược quản lý đế chế, nơi người chơi lãnh đạo một gia tộc trong thời kỳ Trung cổ và phải xây dựng và mở rộng đế chế của mình thông qua quản lý gia đình, chính trị và quân sự.",
+          "mainfeature": "Quản lý gia đình và thân tộc, xây dựng đế chế, thực hiện ngoại giao và chiến tranh, tương tác với các nhân vật và sự kiện lịch sử.",
+          "price": 1500000,
+          "img": "https://i.ytimg.com/vi/iWCGvLXPkQY/maxresdefault.jpg",
+          "category": "Stratery",
+          "bonho": "8GB",
+          "bovixuly": "Intel Core i5-4670K / AMD Ryzen 5 2400G",
+          "dohoa": "NVIDIA GeForce GTX 1650 / AMD Radeon R9 390",
+          "dungluongocung": "8GB",
+          "hedieuhanh": "Windows 10 (64-bit)",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": "6,000,000VNĐ",
+      "user": {
+        "name": "Nguyễn Hậu",
+        "email": "nguyenhau@gmail.com",
+        "phone": "0348761597",
+        "note": ""
+      },
+      "createDate": "13:45:47  19:6:2023",
+      "id": 2
     }
   ]
 }
