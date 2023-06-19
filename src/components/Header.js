@@ -1,61 +1,10 @@
-// import React from "react";
-// import styled from "styled-components";
-// import {NavLink} from "react-router-dom";
-// import Nav from "./Nav";
-//
-// // class Header extends React.Component{
-// //     render() {
-// //         return(
-// //             <MainHeader>
-// //
-// //                 <NavLink to="/">
-// //                     <img className="logo" src="./images/logodnh.jpg" alt="my logo img" />
-// //                 </NavLink>
-// //                 <Nav />
-// //             </MainHeader>
-// //         );
-// //     }
-// // }
-// const Header = ({ cartItems, updateCartItemCount }) => {
-//     return (
-//         <MainHeader>
-//             <NavLink to="/">
-//                 <img className="logo" src="./images/logodnh.jpg" alt="my logo img" />
-//             </NavLink>
-//             <Nav cartItems={cartItems} updateCartItemCount={updateCartItemCount} />
-//         </MainHeader>
-//     );
-// };
-//
-//
-// const MainHeader = styled.header`
-//   height: 10rem;
-//   background-color: cornflowerblue;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   position: relative;
-//
-//   .logo {
-//     padding-left: 3rem;
-//     height: 5rem;
-//   }
-//
-// `;
-//
-//
-// export default Header;
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { TbShoppingBag } from "react-icons/tb";
 import { FaUser } from "react-icons/fa";
 
-const Header = ({ cartItems }) => {
-    // const cartItemsCount = cartItems.reduce(
-    //     (totalCount, currentItem) => totalCount + currentItem.quantity,
-    //     0
-    // );
+const Header = ({ }) => {
 
     return (
         <MainHeader>
@@ -67,22 +16,22 @@ const Header = ({ cartItems }) => {
                     <ul className="navbar-lists">
                         <li>
                             <NavLink to="/" className="navbar-link home-link">
-                                Home
+                                Trang chủ
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/products" className="navbar-link">
-                                Products
+                                Sản phẩm
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/about" className="navbar-link">
-                                About
+                                Thông tin
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/contact" className="navbar-link">
-                                Contact
+                                Liên hệ
                             </NavLink>
                         </li>
                         <li>
@@ -93,8 +42,6 @@ const Header = ({ cartItems }) => {
                         <li>
                             <NavLink to="/cart" className="navbar-link cart-trolley--link">
                                 <TbShoppingBag className="cart-trolley" />
-                                <span className="cart-total--item">{}</span>
-
                             </NavLink>
                         </li>
                     </ul>
