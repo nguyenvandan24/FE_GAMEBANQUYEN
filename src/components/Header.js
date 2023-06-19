@@ -33,11 +33,6 @@ export default function Header () {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about" className="navbar-link">
-                                {t('about')}
-                            </NavLink>
-                        </li>
-                        <li>
                             <NavLink to="/contact" className="navbar-link">
                                 {t('contact')}
                             </NavLink>
