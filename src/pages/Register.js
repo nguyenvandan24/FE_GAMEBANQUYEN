@@ -22,7 +22,7 @@ const Register = () =>{
     const navigate=useNavigate();
     const IsValidate= () =>{
         let isproceed=true;
-        let errormessage= 'please enter the value in';
+        let errormessage= 'Nhập lại mật khẩu';
         if(fullname==null || fullname==''){
             isproceed=false;
             errormessage += 'fullName';
@@ -49,7 +49,7 @@ const Register = () =>{
         }
         if (pass !== repass) {
             isproceed=false;
-            toast.warning('password incorrect ');
+            toast.warning('Sai mật khẩu ');
 
         }
         if(!isproceed){
@@ -59,7 +59,7 @@ const Register = () =>{
 
             }else{
                 isproceed =false;
-                toast.warning('please enter the valid email ');
+                toast.warning('nhập email ');
             }
         }
 
@@ -97,9 +97,9 @@ const Register = () =>{
                     const existingEmail = data.find((user) => user.email === email);
 
                     if (existingUser) {
-                        toast.error('Username already exists');
+                        toast.error('tên tài khoản đã tồn tại');
                     } else if (existingEmail) {
-                        toast.error('Email already exists');
+                        toast.error('Email đã tồn tại');
 
                     } else {
                         fetch('http://localhost:3000/users', {
@@ -108,11 +108,11 @@ const Register = () =>{
                             body: JSON.stringify(regobj)
                         })
                             .then(() => {
-                                toast.success('Register successfully');
+                                toast.success('Tạo tài khoản thành công');
                                 navigate('/login');
                             })
                             .catch((err) => {
-                                toast.error('Failed: ' + err.message);
+                                toast.error('Lỗi');
                             });
                     }
                 })
@@ -130,34 +130,34 @@ const Register = () =>{
     return (
         <Wrapper>
             <div className="register-container">
-                <h2 className="common-heading">Register</h2>
+                <h2 className="common-heading">Đăng ký</h2>
                 <div className="container" onSubmit={handledsubmit}>
                     <div className="contact-form">
                         <form method="POST" className="contact-inputs">
-                            <label className="text">Full name</label>
-                            <input value={fullname} onChange={e=>fullnamechange(e.target.value)} className="input" type="text" placeholder="Full name" name="username" autoComplete="off" required/>
+                            <label className="text">Họ tên</label>
+                            <input value={fullname} onChange={e=>fullnamechange(e.target.value)} className="input" type="text" placeholder="Họ và tên" name="username" autoComplete="off" required/>
 
                             <label className="text">Email</label>
                             <input value={email} onChange={e=>emailchange(e.target.value)} className="input" type="email" name="Email" placeholder="Email" autoComplete="off" required/>
 
-                            <label className="text">Phone</label>
-                            <input value={phone} onChange={e=>phonechange(e.target.value)} className="input" type="phone" name="Phone" placeholder="Phone" autoComplete="off" required/>
+                            <label className="text">SĐT</label>
+                            <input value={phone} onChange={e=>phonechange(e.target.value)} className="input" type="phone" name="Phone" placeholder="xxx.xxx.xxx" autoComplete="off" required/>
 
-                            <label className="text">Username</label>
-                            <input value={id} onChange={e=>idchange(e.target.value)} className="input" type="text" placeholder="Username" name="username" autoComplete="off" required/>
+                            <label className="text">Tên tài khoản</label>
+                            <input value={id} onChange={e=>idchange(e.target.value)} className="input" type="text" placeholder="Tên ta khoản" name="username" autoComplete="off" required/>
 
-                            <label className="text">Password</label>
-                            <input value={pass} onChange={e=>passchange(e.target.value)} className="input" type="password" name="password" placeholder="Password" autoComplete="off" required/>
+                            <label className="text">Mật khẩu</label>
+                            <input value={pass} onChange={e=>passchange(e.target.value)} className="input" type="password" name="password" placeholder="Nhập mật khẩu" autoComplete="off" required/>
 
-                            <label className="text">Re-Password</label>
-                            <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder="Re-password" autoComplete="off" required/>
+                            <label className="text">Nhập lại mật khẩu</label>
+                            <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder="Nhập lại mật khẩu" autoComplete="off" required/>
                             <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
 
                                 <Link to={'/Login'}>Bạn đã có tài khoản?</Link>
                             </div>
 
                             <div style={{textAlign: "right"}}>
-                                <Button  className="register" type="submit"  >Register</Button>
+                                <Button  className="register" type="submit"  >Đăng ký</Button>
                             </div>
                         </form>
                     </div>

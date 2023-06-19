@@ -41,7 +41,7 @@ const Login =()=>{
             }).then((resp)=>{
                 console.log(resp);
                 if(Object.keys(resp).length===0){
-                    toast.error('Please enter valid user')
+                    toast.error('Sai tên tài khoản')
                 }else {
                      if(resp.pass=== btoa(pass)){
                          //console.log('thanhcong');
@@ -50,7 +50,7 @@ const Login =()=>{
                          navigate('/');
 
                      }  else {
-                            toast.error('erorr');
+                            toast.error('Sai mật khẩu');
                         }
                         if (rememberMe) {
                             const loginInfo = {username, password: pass};
@@ -68,7 +68,7 @@ const Login =()=>{
                 })
 
                 .catch((err)=>{
-                toast.error('login faile due to:' + err.message());
+                toast.error('Đăng nhập lỗi:' + err.message());
             })
 
         }
@@ -95,14 +95,14 @@ const Login =()=>{
     return (
         <Wrapper>
             <div className="login-container">
-                <h2 className="common-heading">Login</h2>
+                <h2 className="common-heading">Đăng nhập</h2>
                 <div className="container">
                     <div className="contact-form">
                         <form onSubmit={ProceedLogin} method="POST" className="contact-inputs">
-                            <label className="text">Username</label>
-                            <input value={username} onChange={e=>usernameupdate(e.target.value)} className="input" type="text" placeholder="Username" name="username" autoComplete="off" required/>
-                            <lebel className="text">Password</lebel>
-                            <input value={pass} onChange={e=>passupdate(e.target.value)}className="input" type="password" name="Password" placeholder="Password" autoComplete="off" required/>
+                            <label className="text">Tên tài khoản </label>
+                            <input value={username} onChange={e=>usernameupdate(e.target.value)} className="input" type="text" placeholder="Tên tài khoản" name="username" autoComplete="off" required/>
+                            <lebel className="text">Mật khẩu</lebel>
+                            <input value={pass} onChange={e=>passupdate(e.target.value)}className="input" type="password" name="Password" placeholder="Mật khẩu" autoComplete="off" required/>
 
                             <div className="remember-me">
                                 <input
@@ -110,7 +110,7 @@ const Login =()=>{
                                     checked={rememberMe}
                                     onChange={handleRememberMeChange}
                                 />
-                                <label style={{fontSize: "medium"}}>Remember Me</label>
+                                <label style={{fontSize: "medium"}}>Nhớ mật khẩu</label>
                             </div>
                             <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
                                 Bạn chưa có tài khoản?
@@ -119,7 +119,7 @@ const Login =()=>{
                             </div>
 
                             <div style={{textAlign: "right"}}>
-                                <Button className="login" type="submit">LOGIN</Button>
+                                <Button className="login" type="submit">Đăng nhập</Button>
                             </div>
                         </form>
                     </div>
@@ -170,7 +170,7 @@ const Wrapper = styled.section`
           text-transform: none;
         }
         .login {
-          width: 13rem;
+          width: 17rem;
           border-radius: 10px;
         }
 
