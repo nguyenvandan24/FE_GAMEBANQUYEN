@@ -15,25 +15,25 @@ class Services extends React.Component{
                         <div className="services-1">
                             <div>
                                 <TbTruckDelivery className="icon" />
-                                <h3>Super fast and Free Delivery</h3>
+                                <h3>Dịch vụ nhanh và miễn phí</h3>
                             </div>
                         </div>
 
                         <div className="services-2">
                             <div className="services-column-2">
                                 <MdSecurity className="icon"/>
-                                <h3>Non-contact Shipping</h3>
+                                <h3>Vận chuyển không tiếp xúc</h3>
                             </div>
                             <div className="services-column-2">
                                 <GiReceiveMoney  className="icon"/>
-                                <h3>Money-back Guaranteed</h3>
+                                <h3>Đảm bảo hoàn tiền</h3>
                             </div>
                         </div>
 
                         <div className="services-3">
                             <div>
                                 <RiSecurePaymentLine className="icon"/>
-                                <h3>Super secure payment system</h3>
+                                <h3>Hệ thống thanh toán an toàn</h3>
                             </div>
                         </div>
                     </div>

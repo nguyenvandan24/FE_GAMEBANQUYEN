@@ -18,8 +18,7 @@ const FeatureProduct = () => {
 
     return <Wrapper className="section">
         <div className="container">
-            <div className="intro-data">Check Now!</div>
-            <div className="common-heading"> Our Feature Services </div>
+            <div className="common-heading"> Sản Phẩm Nổi Bật </div>
             <div className="grid grid-three-column">
                     {/* Hiển thị danh sách 3 sản phẩm */}
                     {products.slice(0, 3).map(product => (

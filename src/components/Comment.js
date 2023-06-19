@@ -85,7 +85,7 @@ const Comment = ({id}) => {
             </div>
             <div className="conn">
                 <div className="form">
-                    <h3 className="heading">Add a Comment</h3>
+                    <h3 className="heading">Thêm bình luận và đánh giá</h3>
                     <div className="comment-form">
                         <div className="a">
                             <input className="input"
@@ -99,7 +99,7 @@ const Comment = ({id}) => {
                         <input className="input"
                                value={newComment}
                                onChange={(e) => setNewComment(e.target.value)}
-                               placeholder="Enter your comment"
+                               placeholder="Nhập bình luận"
                         />
                         <div className="rating">
                             {[1, 2, 3, 4, 5].map((rating) => (
@@ -112,7 +112,7 @@ const Comment = ({id}) => {
                             </span>
                             ))}
                         </div>
-                        <Button onClick={handleAddComment}>Submit</Button>
+                        <Button onClick={handleAddComment}>Gửi</Button>
                     </div>
                 </div>
             </div>

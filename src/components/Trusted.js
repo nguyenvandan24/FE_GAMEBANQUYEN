@@ -6,34 +6,7 @@ class Trusted extends React.Component{
         return(
             <Wrapper className="brand-section">
                 <div className="container">
-                    <h3>Trusted by 1000+ companies</h3>
-                    <div className="brand-section-slider">
-                        <div className="slide">
-                            <img  src="https://raw.githubusercontent.com/solodev/
-                            infinite-logo-carousel/master/images/image2.png"
-                            alt="trusted-brands"/>
-                        </div>
-                        <div className="slide">
-                            <img  src="https://raw.githubusercontent.com/solodev/
-                            infinite-logo-carousel/master/images/image3.png"
-                                  alt="trusted-brands"/>
-                        </div>
-                        <div className="slide">
-                            <img  src="https://raw.githubusercontent.com/solodev/
-                            infinite-logo-carousel/master/images/image4.png"
-                                  alt="trusted-brands"/>
-                        </div>
-                        <div className="slide">
-                            <img  src="https://raw.githubusercontent.com/solodev/
-                            infinite-logo-carousel/master/images/image6.png"
-                                  alt="trusted-brands"/>
-                        </div>
-                        <div className="slide">
-                            <img  src="https://raw.githubusercontent.com/solodev/
-                            infinite-logo-carousel/master/images/image8.png"
-                                  alt="trusted-brands"/>
-                        </div>
-                    </div>
+                    <h3>Được tin cậy bởi 100+ công ty</h3>
                 </div>
             </Wrapper>
         );

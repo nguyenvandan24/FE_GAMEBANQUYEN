@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {NavLink, useParams} from "react-router-dom";
 import PageNavigation from "../components/PageNavigation";
 import {Container} from "../styles/Container";
-import Star from "../components/Star";
 import Tabs from "../components/Tabs";
 import Comment from "../components/Comment";
 import {Button} from "../styles/Button";
@@ -88,9 +87,8 @@ const ProductDetail = () => {
 
                     <div className="product_data">
                         <h2>{product.name}</h2>
-                        <Star/>
                         <p className="product-data-price product-data-real-price">
-                            Giá: {product.price}
+                            Giá: {product.price} VNĐ
                         </p>
                         <div className="product-data-info">
                             <p>
