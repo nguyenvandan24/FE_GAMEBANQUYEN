@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const PageNavigation = ({title}) => {
+    const { t, i18n } = useTranslation();
     return (
         <Wrapper>
-            <NavLink to="/">Trang chủ</NavLink>/ {title}
+            <NavLink to="/">{t('home')}</NavLink>/ {title}
         </Wrapper>
     );
 }

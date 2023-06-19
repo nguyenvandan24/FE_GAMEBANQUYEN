@@ -39,6 +39,14 @@
       "id": "hi",
       "pass": "enhjdmJubUAx",
       "repass": "enhjdmJubUAx"
+    },
+    {
+      "fullname": "Nguyễn Thùy Trang",
+      "email": "trang@gmail.com",
+      "phone": "0987654356",
+      "id": "trangNguyen",
+      "pass": "VHJhbmdAMTIzNDU2",
+      "repass": "VHJhbmdAMTIzNDU2"
     }
   ],
   "products": [

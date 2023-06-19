@@ -3,19 +3,20 @@ import styled from "styled-components";
 import {Button} from "../styles/Button";
 import {NavLink} from "react-router-dom";
 import {FaDiscord, FaFacebook, FaInstagram} from "react-icons/fa";
+import {useTranslation} from "react-i18next";
 
-class Footer extends React.Component{
-    render() {
+export default function Footer () {
+    const { t, i18n } = useTranslation();
         return(
             <Wrapper>
                 <section className="contact-short">
                     <div className="grid grid-two-column">
                         <div>
-                            <h3>Trò chuyện với chúng tôi?</h3>
+                            <h3>{t('talk')}</h3>
                         </div>
                         <div>
                             <Button>
-                                <NavLink to="/contact">Bắt đầu</NavLink>
+                                <NavLink to="/contact">{t('start')}</NavLink>
                             </Button>
                         </div>
                     </div>
@@ -24,20 +25,20 @@ class Footer extends React.Component{
                 <footer>
                     <div className="container grid grid-four-column">
                         <div className="footer-about">
-                            <p>Shop chuyên bán game bản quyền uy tín.</p>
-                            <p><b>Địa chỉ: </b>Phường Linh Trung, TP.Thủ Đức</p>
+                            <p>{t('sale')}</p>
+                            <p><b>{t('address')}: </b>{t('addressUs')}</p>
                         </div>
 
                         <div className="footer-subscribe">
-                            <h3>Hãy đăng ký để cập nhật thông tin nhanh nhất</h3>
+                            <h3>{t('sub')}</h3>
                             <form action="#">
-                                <input type="email" placeholder="Nhập email của bạn" required/>
-                                <input type="submit" value="Đăng ký"/>
+                                <input type="email" placeholder={t('email')} required/>
+                                <input type="submit" value={t('subscribe')}/>
                             </form>
                         </div>
 
                         <div className="footer-social">
-                            <h3>Theo dõi chúng tôi</h3>
+                            <h3>{t('follow')}</h3>
                             <div className="footer-social--icons">
                                 <div>
                                     <FaDiscord className="icons"/>
@@ -52,8 +53,8 @@ class Footer extends React.Component{
                         </div>
 
                         <div className="footer-contact">
-                            <h3>Liên hệ với chúng tôi</h3>
-                            <p><b>Sđt: </b>+84 021875242</p>
+                            <h3>{t('contactUs')}</h3>
+                            <p><b>{t('phone')}: </b>+84 021875242</p>
                             <p><b>Email: </b>game@gmail.com</p>
                         </div>
                     </div>
@@ -67,7 +68,6 @@ class Footer extends React.Component{
             </Wrapper>
         );
     }
-}
 
 const Wrapper = styled.section`
   .iSIFGq {
@@ -148,5 +148,3 @@ const Wrapper = styled.section`
     }
   }
 `;
-
-export default Footer;

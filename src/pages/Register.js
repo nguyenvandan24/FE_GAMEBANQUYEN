@@ -6,9 +6,11 @@ import styled from "styled-components";
 import {Button} from "../styles/Button";
 import {Link, useNavigate} from "react-router-dom";
 import bcrypt from 'bcryptjs';
+import {useTranslation} from "react-i18next";
 
 
 const Register = () =>{
+    const { t, i18n } = useTranslation();
     const [fullname, fullnamechange] = useState("");
     const [email, emailchange] = useState("");
     const [phone, phonechange] = useState("");
@@ -17,12 +19,10 @@ const Register = () =>{
     const [repass, repasschange] = useState("");
     const [errorMessage, setErrorMessage] = useState('');
 
-
-
     const navigate=useNavigate();
     const IsValidate= () =>{
         let isproceed=true;
-        let errormessage= 'please enter the value in';
+        let errormessage= 'Nhập lại mật khẩu';
         if(fullname==null || fullname==''){
             isproceed=false;
             errormessage += 'fullName';
@@ -49,7 +49,7 @@ const Register = () =>{
         }
         if (pass !== repass) {
             isproceed=false;
-            toast.warning('password incorrect ');
+            toast.warning('Sai mật khẩu ');
 
         }
         if(!isproceed){
@@ -59,7 +59,7 @@ const Register = () =>{
 
             }else{
                 isproceed =false;
-                toast.warning('please enter the valid email ');
+                toast.warning('nhập email ');
             }
         }
 
@@ -97,9 +97,9 @@ const Register = () =>{
                     const existingEmail = data.find((user) => user.email === email);
 
                     if (existingUser) {
-                        toast.error('Username already exists');
+                        toast.error('tên tài khoản đã tồn tại');
                     } else if (existingEmail) {
-                        toast.error('Email already exists');
+                        toast.error('Email đã tồn tại');
 
                     } else {
                         fetch('http://localhost:3000/users', {
@@ -108,11 +108,11 @@ const Register = () =>{
                             body: JSON.stringify(regobj)
                         })
                             .then(() => {
-                                toast.success('Register successfully');
+                                toast.success('Tạo tài khoản thành công');
                                 navigate('/login');
                             })
                             .catch((err) => {
-                                toast.error('Failed: ' + err.message);
+                                toast.error('Lỗi');
                             });
                     }
                 })
@@ -130,34 +130,34 @@ const Register = () =>{
     return (
         <Wrapper>
             <div className="register-container">
-                <h2 className="common-heading">Register</h2>
+                <h2 className="common-heading">{t('register')}</h2>
                 <div className="container" onSubmit={handledsubmit}>
                     <div className="contact-form">
                         <form method="POST" className="contact-inputs">
-                            <label className="text">Full name</label>
-                            <input value={fullname} onChange={e=>fullnamechange(e.target.value)} className="input" type="text" placeholder="Full name" name="username" autoComplete="off" required/>
+                            <label className="text">{t('fullName')}</label>
+                            <input value={fullname} onChange={e=>fullnamechange(e.target.value)} className="input" type="text" placeholder={t('fullName')} name="username" autoComplete="off" required/>
 
                             <label className="text">Email</label>
                             <input value={email} onChange={e=>emailchange(e.target.value)} className="input" type="email" name="Email" placeholder="Email" autoComplete="off" required/>
 
-                            <label className="text">Phone</label>
-                            <input value={phone} onChange={e=>phonechange(e.target.value)} className="input" type="phone" name="Phone" placeholder="Phone" autoComplete="off" required/>
+                            <label className="text">{t('phone')}</label>
+                            <input value={phone} onChange={e=>phonechange(e.target.value)} className="input" type="phone" name="Phone" placeholder={t('phone')} autoComplete="off" required/>
 
-                            <label className="text">Username</label>
-                            <input value={id} onChange={e=>idchange(e.target.value)} className="input" type="text" placeholder="Username" name="username" autoComplete="off" required/>
+                            <label className="text">{t('userName')}</label>
+                            <input value={id} onChange={e=>idchange(e.target.value)} className="input" type="text" placeholder={t('userName')} autoComplete="off" required/>
 
-                            <label className="text">Password</label>
-                            <input value={pass} onChange={e=>passchange(e.target.value)} className="input" type="password" name="password" placeholder="Password" autoComplete="off" required/>
+                            <label className="text">{t('pass')}</label>
+                            <input value={pass} onChange={e=>passchange(e.target.value)} className="input" type="password" name="password" placeholder={t('pass')} autoComplete="off" required/>
 
-                            <label className="text">Re-Password</label>
-                            <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder="Re-password" autoComplete="off" required/>
+                            <label className="text">{t('rePass')}</label>
+                            <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder={t('rePass')} autoComplete="off" required/>
                             <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
 
-                                <Link to={'/Login'}>Bạn đã có tài khoản?</Link>
+                                <Link to={'/Login'}>{t('acc')}</Link>
                             </div>
 
                             <div style={{textAlign: "right"}}>
-                                <Button  className="register" type="submit"  >Register</Button>
+                                <Button  className="register" type="submit"  >{t('register')}</Button>
                             </div>
                         </form>
                     </div>

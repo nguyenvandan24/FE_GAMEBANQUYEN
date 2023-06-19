@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Button} from "../styles/Button";
-import React, {useState} from "react";
+import React from "react";
+import {useTranslation} from "react-i18next";
 
 const CheckoutForm = ({name, email, phone, note, handleFormCheckout, setName, setEmail, setPhone, setNote, totalPrice, cartItems}) => {
 
@@ -20,34 +21,36 @@ const CheckoutForm = ({name, email, phone, note, handleFormCheckout, setName, se
         setNote(event.target.value);
     }
 
+    const { t } = useTranslation();
+
     return(
         <Wrapper>
             <div className="grid grid-two-column">
                 <div>
                     <form className="infor-input" onSubmit={handleFormCheckout}>
-                        <label>Tên khách hàng *</label>
-                        <input className="input" type="text" value={name} onChange={handleNameChange} placeholder="Vui lòng nhập tên khách hàng."/><br/>
+                        <label>{t('nameCustomer')} *</label>
+                        <input className="input" type="text" value={name} onChange={handleNameChange} placeholder={t('enterNameCustomer')}/><br/>
                         <label>Email *</label>
-                        <input className="input" type="email" value={email} onChange={handleEmailChange} placeholder="Vui lòng nhập eamil khách hàng."/><br/>
-                        <label>Số điện thoại *</label>
-                        <input className="input" type="text" value={phone} onChange={handlePhoneChange} placeholder="Vui lòng nhập số điện thoại khách hàng."/><br/>
-                        <label>Ghi chú</label>
-                        <textarea className="input" type="text" value={note} onChange={handleNoteChange} placeholder="Ghi chú."/><br/>
+                        <input className="input" type="email" value={email} onChange={handleEmailChange} placeholder={t('email')}/><br/>
+                        <label>{t('phone')} *</label>
+                        <input className="input" type="text" value={phone} onChange={handlePhoneChange} placeholder={t('enterPhone')}/><br/>
+                        <label>{t('note')}</label>
+                        <textarea className="input" type="text" value={note} onChange={handleNoteChange} placeholder={t('note')}/><br/>
                         <div className="checkout-btn">
                             <div className="button">
-                                <Button claName="btn-checkout" type="submit" >Xác nhận thanh toán</Button>
+                                <Button claName="btn-checkout" type="submit" >{t('paymentConfirm')}</Button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div>
-                    <h2>Thông tin sản phẩm</h2>
+                    <h2>{t('infoP')}</h2>
                     <table>
                         <thead>
                         <tr className="grid grid-three-column">
-                            <th>Tên sản phẩm</th>
-                            <th>Số lượng</th>
-                            <th>Giá</th>
+                            <th>{t('name')} {t('product')}</th>
+                            <th>{t('quantity')}</th>
+                            <th>{t('price')}</th>
                         </tr>
                         </thead>
 
@@ -62,10 +65,10 @@ const CheckoutForm = ({name, email, phone, note, handleFormCheckout, setName, se
                         </tbody>
                     </table>
                     <div className="total-price">
-                        <p >Tổng tiền: {totalPrice} VNĐ</p>
+                        <p >{t('totalMoney')}: {totalPrice} VNĐ</p>
                     </div>
                     <div className="bank">
-                        <p>Ngân hàng BIDV - 3141000427412 - Nguyễn Trung Hiếu - Chi nhánh Đông Sài Gòn</p>
+                        <p>{t('bank')} BIDV - 3141000427412 - Nguyễn Trung Hiếu - {t('branch')} Đông Sài Gòn</p>
                     </div>
                 </div>
             </div>
@@ -77,16 +80,16 @@ const Wrapper = styled.section`
   h2{
     font-size: 25px;
   }
-    .infor-input {
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-    }
+  .infor-input {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
   .input {
     border-radius: 10px;
     text-transform: none;
   }
-  label 
+  label
   {
     font-size: 1.5rem;
   }

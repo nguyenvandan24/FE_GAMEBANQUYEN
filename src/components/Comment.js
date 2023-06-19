@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {Button} from "../styles/Button";
+import {useTranslation} from "react-i18next";
 
 
 const Comment = ({id}) => {
+    const { t, i18n } = useTranslation();
+
     const [comments, setComments] = useState(() => {
         const savedComments = localStorage.getItem(`comments_${id}`);
         return savedComments ? JSON.parse(savedComments) : [];
@@ -64,7 +67,7 @@ const Comment = ({id}) => {
     return (
         <Wrapper>
             <div className="container-comment">
-                <h3 className="line">Bình luận và đánh giá</h3>
+                <h3 className="line">{t('cmtReview')}</h3>
                 <ul className="comment-list">
                     {comments[id]?.map((comment, index) => (
                         <li key={index}>
@@ -85,21 +88,21 @@ const Comment = ({id}) => {
             </div>
             <div className="conn">
                 <div className="form">
-                    <h3 className="heading">Thêm bình luận và đánh giá</h3>
+                    <h3 className="heading">{t('addCmt')}</h3>
                     <div className="comment-form">
                         <div className="a">
                             <input className="input"
                                    type="text"
                                    value={newName}
                                    onChange={(e) => setNewName(e.target.value)}
-                                   placeholder="Nhập tên của bạn"
+                                   placeholder={t('enterName')}
                             />
                         </div>
 
                         <input className="input"
                                value={newComment}
                                onChange={(e) => setNewComment(e.target.value)}
-                               placeholder="Nhập bình luận"
+                               placeholder={t('enterCmt')}
                         />
                         <div className="rating">
                             {[1, 2, 3, 4, 5].map((rating) => (
@@ -112,7 +115,7 @@ const Comment = ({id}) => {
                             </span>
                             ))}
                         </div>
-                        <Button onClick={handleAddComment}>Gửi</Button>
+                        <Button onClick={handleAddComment}>{t('submit')}</Button>
                     </div>
                 </div>
             </div>
