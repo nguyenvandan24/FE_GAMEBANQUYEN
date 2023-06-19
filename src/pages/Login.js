@@ -7,10 +7,9 @@ import {Link, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'js-cookie'
-import bcrypt from "bcryptjs";
 
-// class Login extends React.Component{
-//     render() {
+
+
 const Login =()=>{
     const [username, usernameupdate]=useState('');
     const [pass, passupdate]=useState('');
@@ -36,8 +35,7 @@ const Login =()=>{
     const ProceedLogin = (e) =>{
         e.preventDefault();
         if(validate()){
-            //implentation
-            //console.log('proceed');
+
             fetch("http://localhost:3000/users/" + username).then((res)=>{
                 return res.json();
             }).then((resp)=>{
@@ -46,16 +44,12 @@ const Login =()=>{
                     toast.error('Please enter valid user')
                 }else {
                      if(resp.pass=== btoa(pass)){
-                         console.log('thanhcong');
+                         //console.log('thanhcong');
+                         toast.success('Đăng nhập thành công');
                          sessionStorage.setItem("username", username );
                          navigate('/');
 
-                     }
-
-
-
-
-                          else {
+                     }  else {
                             toast.error('erorr');
                         }
                         if (rememberMe) {
@@ -118,10 +112,10 @@ const Login =()=>{
                                 />
                                 <label style={{fontSize: "medium"}}>Remember Me</label>
                             </div>
-                            <div className="text" style={{textAlign: "left", color: "gray"}}>
-                                Forgot password?
+                            <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
+                                Bạn chưa có tài khoản?
 
-                                <Link to={'/Register'}> create account</Link>
+                                <Link to={'/Register'}> Tạo tài khoản</Link>
                             </div>
 
                             <div style={{textAlign: "right"}}>
