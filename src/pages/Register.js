@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from "styled-components";
 import {Button} from "../styles/Button";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import bcrypt from 'bcryptjs';
 
 
@@ -65,18 +65,6 @@ const Register = () =>{
 
         return isproceed;
     }
-    // Kiểm tra username đã tồn tại trong cơ sở dữ liệu
-    // const isUsernameExists = (id) => {
-    //     return fetch(`http://localhost:3000/users?id=${id}`)
-    //         .then((response) => response.json())
-    //         .then((users) => users.length > 0);
-    //
-    // };
-    // const isUsernameExists = (username) => {
-    //     const users = router.db.get('users').value();
-    //     const existingUser = users.find((user) => user.username === username);
-    //     return !!existingUser;
-    // };
 
 
 
@@ -87,11 +75,7 @@ const Register = () =>{
 
         // Mã hóa mật khẩu
         const hashedPass =btoa(pass);
-        // window.localStorage.setItem(
-        //     "login",
-        //     JSON.stringify({ id, hashedPass })
-        // );
-        // console.log(hashedPass);
+
 
         if (IsValidate()) {
             if (pass.length <= 8 || repass <= 8) {
@@ -106,21 +90,6 @@ const Register = () =>{
             let regobj = {fullname, email, phone, id, pass: hashedPass, repass:hashedPass};
             console.log(regobj);
 
-            // fetch('http://localhost:3000/users', {
-            //     method: "POST",
-            //     headers: {'Content-Type': 'application/json'},
-            //     body: JSON.stringify(regobj)
-            // })
-            //     .then((res) => {
-            //         toast.success('Register sucessfully');
-            //         navigate('/login');
-            //     })
-            //     .catch((err) => {
-            //         toast.success('Faile:' + err.message);
-            //
-            //
-            //     });
-            // Kiểm tra username, email đã tồn tại trong cơ sở dữ liệu
             fetch('http://localhost:3000/users')
                 .then((response) => response.json())
                 .then((data) => {
@@ -157,8 +126,7 @@ const Register = () =>{
 
 
 
-// class Regiser extends React.Component{
-//     render() {
+
     return (
         <Wrapper>
             <div className="register-container">
@@ -183,6 +151,10 @@ const Register = () =>{
 
                             <label className="text">Re-Password</label>
                             <input value={repass} onChange={e=>repasschange(e.target.value)} className="input" type="password" name="password" placeholder="Re-password" autoComplete="off" required/>
+                            <div className="text" style={{textAlign: "left", color: "gray", fontSize:14}}>
+
+                                <Link to={'/Login'}>Bạn đã có tài khoản?</Link>
+                            </div>
 
                             <div style={{textAlign: "right"}}>
                                 <Button  className="register" type="submit"  >Register</Button>
@@ -235,6 +207,7 @@ const Wrapper = styled.section`
           width: 13rem;
           border-radius: 10px;
           margin-bottom: 20px;
+          margin-top: -33px;
         }
 
         input[type="submit"] {
