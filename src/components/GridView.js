@@ -128,16 +128,16 @@ const GridView = () => {
                         <option value="stratery">Stratery</option>
                     </select>
                 </div>
-            <div className="arrange-price">
-                <label>Sắp xếp:</label>
-                <select id="sort" value={sortOption} onChange={(e) => sortProducts(e.target.value)}>
-                    <option value="default">Mặc định</option>
-                    <option value="priceDescending">Giá giảm dần</option>
-                    <option value="priceAscending">Giá tăng dần</option>
-                    <option value="nameAscending">Tên A-Z</option>
-                    <option value="nameDescending">Tên Z-A</option>
-                </select>
-            </div>
+                <div className="arrange-price">
+                    <label>Sắp xếp:</label>
+                    <select id="sort" value={sortOption} onChange={(e) => sortProducts(e.target.value)}>
+                        <option value="default">Mặc định</option>
+                        <option value="priceDescending">Giá giảm dần</option>
+                        <option value="priceAscending">Giá tăng dần</option>
+                        <option value="nameAscending">Tên A-Z</option>
+                        <option value="nameDescending">Tên Z-A</option>
+                    </select>
+                </div>
             </div>
             <div className="container grid grid-three-column">
                 {getCurrentPageData().map((product) => (
@@ -173,14 +173,18 @@ const GridView = () => {
 };
 
 const Wrapper = styled.section`
+  padding: 9rem 0;
   .search{
     height: 15px;
     width: 200px;
     text-transform: none;
   }
-  padding: 9rem 0;
+  .arrange-category {
+    font-size: 1.5rem;
+  }
   .arrange-price {
     padding-bottom: 2rem;
+    font-size: 1.5rem;
   }
   .container {
     max-width: 120rem;
