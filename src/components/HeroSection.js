@@ -11,12 +11,11 @@ const HeroSection = ({ myData}) =>{
             <div className="container">
                 <div className="grid grid-two-column">
                     <div className="hero-section-data">
-                        <p className="intro-data">Welcome to </p>
                         <h1>{name}</h1>
                         <p>Chào mừng <b> {loggedInUsername}</b> đến với thế giới game bản quyền uy tín.</p>
-                        <NavLink>
+                        <NavLink to={`/products`}>
                             <Button>
-                                Shop now
+                                Mua sắm ngay
                             </Button>
                         </NavLink>
                     </div>
@@ -24,7 +23,6 @@ const HeroSection = ({ myData}) =>{
                     <div className="hero-section-image">
                         <figure>
                             <img src="/images/cta-bg.jpg" alt="hero-section-photo" className="img-style"/>
-
                         </figure>
                     </div>
                 </div>
