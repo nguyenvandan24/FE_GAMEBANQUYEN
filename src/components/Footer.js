@@ -11,12 +11,11 @@ class Footer extends React.Component{
                 <section className="contact-short">
                     <div className="grid grid-two-column">
                         <div>
-                            <h3>Ready to get started?</h3>
-                            <h3>Talk to us today</h3>
+                            <h3>Trò chuyện với chúng tôi?</h3>
                         </div>
                         <div>
                             <Button>
-                                <NavLink to="/contact">Get started</NavLink>
+                                <NavLink to="/contact">Bắt đầu</NavLink>
                             </Button>
                         </div>
                     </div>
@@ -25,20 +24,20 @@ class Footer extends React.Component{
                 <footer>
                     <div className="container grid grid-four-column">
                         <div className="footer-about">
-                            <h3>Hello hihi hehe</h3>
-                            <p>Chào mừng cả nhà iu của kem đã đến đây.</p>
+                            <p>Shop chuyên bán game bản quyền uy tín.</p>
+                            <p><b>Địa chỉ: </b>Phường Linh Trung, TP.Thủ Đức</p>
                         </div>
 
                         <div className="footer-subscribe">
-                            <h3>Subscribe to get important updates</h3>
+                            <h3>Hãy đăng ký để cập nhật thông tin nhanh nhất</h3>
                             <form action="#">
-                                <input type="email" placeholder="Enter your email" required/>
-                                <input type="submit" value="Subscribe"/>
+                                <input type="email" placeholder="Nhập email của bạn" required/>
+                                <input type="submit" value="Đăng ký"/>
                             </form>
                         </div>
 
                         <div className="footer-social">
-                            <h3>Follow us</h3>
+                            <h3>Theo dõi chúng tôi</h3>
                             <div className="footer-social--icons">
                                 <div>
                                     <FaDiscord className="icons"/>
@@ -53,8 +52,9 @@ class Footer extends React.Component{
                         </div>
 
                         <div className="footer-contact">
-                            <h3>Call us</h3>
-                            <p>+84 021875242</p>
+                            <h3>Liên hệ với chúng tôi</h3>
+                            <p><b>Sđt: </b>+84 021875242</p>
+                            <p><b>Email: </b>game@gmail.com</p>
                         </div>
                     </div>
                     <div className="footer-bottom--section">
