@@ -184,8 +184,12 @@ const Wrapper = styled.section`
     text-transform: none;
   }
   padding: 9rem 0;
+  .arrange-category {
+    font-size: 1.5rem;
+  }
   .arrange-price {
     padding-bottom: 2rem;
+    font-size: 1.5rem;
   }
   .container {
     max-width: 120rem;

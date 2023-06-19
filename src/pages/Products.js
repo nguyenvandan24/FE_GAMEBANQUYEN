@@ -17,10 +17,10 @@ const Products = () => {
     }, []);
 
     return( <Wrapper>
-            <div className="container grid grid-filter-column">
-                <div>
-                    <FilterSection />
-                </div>
+            <div className="container grid">
+                {/*<div>*/}
+                {/*    <FilterSection />*/}
+                {/*</div>*/}
                 <section className="product-view--sort">
                     <div className="sort-filter">
                         <Sort />
