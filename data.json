@@ -31,6 +31,14 @@
       "id": "nhquan",
       "pass": "bmhxdWFuMjAwMkA=",
       "repass": "bmhxdWFuMjAwMkA="
+    },
+    {
+      "fullname": "Nguyễn Hoan Hi",
+      "email": "hi@gmail.com",
+      "phone": "0356481519",
+      "id": "hi",
+      "pass": "enhjdmJubUAx",
+      "repass": "enhjdmJubUAx"
     }
   ],
   "products": [
@@ -606,6 +614,50 @@
       },
       "createDate": "13:45:47  19:6:2023",
       "id": 2
+    },
+    {
+      "items": [
+        {
+          "id": "AC03",
+          "name": "Assassin's Creed Valhalla",
+          "year": "2020",
+          "publisher": "Ubisoft",
+          "foundation": "PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Microsoft Windows",
+          "gamemode": "Chơi đơn",
+          "description": "Assassin's Creed Valhalla là một tựa game trong loạt Assassin's Creed, đưa người chơi vào thế giới của những chiến binh Viking vào thời kỳ Trung cổ. Trong game, người chơi sẽ vào vai Eivor, một lãnh chúa Viking, và trải qua cuộc hành trình xâm lược và khám phá vùng đất Anh của thời đại Viking. Trò chơi xây dựng một thế giới mở rộng, cho phép người chơi thám hiểm các vùng đất khác nhau của Anh, từ cảnh quan núi non đến thành phố đông đúc. Assassin's Creed Valhalla cung cấp nhiều hoạt động và nhiệm vụ để người chơi tham gia, bao gồm chiến đấu với kẻ thù, thám hiểm, xây dựng và phát triển cộng đồng Viking, và tham gia vào các hoạt động như đánh cờ, săn bắn và câu cá. Gameplay của Assassin's Creed Valhalla kết hợp các yếu tố hành động và ẩn náu truyền thống của loạt game Assassin's Creed. Người chơi có thể sử dụng vũ khí như kiếm, cung và tên, và các kỹ năng đặc biệt để chiến đấu và tiêu diệt kẻ thù. Trò chơi cũng có yếu tố ẩn náu, cho phép người chơi trèo tường, leo trèo và ám sát trong bóng tối. ",
+          "mainfeature": "Assassin's Creed Valhalla được đánh giá cao với sự khen ngợi về đồ họa đẹp, cốt truyện phong phú, thế giới mở rộng chi tiết và hệ thống gameplay đa dạng. Trò chơi mang đến cho người chơi một trải nghiệm sâu sắc về cuộc sống và cuộc phiêu lưu của người Viking trong thời kỳ lịch sử quan trọng.",
+          "price": 1000000,
+          "img": "https://tse3.mm.bing.net/th?id=OIP.kusTjgQZef1T_pbDeMMdUQHaEK&pid=Api&P=0&h=180",
+          "category": "Action",
+          "bonho": "16GB",
+          "bovixuly": "Intel Core i7-6700 hoặc AMD Ryzen 7 1700",
+          "dohoa": "NVIDIA GeForce GTX 1080 hoặc AMD Radeon RX Vega 64",
+          "dungluongocung": "50GB",
+          "hedieuhanh": "Windows 10 (64-bit)",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": "1,000,000VNĐ",
+      "user": {
+        "name": "hi",
+        "email": "hi@gamil.com",
+        "phone": "0356481519",
+        "note": ""
+      },
+      "createDate": "14:11:32  19:6:2023",
+      "id": 3
+    },
+    {
+      "items": [],
+      "totalPrice": "0VNĐ",
+      "user": {
+        "name": "hi",
+        "email": "hi@gamil.com",
+        "phone": "0356481519",
+        "note": ""
+      },
+      "createDate": "14:11:57  19:6:2023",
+      "id": 4
     }
   ]
 }
