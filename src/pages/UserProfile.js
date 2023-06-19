@@ -96,12 +96,12 @@ const UserProfile = () => {
         <Wrapper>
             <div className="conn">
                 <div className="container-profile">
-                    <h2>User Profile</h2>
+                    <h2>Thông tin cá nhân</h2>
                     {showForm ? (
                         <div>
                             <div className="grid grid-two-column">
                                 <div className="data-form">
-                                    <label>Username: </label>
+                                    <label>Tên tài khoản: </label>
                                     <input
                                         className="input"
                                         value={id}
@@ -117,7 +117,7 @@ const UserProfile = () => {
                                     />
                                 </div>
                                 <div className="data-form">
-                                    <label>Full Name: </label>
+                                    <label>Họ tên: </label>
                                     <input
                                         className="input"
                                         value={fullname}
@@ -125,7 +125,7 @@ const UserProfile = () => {
                                     />
                                 </div>
                                 <div className="data-form">
-                                    <label>Phone: </label>
+                                    <label>SĐT: </label>
                                     <input
                                         className="input"
                                         value={phone}
@@ -133,7 +133,7 @@ const UserProfile = () => {
                                     />
                                 </div>
                                 <div className="data-form">
-                                    <label>Password: </label>
+                                    <label>Mật khẩu: </label>
                                     <input
                                         className="input"
                                         value={pass}
@@ -141,7 +141,7 @@ const UserProfile = () => {
                                     />
                                 </div>
                                 <div className="data-form">
-                                    <label>RePass: </label>
+                                    <label>Nhập lại mật khẩu: </label>
                                     <input
                                         className="input"
                                         value={repass}
@@ -159,7 +159,7 @@ const UserProfile = () => {
                         <div>
                             <div className="grid grid-two-column">
                                 <div className="data-form">
-                                    <label>Username:</label>
+                                    <label>Tên tài khoản:</label>
                                     <span>{id}</span>
                                 </div>
                                 <div className="data-form">
@@ -167,20 +167,20 @@ const UserProfile = () => {
                                     <span>{email}</span>
                                 </div>
                                 <div className="data-form">
-                                    <label>Full Name:</label>
+                                    <label>Họ tên:</label>
                                     <span>{fullname}</span>
                                 </div>
                                 <div className="data-form">
-                                    <label>Phone:</label>
+                                    <label>SĐT:</label>
                                     <span>{phone}</span>
                                 </div>
                             </div>
                             <div className="button-btn" style={{ textAlign: "right" }}>
-                                <Button className="btn">
-                                    <Link to="/login" className="navbar-link">logout</Link>
-                                </Button>
+                                <StyledButton className="btn">
+                                    <Link to="/login" className="navbar-link" style={{color: "white"}}>Đăng xuất</Link>
+                                </StyledButton>
                                 <Button className="btn" type="submit" onClick={handleEditClick}>
-                                    Edit
+                                    Sửa
                                 </Button>
                             </div>
                         </div>
@@ -190,6 +190,16 @@ const UserProfile = () => {
         </Wrapper>
     );
 };
+const StyledButton = styled.button`
+  background-color: red;
+  bborder-radius: 15px;
+  text-transform: none;
+  height: 50px;
+  margin-left: 30px;
+  margin-right: 33px;
+  color: white;
+
+`;
 
 const Wrapper = styled.section`
   padding: 30px;
