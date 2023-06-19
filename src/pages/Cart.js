@@ -78,6 +78,13 @@ const Cart = () => {
         return totalPrice.toLocaleString(); // Convert the total price to localized string format
     };
 
+    const totalAmount = () => {
+        const total = cartItems.reduce(
+            (total1, item) => total1 + item.quantity, 0
+        );
+        return total;
+    };
+
     const clearCart =() => {
         const order = {
             items: cartItems,
@@ -138,6 +145,7 @@ const Cart = () => {
     };
     return (
         <Wrapper>
+            <div className="totalProduct">Tổng số lượng sản phẩm trong giỏ hàng: {totalAmount()} </div>
             <div className="cart">
                 <table>
                     <thead>
@@ -205,6 +213,11 @@ const Cart = () => {
 };
 
 const Wrapper = styled.section`
+  .totalProduct{
+    font-size: 1.5rem;
+    padding-top: 50px;
+    padding-left: 100px;
+  }
   img{
     height: 150px;
     width: 150px;
